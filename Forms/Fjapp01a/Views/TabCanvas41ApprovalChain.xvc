@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="JOURNAL_APPROVAL" />
+  <panel width="100%">
+    <!-- <slider name="journalApprovalscrollbar" block="JOURNAL_APPROVAL" top="3px" left="753px" width="16px" height="285px" /> -->
+    <framepanel width="100%">  
+      <gridview width="100%" name="grdJournalApproval" block="JOURNAL_APPROVAL">
+        <viewheader>
+          <viewcolumn width="136px" label="journalApproval_approverSequence_prompttext" name="approverSequence" style="DEFAULT" labelstyle="DEFAULT" member="APPROVER_SEQUENCE" block="JOURNAL_APPROVAL" datatype="Number" />
+          <viewcolumn width="83px" label="journalApproval_approvalCode_prompttext" name="approvalCode" style="DEFAULT" labelstyle="DEFAULT" member="APPROVAL_CODE" block="JOURNAL_APPROVAL" datatype="String" />
+          <viewcolumn width="149px" label="journalApproval_appCodeDesc_prompttext" name="appCodeDesc" style="DEFAULT" labelstyle="DEFAULT" member="APP_CODE_DESC" block="JOURNAL_APPROVAL" datatype="String" />
+          <viewcolumn width="62px" label="journalApproval_statusFlag_prompttext" name="statusFlag" style="DEFAULT" labelstyle="DEFAULT" member="STATUS_FLAG" block="JOURNAL_APPROVAL" datatype="String" />
+          <viewcolumn width="100px" label="journalApproval_statusDescription_prompttext" name="statusDescription" style="DEFAULT" labelstyle="DEFAULT" member="STATUS_DESCRIPTION" block="JOURNAL_APPROVAL" datatype="String" />
+          <viewcolumn width="145px" label="journalApproval_statusDate_prompttext" name="statusDate" style="DEFAULT" labelstyle="DEFAULT" menu="" member="STATUS_DATE" block="JOURNAL_APPROVAL" datatype="Date" formatmask="MM/DD/YYYY hh:mi:ss am">
+            <editor>
+              <calendar />
+            </editor>
+          </viewcolumn>
+          <viewcolumn width="112px" label="journalApproval_userId_prompttext" name="userId" style="DEFAULT" labelstyle="DEFAULT" member="USER_ID" block="JOURNAL_APPROVAL" datatype="String" />
+        </viewheader>
+      </gridview>
+    </framepanel>
+  </panel>
+</config>

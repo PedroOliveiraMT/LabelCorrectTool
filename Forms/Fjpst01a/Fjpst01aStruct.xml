@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="FJPST01A" AlertDataPath="Fjpst01aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="POST_JE_DATA" Url="Alio/Forms/Fjpst01a/Views/ViewPostJeData" Title="postJeData_title">
+      <ContentCanvas Id="POST_JE_DATA">
+      </ContentCanvas>
+<!--       <StackedCanvas Id="CONTROLS">
+      </StackedCanvas> -->
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="BATCHES" MultiRecord="true" AllowInsert="false" AllowDelete="false">
+      <Item Id="BATCH_YEAR" Type="TextItem" CanvasName="POST_JE_DATA" Hint="batches_batchYear_hint" AllowInsert="false" AllowUpdate="false" MaxLength="2">
+      </Item>
+      <Item Id="BATCH_NO" Type="TextItem" CanvasName="POST_JE_DATA" Hint="batches_batchNo_hint" AllowInsert="false" AllowUpdate="false" MaxLength="7">
+      </Item>
+      <Item Id="DATE_CREATED" Type="TextItem" Hint="batches_dateCreated_hint" AllowInsert="false" AllowUpdate="false" MinValue="01-01-1900" MaxValue="12-31-2099" MaxLength="10">
+      </Item>
+      <Item Id="BATCH_DATE" Type="TextItem" CanvasName="POST_JE_DATA" Hint="batches_batchDate_hint" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="10">
+      </Item>
+      <Item Id="BATCH_DESCRIPTION" Type="TextItem" CanvasName="POST_JE_DATA" Hint="batches_batchDescription_hint" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="40">
+      </Item>
+      <Item Id="ACCOUNT_PERIOD" Type="TextItem" CanvasName="POST_JE_DATA" Hint="batches_accountPeriod_hint" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="2">
+      </Item>
+      <Item Id="POST_BATCH" Type="Checkbox" CanvasName="POST_JE_DATA" AllowInsert="false" AllowSearch="false" MaxLength="30">
+      </Item>
+      <Item Id="DEBIT_TOTAL" Type="DisplayItem" CanvasName="POST_JE_DATA" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="CREDIT_TOTAL" Type="DisplayItem" CanvasName="POST_JE_DATA" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="DETAILS" Type="Button" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="POSTED_FLAG" Type="TextItem" Hint="batches_postedFlag_hint" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="2">
+      </Item>
+      <Item Id="USER_ID" Type="TextItem" Hint="batches_userId_hint" AllowInsert="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="BATCH_TYPE" Type="TextItem" Hint="batches_batchType_hint" AllowInsert="false" AllowUpdate="false" MaxLength="2">
+      </Item>
+      <Item Id="BATCH_ORIGIN" Type="TextItem" Hint="batches_batchOrigin_hint" AllowInsert="false" AllowUpdate="false" MaxLength="2">
+      </Item>
+      <Item Id="ACCESS_FLAG" Type="TextItem" Hint="batches_accessFlag_hint" AllowInsert="false" AllowUpdate="false" MaxLength="2">
+      </Item>
+    </Block>
+    <Block Id="OK_CANCEL">
+      <Item Id="SELECT_ALL" Type="Checkbox" CanvasName="POST_JE_DATA" AllowSearch="false" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="POST" Type="Button" CanvasName="POST_JE_DATA" MaxLength="30">
+      </Item>
+      <Item Id="CANCEL" Type="Button" CanvasName="POST_JE_DATA" MaxLength="30">
+      </Item>
+    </Block>
+    <!--<Block Id="CONTROLS" AllowDelete="false" AllowSearch="false" NavigationStyle="ChangeBlock">
+      <Item Id="BUTTON_01" Type="Button" Hint="Help" Navigable="false" MaxLength="30" Tooltip="Help">
+      </Item>
+      <Item Id="BUTTON_02" Type="Button" Hint="Enter or execute a query" Navigable="false" MaxLength="30" Tooltip="Find">
+      </Item>
+      <Item Id="BUTTON_03" Type="Button" Hint="Save all changes" Navigable="false" MaxLength="30" Tooltip="Save">
+      </Item>
+      <Item Id="BUTTON_04" Type="Button" Hint="Add a new record" Navigable="false" MaxLength="30" Tooltip="New">
+      </Item>
+      <Item Id="BUTTON_05" Type="Button" Hint="Delete a record" Navigable="false" MaxLength="30" Tooltip="Delete">
+      </Item>
+      <Item Id="BUTTON_06" Type="Button" Hint="Print the Screen" Navigable="false" MaxLength="30" Tooltip="Print">
+      </Item>
+      <Item Id="BUTTON_07" Type="Button" Hint="move up one record in query" Navigable="false" MaxLength="30" Tooltip="Prev">
+      </Item>
+      <Item Id="BUTTON_08" Type="Button" Hint="Move down one record in query" Navigable="false" MaxLength="30" Tooltip="Next">
+      </Item>
+      <Item Id="MAIN_MENU" Type="Button" Hint="Go to the Main Menu" Navigable="false" MaxLength="30" Tooltip="Main Menu">
+      </Item>
+      <Item Id="CLOSE" Type="Button" Hint="Close Window" Navigable="false" MaxLength="30" Tooltip="Close Window">
+      </Item>
+      <Item Id="PROGRAM_LIST" Type="List" Navigable="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="GO" Type="Button" Navigable="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="SCREEN_MODE" Type="DisplayItem" MaxLength="30">
+      </Item>
+      <Item Id="QTSI_FIND_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_ADD_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_DELETE_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_UPDATE_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+    </Block>-->
+  </Logic>
+</FormStructure>

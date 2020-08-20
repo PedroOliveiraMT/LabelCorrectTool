@@ -1,0 +1,1096 @@
+Select the forms root folder
+
+Resx File key's: 69
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\PanelAjeApprovalCv.xvc
+N of descendants: 26
+Gridview Descendants: 0
+Member: batchDate
+Block: jeHeader
+Tooltip in resx: jeHeader_batchDate_tooltip
+Tooltip in xvc : jeHeader_batchDate_tooltip
+Member: approve
+Block: jeHeader
+Tooltip in resx: jeHeader_approve_tooltip
+Tooltip in xvc : jeHeader_approve_tooltip
+Member: disapprove
+Block: jeHeader
+Tooltip in resx: jeHeader_disapprove_tooltip
+Tooltip in xvc : jeHeader_disapprove_tooltip
+CamelBlock_CamelMember: jeHeader_referenceNo
+Label in resx: jeHeader_referenceNo_label
+Label in xvc : jeHeader_referenceNo_label
+CamelBlock_CamelMember: jeHeader_batchYear
+Label in resx: jeHeader_batchYear_prompttext
+Label in xvc : jeHeader_batchYear_prompttext
+CamelBlock_CamelMember: jeHeader_batchNo
+Label in resx: jeHeader_batchNo_prompttext
+Label in xvc : jeHeader_batchNo_prompttext
+CamelBlock_CamelMember: jeHeader_batchDate
+Label in resx: jeHeader_batchDate_prompttext
+Label in xvc : jeHeader_batchDate_prompttext
+CamelBlock_CamelMember: jeHeader_requestor
+Label in resx: jeHeader_requestor_prompttext
+Label in xvc : jeHeader_requestor_prompttext
+CamelBlock_CamelMember: jeHeader_journalDescription
+Label in resx: jeHeader_journalDescription_prompttext
+Label in xvc : jeHeader_journalDescription_prompttext
+CamelBlock_CamelMember: jeHeader_disapprovalMessage
+Label in resx: jeHeader_disapprovalMessage_prompttext
+Label in xvc : jeHeader_disapprovalMessage_prompttext
+CamelBlock_CamelMember: jeHeader_approve
+Label in resx: jeHeader_approve_label
+Label in xvc : jeHeader_approve_label
+CamelBlock_CamelMember: jeHeader_disapprove
+Label in resx: jeHeader_disapprove_label
+Label in xvc : jeHeader_disapprove_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\PanelCanvas41.xvc
+N of descendants: 7
+Gridview Descendants: 0
+Label in resx: ajeApproval_label
+Label in xvc : ajeApproval_label
+Label in resx: approvalChain_label
+Label in xvc : approvalChain_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\PanelControls.xvc
+N of descendants: 18
+Gridview Descendants: 0
+Member: button01
+Block: controls
+Member: button02
+Block: controls
+Member: button03
+Block: controls
+Member: button04
+Block: controls
+Member: button05
+Block: controls
+Member: button06
+Block: controls
+Member: button07
+Block: controls
+Member: button08
+Block: controls
+Member: mainMenu
+Block: controls
+Member: close
+Block: controls
+CamelBlock_CamelMember: controls_mainMenu
+Label before replace: controls_mainMenu_label
+Label after replace : controls_mainMenu_prompttext
+Label before replace: controls_mainMenu_prompttext
+Label after replace : controls_mainMenu_label
+Unset label: controls_mainMenu_label
+CamelBlock_CamelMember: controls_close
+Label before replace: controls_close_label
+Label after replace : controls_close_prompttext
+Label before replace: controls_close_prompttext
+Label after replace : controls_close_label
+Unset label: controls_close_label
+CamelBlock_CamelMember: controls_go
+Label before replace: controls_go_label
+Label after replace : controls_go_prompttext
+Label before replace: controls_go_prompttext
+Label after replace : controls_go_label
+Unset label: controls_go_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\PanelDateLovCanvas.xvc
+N of descendants: 178
+Gridview Descendants: 0
+CamelBlock_CamelMember: dateControlBlock_monthPlus1
+Label before replace: dateControlBlock_monthPlus1_label
+Label after replace : dateControlBlock_monthPlus1_prompttext
+Label before replace: dateControlBlock_monthPlus1_prompttext
+Label after replace : dateControlBlock_monthPlus1_label
+Unset label: dateControlBlock_monthPlus1_label
+CamelBlock_CamelMember: dateControlBlock_yearPlus1
+Label before replace: dateControlBlock_yearPlus1_label
+Label after replace : dateControlBlock_yearPlus1_prompttext
+Label before replace: dateControlBlock_yearPlus1_prompttext
+Label after replace : dateControlBlock_yearPlus1_label
+Unset label: dateControlBlock_yearPlus1_label
+CamelBlock_CamelMember: dateControlBlock_yearMinus1
+Label before replace: dateControlBlock_yearMinus1_label
+Label after replace : dateControlBlock_yearMinus1_prompttext
+Label before replace: dateControlBlock_yearMinus1_prompttext
+Label after replace : dateControlBlock_yearMinus1_label
+Unset label: dateControlBlock_yearMinus1_label
+CamelBlock_CamelMember: dateControlBlock_monthMinus1
+Label before replace: dateControlBlock_monthMinus1_label
+Label after replace : dateControlBlock_monthMinus1_prompttext
+Label before replace: dateControlBlock_monthMinus1_prompttext
+Label after replace : dateControlBlock_monthMinus1_label
+Unset label: dateControlBlock_monthMinus1_label
+CamelBlock_CamelMember: dateControlBlock_okButton
+Label before replace: dateControlBlock_okButton_label
+Label after replace : dateControlBlock_okButton_prompttext
+Label before replace: dateControlBlock_okButton_prompttext
+Label after replace : dateControlBlock_okButton_label
+Unset label: dateControlBlock_okButton_label
+CamelBlock_CamelMember: dateControlBlock_cancelButton
+Label before replace: dateControlBlock_cancelButton_label
+Label after replace : dateControlBlock_cancelButton_prompttext
+Label before replace: dateControlBlock_cancelButton_prompttext
+Label after replace : dateControlBlock_cancelButton_label
+Unset label: dateControlBlock_cancelButton_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\TabCanvas41AjeApproval.xvc
+N of descendants: 15
+Gridview Descendants: 1
+CamelBlock_CamelMember: total | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+View Column Label in resx: jeData_displayAccount_prompttext
+View Column in xvc : jeData_displayAccount_prompttext
+View Column Label in resx: jeData_accountBalance_label
+View Column in xvc : jeData_accountBalance_label
+View Column Label in resx: jeData_drAmount_label
+View Column in xvc : jeData_drAmount_label
+View Column Label in resx: jeData_crAmount_label
+View Column in xvc : jeData_crAmount_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\TabCanvas41ApprovalChain.xvc
+N of descendants: 15
+Gridview Descendants: 1
+View Column Label in resx: journalApproval_approverSequence_prompttext
+View Column in xvc : journalApproval_approverSequence_prompttext
+View Column Label in resx: journalApproval_approvalCode_prompttext
+View Column in xvc : journalApproval_approvalCode_prompttext
+View Column Label in resx: journalApproval_appCodeDesc_prompttext
+View Column in xvc : journalApproval_appCodeDesc_prompttext
+View Column Label in resx: journalApproval_statusFlag_prompttext
+View Column in xvc : journalApproval_statusFlag_prompttext
+View Column Label in resx: journalApproval_statusDescription_prompttext
+View Column in xvc : journalApproval_statusDescription_prompttext
+View Column Label in resx: journalApproval_statusDate_prompttext
+View Column in xvc : journalApproval_statusDate_prompttext
+View Column Label in resx: journalApproval_userId_prompttext
+View Column in xvc : journalApproval_userId_prompttext
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\ViewAjeApproval.xvc
+N of descendants: 3
+Gridview Descendants: 0
+Title in resx: ajeApproval_title
+Title in xvc : ajeApproval_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Views\ViewDateLovWindow.xvc
+N of descendants: 2
+Gridview Descendants: 0
+Title in resx: dateLovWindow_title
+Title in xvc : dateLovWindow_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Fjapp01aStruct.xml
+Window Title: ateLovWindow_title not in Resx 
+Window Title: jeApproval_title not in Resx 
+Hint in Item: referenceNo
+Hint in Item (Localized): jeHeader_referenceNo_hint
+Hint in Item: batchNo
+Hint in Item (Localized): jeHeader_batchNo_hint
+Hint in Item: batchDate
+Hint in Item (Localized): jeHeader_batchDate_hint
+Hint in Item: journalDescription
+Hint in Item (Localized): jeHeader_journalDescription_hint
+Hint in Item: accountBalance
+Hint in Item (Localized): jeData_accountBalance_hint
+Hint in Item: drAmount
+Hint in Item (Localized): jeData_drAmount_hint
+Hint in Item: crAmount
+Hint in Item (Localized): jeData_crAmount_hint
+Hint in Item: referenceNo
+Hint in Item (Localized): jeData_referenceNo_hint
+Hint in Item: lineNo
+Hint in Item (Localized): jeData_lineNo_hint
+Hint in Item: accountId
+Hint in Item (Localized): jeData_accountId_hint
+Hint in Item: debitCreditFlag
+Hint in Item (Localized): jeData_debitCreditFlag_hint
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Fjapp01aAlerts.xml
+Alert Label Value: onErrorStop_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onMessage_btn1_label
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Title: debitCredit_title
+Alert Text Value: debitCredit_text
+Alert Label Value: debitCredit_btn1_label
+Alert Label Value: debitCredit_btn2_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjapp01a\Fjapp01aLovs.xml
+Lov Column Title: pendingApprovalsLov_referenceNo_title
+Lov Column Title: pendingApprovalsLov_batchYear_title
+Lov Column Title: pendingApprovalsLov_batchNo_title
+Lov Column Title: pendingApprovalsLov_batchDate_title
+Lov Column Title: pendingApprovalsLov_batchDescription_title
+File saved
+----------
+
+Resx File key's: 85
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent01a\Views\MnuFjent01a.xvc
+N of descendants: 11
+Gridview Descendants: 0
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menu | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent01a\Views\PanelJouralEntry.xvc
+N of descendants: 51
+Gridview Descendants: 1
+Member: journalDate
+Block: jeHeader
+Tooltip in resx: jeHeader_journalDate_tooltip
+Tooltip in xvc : jeHeader_journalDate_tooltip
+CamelBlock_CamelMember: jeHeader_batchYear
+Label in resx: jeHeader_batchYear_prompttext
+Label in xvc : jeHeader_batchYear_prompttext
+CamelBlock_CamelMember: jeHeader_batchNo
+Label in resx: jeHeader_batchNo_prompttext
+Label in xvc : jeHeader_batchNo_prompttext
+CamelBlock_CamelMember: jeHeader_debitTotal
+Label in resx: jeHeader_debitTotal_prompttext
+Label in xvc : jeHeader_debitTotal_prompttext
+CamelBlock_CamelMember: jeHeader_creditTotal
+Label in resx: jeHeader_creditTotal_prompttext
+Label in xvc : jeHeader_creditTotal_prompttext
+CamelBlock_CamelMember: jeHeader_whsOrderNo
+Label in resx: jeHeader_whsOrderNo_prompttext
+Label in xvc : jeHeader_whsOrderNo_prompttext
+CamelBlock_CamelMember: jeHeader_assignReference
+Label in resx: jeHeader_assignReference_label
+Label in xvc : jeHeader_assignReference_label
+CamelBlock_CamelMember: jeHeader_journalDate
+Label in resx: jeHeader_journalDate_prompttext
+Label in xvc : jeHeader_journalDate_prompttext
+CamelBlock_CamelMember: jeHeader_readyForApproval
+Label in resx: jeHeader_readyForApproval_label
+Label in xvc : jeHeader_readyForApproval_label
+CamelBlock_CamelMember: jeHeader_journalDescription
+Label in resx: jeHeader_journalDescription_prompttext
+Label in xvc : jeHeader_journalDescription_prompttext
+CamelBlock_CamelMember: jeHeader_approvalStatusDesc
+Label in resx: jeHeader_approvalStatusDesc_prompttext
+Label in xvc : jeHeader_approvalStatusDesc_prompttext
+CamelBlock_CamelMember: total | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: jeHeader_approvalChain
+Label before replace: jeHeader_approvalChain_label
+Label after replace : jeHeader_approvalChain_prompttext
+Label before replace: jeHeader_approvalChain_prompttext
+Label after replace : jeHeader_approvalChain_label
+Unset label: jeHeader_approvalChain_label
+View Column Label in resx: jeData_accountNo_label
+View Column in xvc : jeData_accountNo_label
+View Column Label in resx: jeData_accountDesc_prompttext
+View Column in xvc : jeData_accountDesc_prompttext
+View Column Label in resx: jeData_accountBalance_label
+View Column in xvc : jeData_accountBalance_label
+View Column Label in resx: jeData_drAmount_label
+View Column in xvc : jeData_drAmount_label
+View Column Label in resx: jeData_crAmount_label
+View Column in xvc : jeData_crAmount_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent01a\Views\ViewJournalEntry.xvc
+N of descendants: 3
+Gridview Descendants: 0
+Title in resx: journalEntry_title
+Title in xvc : journalEntry_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent01a\Fjent01aStruct.xml
+Window Title: ournalEntry_title not in Resx 
+Hint in Item: referenceNo
+Hint in Item (Localized): jeHeader_referenceNo_hint
+Hint in Item: journalDate
+Hint in Item (Localized): jeHeader_journalDate_hint
+Hint in Item: journalDescription
+Hint in Item (Localized): jeHeader_journalDescription_hint
+Hint in Item: approvalStatusDesc
+Hint in Item (Localized): jeHeader_approvalStatusDesc_hint
+Hint in Item: batchNo
+Hint in Item (Localized): jeHeader_batchNo_hint
+Hint in Item: accountNo
+Hint in Item (Localized): jeData_accountNo_hint
+Hint in Item: drAmount
+Hint in Item (Localized): jeData_drAmount_hint
+Hint in Item: crAmount
+Hint in Item (Localized): jeData_crAmount_hint
+Hint in Item: referenceNo
+Hint in Item (Localized): jeData_referenceNo_hint
+Hint in Item: lineNo
+Hint in Item (Localized): jeData_lineNo_hint
+Hint in Item: journalAmount
+Hint in Item (Localized): jeData_journalAmount_hint
+Hint in Item: accountId
+Hint in Item (Localized): jeData_accountId_hint
+Hint in Item: debitCreditFlag
+Hint in Item (Localized): jeData_debitCreditFlag_hint
+Hint in Item: holdAccountId
+Hint in Item (Localized): jeData_holdAccountId_hint
+Hint in Item: holdJournalAmount
+Hint in Item (Localized): jeData_holdJournalAmount_hint
+Hint in Item: holdDrAmount
+Hint in Item (Localized): jeData_holdDrAmount_hint
+Hint in Item: holdCrAmount
+Hint in Item (Localized): jeData_holdCrAmount_hint
+Hint in Item: accountBalance
+Hint in Item (Localized): jeData_accountBalance_hint
+Hint in Item: batchDate
+Hint in Item (Localized): batchNoBlock_batchDate_hint
+Hint in Item: batchNo
+Hint in Item (Localized): batchNoBlock_batchNo_hint
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent01a\Fjent01aAlerts.xml
+Alert Label Value: overBudgetNoOverride_btn1_label
+Alert Label Value: overBudgetNoOverride_btn2_label
+Alert Label Value: overBudgetOverride_btn1_label
+Alert Label Value: overBudgetOverride_btn2_label
+Alert Label Value: onErrorStop_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: accountAlert_btn1_label
+Alert Label Value: accountAlert_btn2_label
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Title: debitCredit_title
+Alert Text Value: debitCredit_text
+Alert Label Value: debitCredit_btn1_label
+Alert Label Value: debitCredit_btn2_label
+Alert Label Value: spreadsheetAlert_btn1_label
+Alert Label Value: spreadsheetAlert_btn2_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent01a\Fjent01aLovs.xml
+Lov Title: approvalChains_title
+Lov Column Title: approvalChains_approvalChain_title
+File saved
+----------
+
+Resx File key's: 92
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent03a\Views\MnuFjent03a.xvc
+N of descendants: 11
+Gridview Descendants: 0
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menu | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: menuitem | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent03a\Views\PanelRecurJouralEntry.xvc
+N of descendants: 56
+Gridview Descendants: 1
+Member: journalDate
+Block: recurJeHeader
+Tooltip in resx: recurJeHeader_journalDate_tooltip
+Tooltip in xvc : recurJeHeader_journalDate_tooltip
+CamelBlock_CamelMember: batchNoBlock_batchYear
+Label in resx: batchNoBlock_batchYear_prompttext
+Label in xvc : batchNoBlock_batchYear_prompttext
+CamelBlock_CamelMember: batchNoBlock_batchNo
+Label in resx: batchNoBlock_batchNo_prompttext
+Label in xvc : batchNoBlock_batchNo_prompttext
+CamelBlock_CamelMember: recurJeHeader_readyForApproval
+Label in resx: recurJeHeader_readyForApproval_label
+Label in xvc : recurJeHeader_readyForApproval_label
+CamelBlock_CamelMember: recurJeHeader_assignRecurJournalId
+Label in resx: recurJeHeader_assignRecurJournalId_label
+Label in xvc : recurJeHeader_assignRecurJournalId_label
+CamelBlock_CamelMember: recurJeHeader_recurJournalDesc
+Label before replace: recurJeHeader_recurJournalDesc_prompttext
+Label after replace : recurJeHeader_recurJournalDesc_label
+Label in resx: recurJeHeader_recurJournalDesc_label
+Label in xvc : recurJeHeader_recurJournalDesc_label
+CamelBlock_CamelMember: radiobox | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: radiobox | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: radiobox | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: recurJeHeader_assignReference
+Label in resx: recurJeHeader_assignReference_label
+Label in xvc : recurJeHeader_assignReference_label
+CamelBlock_CamelMember: recurJeHeader_journalDescription
+Label before replace: recurJeHeader_journalDescription_prompttext
+Label after replace : recurJeHeader_journalDescription_label
+Label in resx: recurJeHeader_journalDescription_label
+Label in xvc : recurJeHeader_journalDescription_label
+CamelBlock_CamelMember: recurJeHeader_journalDate
+Label in resx: recurJeHeader_journalDate_prompttext
+Label in xvc : recurJeHeader_journalDate_prompttext
+CamelBlock_CamelMember: recurJeHeader_createJournal
+Label in resx: recurJeHeader_createJournal_label
+Label in xvc : recurJeHeader_createJournal_label
+CamelBlock_CamelMember: recurJeHeader_zeroAmounts
+Label in resx: recurJeHeader_zeroAmounts_label
+Label in xvc : recurJeHeader_zeroAmounts_label
+CamelBlock_CamelMember: total | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: recurJeHeader_approvalChain
+Label before replace: recurJeHeader_approvalChain_label
+Label after replace : recurJeHeader_approvalChain_prompttext
+Label before replace: recurJeHeader_approvalChain_prompttext
+Label after replace : recurJeHeader_approvalChain_label
+Unset label: recurJeHeader_approvalChain_label
+CamelBlock_CamelMember: recurJeData_resequence
+Label in resx: recurJeData_resequence_label
+Label in xvc : recurJeData_resequence_label
+View Column Label in resx: recurJeData_lineNo_label
+View Column in xvc : recurJeData_lineNo_label
+View Column Label in resx: recurJeData_accountNo_label
+View Column in xvc : recurJeData_accountNo_label
+View Column Label in resx: recurJeData_accountBalance_label
+View Column in xvc : recurJeData_accountBalance_label
+View Column Label in resx: recurJeData_drAmount_label
+View Column in xvc : recurJeData_drAmount_label
+View Column Label in resx: recurJeData_crAmount_label
+View Column in xvc : recurJeData_crAmount_label
+View Column Label in resx: recurJeData_journalDescription_label
+View Column in xvc : recurJeData_journalDescription_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent03a\Views\ViewRecurJournalEntry.xvc
+N of descendants: 3
+Gridview Descendants: 0
+Title in resx: recurJournalEntry_title
+Title in xvc : recurJournalEntry_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent03a\Fjent03aStruct.xml
+Window Title: ecurJournalEntry_title not in Resx 
+Hint in Item: recurJournalId
+Hint in Item (Localized): recurJeHeader_recurJournalId_hint
+Hint in Item: recurJournalDesc
+Hint in Item (Localized): recurJeHeader_recurJournalDesc_hint
+Hint in Item: referenceNo
+Hint in Item (Localized): recurJeHeader_referenceNo_hint
+Hint in Item: journalDescription
+Hint in Item (Localized): recurJeHeader_journalDescription_hint
+Hint in Item: journalDate
+Hint in Item (Localized): recurJeHeader_journalDate_hint
+Hint in Item: lineNo
+Hint in Item (Localized): recurJeData_lineNo_hint
+Hint in Item: accountNo
+Hint in Item (Localized): recurJeData_accountNo_hint
+Hint in Item: accountBalance
+Hint in Item (Localized): recurJeData_accountBalance_hint
+Hint in Item: drAmount
+Hint in Item (Localized): recurJeData_drAmount_hint
+Hint in Item: crAmount
+Hint in Item (Localized): recurJeData_crAmount_hint
+Hint in Item: recurJournalId
+Hint in Item (Localized): recurJeData_recurJournalId_hint
+Hint in Item: journalAmount
+Hint in Item (Localized): recurJeData_journalAmount_hint
+Hint in Item: accountId
+Hint in Item (Localized): recurJeData_accountId_hint
+Hint in Item: journalDescription
+Hint in Item (Localized): recurJeData_journalDescription_hint
+Hint in Item: debitCreditFlag
+Hint in Item (Localized): recurJeData_debitCreditFlag_hint
+Hint in Item: holdJournalAmount
+Hint in Item (Localized): recurJeData_holdJournalAmount_hint
+Hint in Item: holdAccountId
+Hint in Item (Localized): recurJeData_holdAccountId_hint
+Hint in Item: holdDrAmount
+Hint in Item (Localized): recurJeData_holdDrAmount_hint
+Hint in Item: holdCrAmount
+Hint in Item (Localized): recurJeData_holdCrAmount_hint
+Hint in Item: batchDate
+Hint in Item (Localized): batchNoBlock_batchDate_hint
+Hint in Item: batchNo
+Hint in Item (Localized): batchNoBlock_batchNo_hint
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent03a\Fjent03aAlerts.xml
+Alert Label Value: overBudgetNoOverride_btn1_label
+Alert Label Value: overBudgetNoOverride_btn2_label
+Alert Label Value: accountAlert_btn1_label
+Alert Label Value: accountAlert_btn2_label
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Text Value: zeroAmounts_text
+Alert Label Value: zeroAmounts_btn1_label
+Alert Label Value: zeroAmounts_btn2_label
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onErrorStop_btn1_label
+Alert Label Value: overBudgetOverride_btn1_label
+Alert Label Value: overBudgetOverride_btn2_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjent03a\Fjent03aLovs.xml
+Lov Title: recurJeHeader_title
+Lov Column Title: recurJeHeader_recurJournalId_title
+Lov Column Title: recurJeHeader_recurJournalDesc_title
+Lov Column Title: recurJeHeader_journalDate_title
+Lov Column Title: recurJeHeader_referenceNo_title
+Lov Title: approvalChains_title
+Lov Column Title: approvalChains_approvalChain_title
+File saved
+----------
+
+Resx File key's: 64
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjgen01a\Views\PanelJournalInqury.xvc
+N of descendants: 34
+Gridview Descendants: 1
+CamelBlock_CamelMember: calendar | null_JOURNAL_DATE
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: journals_dupRec
+Label in resx: journals_dupRec_label
+Label in xvc : journals_dupRec_label
+View Column Label in resx: journals_checkKey_label
+View Column in xvc : journals_checkKey_label
+View Column Label in resx: journals_claimNo_label
+View Column in xvc : journals_claimNo_label
+View Column Label in resx: journals_referenceNo_label
+View Column in xvc : journals_referenceNo_label
+View Column Label in resx: journals_referenceSeqNo_label
+View Column in xvc : journals_referenceSeqNo_label
+View Column Label in resx: journals_referenceType_label
+View Column in xvc : journals_referenceType_label
+View Column Label in resx: journals_batchYear_label
+View Column in xvc : journals_batchYear_label
+View Column Label in resx: journals_batchNo_label
+View Column in xvc : journals_batchNo_label
+View Column Label in resx: journals_accountPeriod_label
+View Column in xvc : journals_accountPeriod_label
+View Column Label in resx: journals_journalDate_label
+View Column in xvc : journals_journalDate_label
+View Column Label in resx: journals_journalType_label
+View Column in xvc : journals_journalType_label
+View Column Label in resx: journals_journalAmount_label
+View Column in xvc : journals_journalAmount_label
+View Column Label in resx: journals_debitCreditFlag_label
+View Column in xvc : journals_debitCreditFlag_label
+View Column Label in resx: journals_journalId_label
+View Column in xvc : journals_journalId_label
+View Column Label in resx: journals_journalSeqNo_label
+View Column in xvc : journals_journalSeqNo_label
+View Column Label in resx: journals_journalDescription_label
+View Column in xvc : journals_journalDescription_label
+View Column Label in resx: journals_accountId_label
+View Column in xvc : journals_accountId_label
+View Column Label in resx: journals_accountType_label
+View Column in xvc : journals_accountType_label
+View Column Label in resx: journals_accountNo_label
+View Column in xvc : journals_accountNo_label
+View Column Label in resx: journals_accountYear_label
+View Column in xvc : journals_accountYear_label
+View Column Label in resx: journals_accountDesc_label
+View Column in xvc : journals_accountDesc_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjgen01a\Views\ViewJournalInqury.xvc
+N of descendants: 2
+Gridview Descendants: 0
+Title in resx: journalInqury_title
+Title in xvc : journalInqury_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjgen01a\Fjgen01aStruct.xml
+Window Title: ournalInqury_title not in Resx 
+Hint in Item: checkKey
+Hint in Item (Localized): journals_checkKey_hint
+Hint in Item: claimNo
+Hint in Item (Localized): journals_claimNo_hint
+Hint in Item: referenceNo
+Hint in Item (Localized): journals_referenceNo_hint
+Hint in Item: referenceSeqNo
+Hint in Item (Localized): journals_referenceSeqNo_hint
+Hint in Item: referenceType
+Hint in Item (Localized): journals_referenceType_hint
+Hint in Item: batchYear
+Hint in Item (Localized): journals_batchYear_hint
+Hint in Item: batchNo
+Hint in Item (Localized): journals_batchNo_hint
+Hint in Item: accountPeriod
+Hint in Item (Localized): journals_accountPeriod_hint
+Hint in Item: journalDate
+Hint in Item (Localized): journals_journalDate_hint
+Hint in Item: journalType
+Hint in Item (Localized): journals_journalType_hint
+Hint in Item: journalAmount
+Hint in Item (Localized): journals_journalAmount_hint
+Hint in Item: debitCreditFlag
+Hint in Item (Localized): journals_debitCreditFlag_hint
+Hint in Item: journalId
+Hint in Item (Localized): journals_journalId_hint
+Hint in Item: journalSeqNo
+Hint in Item (Localized): journals_journalSeqNo_hint
+Hint in Item: journalDescription
+Hint in Item (Localized): journals_journalDescription_hint
+Hint in Item: accountId
+Hint in Item (Localized): journals_accountId_hint
+Hint in Item: accountType
+Hint in Item (Localized): journals_accountType_hint
+Hint in Item: accountNo
+Hint in Item (Localized): journals_accountNo_hint
+Hint in Item: accountDesc
+Hint in Item (Localized): journals_accountDesc_hint
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjgen01a\Fjgen01aAlerts.xml
+Alert Label Value: accountAlert_btn1_label
+Alert Label Value: accountAlert_btn2_label
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onErrorStop_btn1_label
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+File saved
+----------
+
+Resx File key's: 41
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjpst01a\Views\PanelPostJeData.xvc
+N of descendants: 24
+Gridview Descendants: 1
+CamelBlock_CamelMember: okCancel_post
+Label in resx: okCancel_post_label
+Label in xvc : okCancel_post_label
+CamelBlock_CamelMember: okCancel_cancel
+Label in resx: okCancel_cancel_label
+Label in xvc : okCancel_cancel_label
+View Column Label in resx: batches_batchYear_label
+View Column in xvc : batches_batchYear_label
+View Column Label in resx: batches_batchNo_label
+View Column in xvc : batches_batchNo_label
+View Column Label in resx: batches_batchDate_label
+View Column in xvc : batches_batchDate_label
+View Column Label in resx: batches_batchDescription_label
+View Column in xvc : batches_batchDescription_label
+View Column Label in resx: batches_accountPeriod_label
+View Column in xvc : batches_accountPeriod_label
+View Column Label in resx: batches_postBatch_prompttext
+View Column in xvc : batches_postBatch_prompttext
+View Column Label in resx: batches_debitTotal_prompttext
+View Column in xvc : batches_debitTotal_prompttext
+View Column Label in resx: batches_creditTotal_prompttext
+View Column in xvc : batches_creditTotal_prompttext
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjpst01a\Views\ViewPostJeData.xvc
+N of descendants: 2
+Gridview Descendants: 0
+Title in resx: postJeData_title
+Title in xvc : postJeData_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjpst01a\Fjpst01aStruct.xml
+Window Title: ostJeData_title not in Resx 
+Hint in Item: batchYear
+Hint in Item (Localized): batches_batchYear_hint
+Hint in Item: batchNo
+Hint in Item (Localized): batches_batchNo_hint
+Hint in Item: dateCreated
+Hint in Item (Localized): batches_dateCreated_hint
+Hint in Item: batchDate
+Hint in Item (Localized): batches_batchDate_hint
+Hint in Item: batchDescription
+Hint in Item (Localized): batches_batchDescription_hint
+Hint in Item: accountPeriod
+Hint in Item (Localized): batches_accountPeriod_hint
+Hint in Item: postedFlag
+Hint in Item (Localized): batches_postedFlag_hint
+Hint in Item: userId
+Hint in Item (Localized): batches_userId_hint
+Hint in Item: batchType
+Hint in Item (Localized): batches_batchType_hint
+Hint in Item: batchOrigin
+Hint in Item (Localized): batches_batchOrigin_hint
+Hint in Item: accessFlag
+Hint in Item (Localized): batches_accessFlag_hint
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fjpst01a\Fjpst01aAlerts.xml
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onErrorStop_btn1_label
+File saved
+----------
+
+Resx File key's: 77
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fmbth01a\Views\PanelBatches.xvc
+N of descendants: 36
+Gridview Descendants: 1
+CamelBlock_CamelMember: batches_assignBatch
+Label in resx: batches_assignBatch_label
+Label in xvc : batches_assignBatch_label
+CamelBlock_CamelMember: batches_assignWarrant
+Label in resx: batches_assignWarrant_label
+Label in xvc : batches_assignWarrant_label
+CamelBlock_CamelMember: button | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: batches_resetActiveBatch
+Label in resx: batches_resetActiveBatch_label
+Label in xvc : batches_resetActiveBatch_label
+CamelBlock_CamelMember: batches_batchMasterListing
+Label in resx: batches_batchMasterListing_label
+Label in xvc : batches_batchMasterListing_label
+View Column Label in resx: batches_batchYear_label
+View Column in xvc : batches_batchYear_label
+View Column Label in resx: batches_batchDate_label
+View Column in xvc : batches_batchDate_label
+View Column tooltip in resx: batches_batchDate_tooltip
+View Column tooltip in xvc : batches_batchDate_tooltip
+View Column Label in resx: batches_batchDescription_label
+View Column in xvc : batches_batchDescription_label
+View Column Label in resx: batches_accountPeriod_label
+View Column in xvc : batches_accountPeriod_label
+View Column Label in resx: batches_userId_label
+View Column in xvc : batches_userId_label
+View Column Label in resx: batches_status_prompttext
+View Column in xvc : batches_status_prompttext
+View Column tooltip in resx: batches_status_tooltip
+View Column tooltip in xvc : batches_status_tooltip
+View Column Label in resx: batches_warrantFromDate_label
+View Column in xvc : batches_warrantFromDate_label
+View Column Label in resx: batches_warrantToDate_label
+View Column in xvc : batches_warrantToDate_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fmbth01a\Views\ViewBatches.xvc
+N of descendants: 2
+Gridview Descendants: 0
+Title in resx: batches_title
+Title in xvc : batches_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fmbth01a\Fmbth01aStruct.xml
+Window Title: atches_title not in Resx 
+Hint in Item: batchYear
+Hint in Item (Localized): batches_batchYear_hint
+Hint in Item: batchNo
+Hint in Item (Localized): batches_batchNo_hint
+Hint in Item: dateCreated
+Hint in Item (Localized): batches_dateCreated_hint
+Hint in Item: batchDate
+Hint in Item (Localized): batches_batchDate_hint
+Hint in Item: batchDescription
+Hint in Item (Localized): batches_batchDescription_hint
+Hint in Item: accountPeriod
+Hint in Item (Localized): batches_accountPeriod_hint
+Hint in Item: postedFlag
+Hint in Item (Localized): batches_postedFlag_hint
+Hint in Item: userId
+Hint in Item (Localized): batches_userId_hint
+Hint in Item: warrantFromDate
+Hint in Item (Localized): batches_warrantFromDate_hint
+Hint in Item: warrantToDate
+Hint in Item (Localized): batches_warrantToDate_hint
+Hint in Item: batchType
+Hint in Item (Localized): batches_batchType_hint
+Hint in Item: batchOrigin
+Hint in Item (Localized): batches_batchOrigin_hint
+Hint in Item: accessFlag
+Hint in Item (Localized): batches_accessFlag_hint
+Hint in Item: accountPeriod
+Hint in Item (Localized): hold_accountPeriod_hint
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fmbth01a\Fmbth01aAlerts.xml
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onErrorStop_btn1_label
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Text Value: saveChanges_text
+Alert Label Value: saveChanges_btn1_label
+Alert Label Value: saveChanges_btn2_label
+Alert Label Value: saveChanges_btn3_label
+Alert Text Value: accountPeriodWarning_text
+Alert Label Value: accountPeriodWarning_btn1_label
+Alert Label Value: accountPeriodWarning_btn2_label
+Alert Text Value: accountPeriodChange_text
+Alert Label Value: accountPeriodChange_btn1_label
+Alert Label Value: accountPeriodChange_btn2_label
+Alert Label Value: batchPrefix_btn1_label
+Alert Label Value: batchPrefix_btn2_label
+Alert Label Value: batchPrefix_btn3_label
+Alert Title: debugMessage_title
+Alert Label Value: debugMessage_btn1_label
+Alert Label Value: debugMessage_btn2_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Fmbth01a\Fmbth01aLovs.xml
+Lov Title: warrantNoLov_title
+Lov Column Title: warrantNoLov_warrantNo_title
+Lov Column Title: warrantNoLov_batchDescription_title
+Lov Column Title: warrantNoLov_fromDate_title
+Lov Column Title: warrantNoLov_toDate_title
+Lov Title: batchNoLov_title
+Lov Column Title: batchNoLov_keyValue_title
+File saved
+----------
+
+Resx File key's: 25
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Slact01a\Views\PanelAccountLookup.xvc
+N of descendants: 13
+Gridview Descendants: 1
+CamelBlock_CamelMember: accounts_accountId
+Label in resx: accounts_accountId_prompttext
+Label in xvc : accounts_accountId_prompttext
+View Column Label in resx: nickAccounts_accountNickNo_label
+View Column in xvc : nickAccounts_accountNickNo_label
+View Column Label in resx: nickAccounts_userId_label
+View Column in xvc : nickAccounts_userId_label
+View Column Label in resx: nickAccounts_sysGenFlag_label
+View Column in xvc : nickAccounts_sysGenFlag_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Slact01a\Views\PanelControls.xvc
+N of descendants: 18
+Gridview Descendants: 0
+Member: button01
+Block: controls
+Member: button02
+Block: controls
+Member: button03
+Block: controls
+Member: button04
+Block: controls
+Member: button05
+Block: controls
+Member: button06
+Block: controls
+Member: button07
+Block: controls
+Member: button08
+Block: controls
+Member: mainMenu
+Block: controls
+Member: close
+Block: controls
+CamelBlock_CamelMember: controls_mainMenu
+Label before replace: controls_mainMenu_label
+Label after replace : controls_mainMenu_prompttext
+Label before replace: controls_mainMenu_prompttext
+Label after replace : controls_mainMenu_label
+Unset label: controls_mainMenu_label
+CamelBlock_CamelMember: controls_close
+Label before replace: controls_close_label
+Label after replace : controls_close_prompttext
+Label before replace: controls_close_prompttext
+Label after replace : controls_close_label
+Unset label: controls_close_label
+CamelBlock_CamelMember: controls_go
+Label before replace: controls_go_label
+Label after replace : controls_go_prompttext
+Label before replace: controls_go_prompttext
+Label after replace : controls_go_label
+Unset label: controls_go_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Slact01a\Views\ViewAccountLookup.xvc
+N of descendants: 2
+Gridview Descendants: 0
+Title in resx: accountLookup_title
+Title in xvc : accountLookup_title
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Slact01a\Slact01aStruct.xml
+Window Title: ccountLookup_title not in Resx 
+Hint in Item: accountNo
+Hint in Item (Localized): accounts_accountNo_hint
+Hint in Item: accountId
+Hint in Item (Localized): accounts_accountId_hint
+Hint in Item: accountDesc
+Hint in Item (Localized): accounts_accountDesc_hint
+Hint in Item: accountNickNo
+Hint in Item (Localized): nickAccounts_accountNickNo_hint
+Hint in Item: userId
+Hint in Item (Localized): nickAccounts_userId_hint
+Hint in Item: sysGenFlag
+Hint in Item (Localized): nickAccounts_sysGenFlag_hint
+Hint: controls_button01_hint not in Resx 
+Hint: controls_button02_hint not in Resx 
+Hint: controls_button03_hint not in Resx 
+Hint: controls_button04_hint not in Resx 
+Hint: controls_button05_hint not in Resx 
+Hint: controls_button06_hint not in Resx 
+Hint: controls_button07_hint not in Resx 
+Hint: controls_button08_hint not in Resx 
+Hint: controls_mainMenu_hint not in Resx 
+Hint: controls_close_hint not in Resx 
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Slact01a\Slact01aAlerts.xml
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onErrorStop_btn1_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Slact01a\Slact01aLovs.xml
+Lov Title: accountsLov_title
+Lov Column Title: accountsLov_accountAndDesc_title
+Lov Column Title: accountsLov_accountYear_title
+File saved
+----------
+
+Resx File key's: 14
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Ssutl01a\Views\PanelCanvas1.xvc
+N of descendants: 15
+Gridview Descendants: 0
+CamelBlock_CamelMember: securityBlock_waiverKey
+Label in resx: securityBlock_waiverKey_prompttext
+Label in xvc : securityBlock_waiverKey_prompttext
+CamelBlock_CamelMember: framepanel | null_null
+CamelBlock_CamelMember: FIX ME, PLEASE!!_FIX ME, PLEASE!!
+Label before replace: FIX ME, PLEASE!!_FIX ME, PLEASE!!_prompttext
+Label after replace : FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+Unset label: FIX ME, PLEASE!!_FIX ME, PLEASE!!_label
+CamelBlock_CamelMember: securityBlock_securityDate
+Label in resx: securityBlock_securityDate_prompttext
+Label in xvc : securityBlock_securityDate_prompttext
+CamelBlock_CamelMember: securityBlock_securityKey
+Label in resx: securityBlock_securityKey_prompttext
+Label in xvc : securityBlock_securityKey_prompttext
+CamelBlock_CamelMember: securityBlock_counterKey
+Label in resx: securityBlock_counterKey_prompttext
+Label in xvc : securityBlock_counterKey_prompttext
+CamelBlock_CamelMember: securityBlock_process
+Label in resx: securityBlock_process_label
+Label in xvc : securityBlock_process_label
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Ssutl01a\Views\ViewSsutl01a.xvc
+N of descendants: 2
+Gridview Descendants: 0
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Ssutl01a\Ssutl01aStruct.xml
+File saved
+----------
+Current file: C:\Users\pedro.oliveira\Documents\Hammer - Pilot\LabelCorrect\Forms\Ssutl01a\Ssutl01aAlerts.xml
+Alert Title: noRecord_title
+Alert Text Value: noRecord_text
+Alert Label Value: noRecord_btn1_label
+Alert Label Value: noRecord_btn2_label
+Alert Label Value: onMessage_btn1_label
+Alert Label Value: onErrorCaution_btn1_label
+Alert Label Value: onErrorStop_btn1_label
+File saved
+----------

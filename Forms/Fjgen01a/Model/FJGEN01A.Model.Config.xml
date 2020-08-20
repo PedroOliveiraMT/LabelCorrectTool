@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="FJGEN01A" logicalName="Fjgen01a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Fjgen01a.Model.Fjgen01aModel</modelClass>	
+	
+	<businessObjects>
+		<businessObject name="JOURNALS" manager="JOURNALS.Manager.Config.xml">
+		</businessObject>
+	</businessObjects>	
+</model>

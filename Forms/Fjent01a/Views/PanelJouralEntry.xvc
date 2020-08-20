@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="JE_DATA" />
+  <interactionblock name="BATCH_NO_BLOCK" />
+  <interactionblock name="JE_HEADER" />
+  <panel width="100%" id="pnlJouralEntry" name="JOURAL_ENTRY" class="ContentCanvas">
+    <framepanel width="100%">
+      <panel width="100%">
+        <gridlayout cols="3" orientation="horizontal">
+          <gridcell>
+            <textfield label="jeHeader_batchYear_prompttext" name="batchYear" style="DISPLAY_TEXT_ITEM" width="30px" member="BATCH_YEAR" block="JE_HEADER" maxlength="2" datatype="String" />
+          </gridcell>
+          <gridcell>
+            <textfield label="jeHeader_batchNo_prompttext" name="batchNo" style="DISPLAY_TEXT_ITEM" width="64px" member="BATCH_NO" block="JE_HEADER" maxlength="7" datatype="String" />
+          </gridcell>
+          <gridcell>
+            <textbox name="navigableItem1" style="DEFAULT empty" width="0px" height="0px" member="NAVIGABLE_ITEM_1" block="BATCH_NO_BLOCK" maxlength="30" datatype="String" />
+          </gridcell>
+          <gridcell>
+            <textfield label="jeHeader_debitTotal_prompttext" name="debitTotal" style="DISPLAY_TEXT_ITEM" width="130px" textalign="right" member="DEBIT_TOTAL" block="JE_HEADER" maxlength="30" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" />
+          </gridcell>
+          <gridcell>
+            <textfield label="jeHeader_creditTotal_prompttext" name="creditTotal" style="DISPLAY_TEXT_ITEM" width="130px" textalign="right" member="CREDIT_TOTAL" block="JE_HEADER" maxlength="30" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" />
+          </gridcell>
+          <gridcell>
+            <textbox label="jeHeader_whsOrderNo_prompttext" name="whsOrderNo" style="TEXT_ITEM" width="70px" member="WHS_ORDER_NO" block="JE_HEADER" maxlength="10" datatype="String" />
+          </gridcell>
+          <gridcell>
+            <component>
+              <button label="jeHeader_assignReference_label" name="assignReference" style="BUTTON" member="ASSIGN_REFERENCE" block="JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+              <textbox name="referenceNo" style="TEXT_ITEM" width="100px" member="REFERENCE_NO" block="JE_HEADER" maxlength="10" datatype="String" validation="server" />
+            </component>
+          </gridcell>
+          <gridcell>
+            <calendar label="jeHeader_journalDate_prompttext" name="journalDate" style="DATE" width="120px" tooltip="jeHeader_journalDate_tooltip" member="JOURNAL_DATE" block="JE_HEADER" maxlength="10" datatype="Date" formatmask="MM/DD/YYYY" validation="server">
+              <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+            </calendar>
+          </gridcell>
+          <gridcell>
+            <checkbox label="jeHeader_readyForApproval_label" unmatchedvalue="N" value="Y" falsevalue="N" name="readyForApproval" style="CHECK_BOX" width="116px" member="READY_FOR_APPROVAL" block="JE_HEADER" maxlength="1" validation="server" />
+          </gridcell>
+          <gridcell colspan="2">
+            <textbox label="jeHeader_journalDescription_prompttext" name="journalDescription" style="TEXT_ITEM" width="350px" member="JOURNAL_DESCRIPTION" block="JE_HEADER" maxlength="40" datatype="String" validation="server" />
+          </gridcell>
+          <gridcell>
+            <editbox label="jeHeader_approvalStatusDesc_prompttext" name="approvalStatusDesc" style="DISPLAY_TEXT_ITEM" width="173px" multiline="true" member="APPROVAL_STATUS_DESC" block="JE_HEADER" maxlength="4000" datatype="String" />
+            <!-- <button label="View" name="viewButton" style="DEFAULT" member="VIEW_BUTTON" block="JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" /> -->
+          </gridcell>
+        </gridlayout>
+
+
+      </panel>  
+    </framepanel>
+    <framepanel width="100%" name="rect5">
+      <panel width="100%">
+        <gridview width="100%" name="grdJeData" block="JE_DATA">
+          <viewheader>
+            <viewcolumn width="242px" label="jeData_accountNo_label" name="accountNo" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_NO" block="JE_DATA" validation="server" maxlength="50" datatype="String">
+             <editor>
+                <lovdropdown action="KEY-LISTVALUE" />
+              </editor>
+            </viewcolumn>
+           <!--  <viewcolumn width="19px" label="" name="showLov" style="DEFAULT" labelstyle="DEFAULT" icon="qtdown" member="SHOW_LOV" block="JE_DATA" validation="server" maxlength="30">
+              <editor>
+                <button action="WHEN-BUTTON-PRESSED" />
+              </editor>
+            </viewcolumn> -->
+            <viewcolumn width="193px" label="jeData_accountDesc_prompttext" name="accountDesc" member="ACCOUNT_DESC" block="JE_DATA" validation="server" maxlength="50" datatype="String" />
+            <viewcolumn width="93px" label="jeData_accountBalance_label" name="accountBalance" member="ACCOUNT_BALANCE" block="JE_DATA" validation="server" maxlength="15" datatype="Number" formatmask="999G999G999G999D99MI" />
+            <viewcolumn width="93px" label="jeData_drAmount_label" name="drAmount" member="DR_AMOUNT" block="JE_DATA" validation="server" maxlength="15" minvalue="999,999,999.99-" maxvalue="999,999,999.99 " datatype="Number" formatmask="999G999G999D99MI" />
+            <viewcolumn width="93px" label="jeData_crAmount_label" name="crAmount" member="CR_AMOUNT" block="JE_DATA" validation="server" maxlength="15" minvalue="999,999,999.99-" maxvalue="999,999,999.99 " datatype="Number" formatmask="999G999G999D99MI" />
+          </viewheader>
+          <totals>
+            <group>
+                <total ref="accountBalance" label="Total" />
+                <total ref="drAmount" name="drTotal" type="member" block="JE_DATA" member="DR_TOTAL" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" validation="server" />
+                <total ref="crAmount" name="crTotal" type="member" block="JE_DATA" member="CR_TOTAL" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" validation="server" />
+            </group>
+          </totals>
+        </gridview>
+      </panel>
+      <panel width="100%" style="ui-button-container-right">
+        <lovdropdown label="jeHeader_approvalChain_label" name="approvalChain" style="TEXT_ITEM" width="122px" menu="EDIT" member="APPROVAL_CHAIN" block="JE_HEADER" maxlength="15" datatype="String" />
+      </panel>          
+    </framepanel>
+  </panel>
+</config>

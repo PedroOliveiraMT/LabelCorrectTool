@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="SSUTL01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Ssutl01a.Ssutl01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Ssutl01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Ssutl01a.Services.Ssutl01aServices</services>
+    <packages>
+      <!--<package name="FORM">Alio.Forms.Ssutl01a.Services.PropClassForm</package>--> 
+		 <!--<package name="VALIDATE_ACCOUNT">Alio.Common.Parts.PkgValidateAccount</package>-->
+    </packages>
+    <attachedLibraries>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="SSUTL01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Ssutl01a.Controllers.Ssutl01aTaskController</taskController>
+  <blockControllers>
+    <block name="SECURITY_BLOCK">Alio.Forms.Ssutl01a.Controllers.SecurityBlockController</block>
+  </blockControllers>
+	<customProperties>
+		<property name="version">1</property>
+		<property name="changelog">
+			<![CDATA[
+			PROCEDURE change_history IS
+  /*
+  09/26/16  psr  alio-11584  17.2    Added WNFI Erase and Default_Value calls for global.run_program variable.
+                                     Created common procedure to Validate Counter Key called by Key_Enter and WBP trigger
+                                     with a different Counter Key algorithm.
+  10/12/16  psr  alio-11584  17.2    Changed Counter Key algorithm from JAG's to Linsey's pi.
+  05/08/17  psr  alio-15253  17.4    Changed short cut number
+  03/16/18  mfl  alio-7619   18.4    Changed the Note on the top of the form from "the support staff at Weidenhammer Systems Corp." to "your support representative".
+  08/31/18  dph  alio-16428  19.1    Change profile key calculation, display key to waiver users 
+  */
+BEGIN
+  Null;
+END;
+			]]>
+		</property>
+	</customProperties>
+</task>

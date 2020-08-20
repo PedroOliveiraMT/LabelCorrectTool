@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="FJENT01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Fjent01a.Fjent01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Fjent01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Fjent01a.Services.Fjent01aServices</services>
+    <packages>
+      <package name="VALIDATE_ACCOUNT">Alio.Common.Parts.PkgValidateAccount</package>
+      <package name="ACCOUNTING_ARRAY">Alio.Common.Parts.PkgAccountingArray</package> 
+      <package name="HOLD">Alio.Forms.Fjent01a.Services.PkgHold</package> 
+      <!--<package name="CALENDAR_FORM">Alio.Forms.Fjent01a.Services.PropClassCalendarForm</package> 
+      <package name="FORM">Alio.Forms.Fjent01a.Services.PropClassForm</package>--> 
+    </packages>
+    <attachedLibraries>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="SCLA01A.Library.Config.xml"/>
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="FJENT01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Fjent01a.Controllers.Fjent01aTaskController</taskController>
+  <blockControllers>
+    <block name="JE_HEADER">Alio.Forms.Fjent01a.Controllers.JeHeaderController</block>
+    <block name="JE_DATA">Alio.Forms.Fjent01a.Controllers.JeDataController</block>
+    <block name="BATCH_NO_BLOCK">Alio.Forms.Fjent01a.Controllers.BatchNoBlockController</block>
+    <!--<block name="DATE_CONTROL_BLOCK">Alio.Forms.Fjent01a.Controllers.DateControlBlockController</block>
+    <block name="DATE_BUTTON_BLOCK">Alio.Forms.Fjent01a.Controllers.DateButtonBlockController</block>-->
+  </blockControllers>
+  <menuControllers>
+    <menu name="EDIT">Alio.Forms.Fjent01a.Controllers.EditContextController</menu>
+  </menuControllers>
+
+  <!-- custom properties -->
+  <customProperties>
+    <property name="version">1</property>
+    <property name="changelog">
+      <![CDATA[
+-- 05/21/12         NJA  Alio-307 Checked and if necessary changed the variable sizes/types of batch_no, batch_year, account_id, account_no, po_no, reference_no, vendor_no, check_key, check_no 
+-- 10/23/12         NJA   ALIO-7410 recommitting due to a missed commit in 6i 
+ cec  12/14/12  alio-7444  -re-inherited validate_account from idi_lib to recognize trans driver validation correction 
+ NJA   02/21/14    Alio-10283  - Expanded teh size of line_no from 6 to 7 
+ klb   09/04/14    alio-3074   - Validate journals against budget based on JOURNAL_BUDGET_CHECK profile 
+                               - WNFI retrieve above profiles.     
+                               -  Subclass IDI-Lib Component - BUDGET_OVERRIDE (includes program unit - VALIDATE_BUDGET 
+                                  and alerts including over_budget_no_override. VALIDATE_BUDGET determines when amount should be validated 
+                                  and displays appropriate Insufficent Funds/Override message in the alert displayed. 
+                               - Added: parameter.journal_budget_check and program unit journal_budget_check. 
+                               - journal_budget_check calls new function fjent01a_debit_credit_amt_ (reverse amount when needed) 
+                                       and library program unit validate_budget.  
+                               - Modified je_data triggers: pre insert, pre-update to call.journal_budget_check 
+  klb   09/05/14    ALIO-3074   - Changed database function name to FJENT01A_AMT_VALIDATE_BUDGET instead of FJENT01A_CREDIT_DEBIT_AMT.                              
+ cec  12/03/14  alio-3074  -changed balance check functionality to check the balance in the wvr trigger instead of pre-insert and pre-update triggers 
+                and to use the array balance checking instead of just the validate budget program unit so that a running total 
+                is kept for the account balance. 
+                -changed dr and cr amount fields to not allow negative values 
+ cec  12/12/14        -reinherit accounting_array 
+    12/29/14        -changed journal_budget_check to decrease old account amount but flag it as validated 
+    12/31/14        -changed journal_budget_check to validate full amount when account id is changed 
+    01/28/15        -changed journal_budget_check to validate liability accounts for debits instead of credits 
+    02/03/15        -reinherit idi_lib budget_override 
+    02/23/15        -reinherit idi_lib budget_override 
+ wjk  03/23/15  alio-12166 15.4  added current account balance 
+ NJA   04/13/15    alio-12797  15.4    added the pre_query trigger to je_data 
+ wjk  05/15/15  alio-12166 15.4  added pre_payable to account balance calculation 
+ NJA   05/28/15    alio-12797  15.4    corrected the default where clause 
+       06/01/15                        -Added the pre_insert/pre_update validation to DR_AMOUNT and CR_AMOUNT if the profile is set to disallow negatives 
+ DPH   06/03/15    alio-13043  16.1   set account balance for type 77 (WIP) 
+ DPH   08/03/15    alio-3109   16.1   add code in post insert and post update triggers to build an array of references that need approval
+                                      in the post form trigger - loop through the array and call the approvals
+       09/02/15                       fixed view go item  
+DPH    12/31/15    alio-13043         call common plsql funciton fabal01a_avail_balance to get balance amounts
+DPH    01/19/17    alio-14278 17.3    Add display_reference_no and overlay reference_no conditionally show order_no if processing by order                                         
+DPH    02/13/17    alio-15017 17.4    in the account_no key list val and wvi trigger reset account no if account_id is not valid 
+                                      also changed this forms account_lookup program unit to stop them if they pick an invalid account 
+                                      if this works it should be applied to the library
+DPH    03/08/17    alio-15017 17.4    Added nvls around the amounts in the je_data when-remove-record trigger
+psr    06/01/17    alio-15301 18.1    Added assignment in je_header.display_reference_no WVI trigger :je_header.reference_no := :je_header.display_reference_no to provide FAS.JE_HEADER PK
+                                      Required when reference_no is hand keyed.
+psr    06/12/17    alio-15315 18.1    Removed display_reference_no from layout. No longer using display_reference_no and therefore alio-15301 change.
+                                      In WNFI using USE_WHS_ORDER_NO_FOR_JOURNAL_REF profile to control use of whs_order_no or Reference no assignment button and field.
+                                      Commented display_reference_no code in triggers Pre-Query and Post-Query je_header block, WBP je_header.assign_reference and WVI je_header.display_reference_no
+psr    06/13/17    alio-15315 18.1    Changed WNFI using USE_WHS_ORDER_NO_FOR_JOURNAL_REF profile to control use of WHS_ORDER_NO only.
+                                      Reference no assignment button and field will always be visible and enabled.
+psr    06/22/17    alio-15391 18.1    In JE_DATA WVR added If to Raise form_trigger_failure if Account No is invalid.
+                                      Commented Nulling of Account No in validate_account.
+psr    07/31/17    alio-15391 18.1    Added :Parameter.SHOW_MESSAGE to avoid message showing multiple times in JE_DATA wvr, Form Key-F2 and Controls.Button_03 wbp triggers.
+                                      Added in JE_DATA wrr :je_data.account_id <> -1 condition to bypass error when calling fjent01a_amt_validate_budget_ with -1 account_id
+psr    08/11/17    alio-15391 18.1    Commented :Parameter.SHOW_MESSAGE related code.  This method was not acceptable.
+mfl    07/17/18    alio-14824 19.1    Added checkbox to form - Ready for Approval.  If the profile_key JOURNAL_APPROVAL is not set to Y, then this new field will not show.
+                                      If the profile_key is set to Y, then if the Ready for Approval box is checked, the release_flag in je_header will be set to Y, otherwise will
+                                      be set to N.
+mfl    08/02/18    alio-14824 19.1    In post_query trigger, if the approval_status is EN or RQ but the release flag is not Y, then display the status
+                                      of Pending Release.
+mfl    10/12/18    alio-14830 19.2    Added approval chain LOV to form to allow user to specify an approval chain. 
+mfl    01/17/19    alio-16811 19.4    Added a dummy navigable field in the BATCH_NO_BLOCK block in order to eliminate the 'No navigable items in destination block' error.
+mfl    02/08/19    alio-16811 19.4    Corrected tabbing order of fields on form.  Tabbing order should be:  ref#, date, desc, account no, amounts.
+mfl    05/10/19    alio-16811 19.4    Fixed navigation error where if you are in the reference no field and do shift/tab, the calendar LOV would come up
+                                      and then you could not exist out of it.
+dph    12/23/19    alio-17304 20.3		Add ability to export to spreadsheet.    
+      ]]>
+    </property>
+  </customProperties>
+</task>

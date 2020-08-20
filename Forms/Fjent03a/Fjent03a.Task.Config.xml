@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="FJENT03A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Fjent03a.Fjent03aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Fjent03aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Fjent03a.Services.Fjent03aServices</services>
+    <packages>
+      <package name="HOLD">Alio.Forms.Fjent03a.Services.PkgHold</package> 
+      <package name="VALIDATE_ACCOUNT">Alio.Common.Parts.PkgValidateAccount</package>
+      <package name="ACCOUNTING_ARRAY">Alio.Common.Parts.PkgAccountingArray</package> 
+      <!--<package name="FORM">Alio.Forms.Fjent03a.Services.PropClassForm</package>--> 
+    </packages>
+    <attachedLibraries>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+      <libraryConfiguration config="SCLA01A.Library.Config.xml"/>
+      <!--<libraryConfiguration config="CALENDAR.Library.Config.xml"/>
+      <libraryConfiguration config="WEBUTIL.Library.Config.xml"/>-->
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="FJENT03A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Fjent03a.Controllers.Fjent03aTaskController</taskController>
+  <blockControllers>
+    <block name="RECUR_JE_HEADER">Alio.Forms.Fjent03a.Controllers.RecurJeHeaderController</block>
+    <block name="RECUR_JE_DATA">Alio.Forms.Fjent03a.Controllers.RecurJeDataController</block>
+    <block name="DESC_BUTTONS">Alio.Forms.Fjent03a.Controllers.DescButtonsController</block>
+    <block name="BATCH_NO_BLOCK">Alio.Forms.Fjent03a.Controllers.BatchNoBlockController</block>
+    <block name="HOLD">Alio.Forms.Fjent03a.Controllers.HoldController</block>
+    <!--<block name="CONTROLS">Alio.Forms.Fjent03a.Controllers.ControlsController</block>
+    <block name="DATE_CONTROL_BLOCK">Alio.Forms.Fjent03a.Controllers.DateControlBlockController</block>
+    <block name="DATE_BUTTON_BLOCK">Alio.Forms.Fjent03a.Controllers.DateButtonBlockController</block>-->
+  </blockControllers>
+  <menuControllers>
+    <menu name="EDIT">Alio.Forms.Fjent03a.Controllers.EditContextController</menu>
+  </menuControllers>
+
+  <!-- custom properties -->
+  <customProperties>
+    <property name="version">1</property>
+    <property name="changelog">
+      <![CDATA[
+      Purpose: CHANGE_HISTORY is used to retain a history of changes made to this form that can not be documented elsewhere 
+    
+Date      Author       Ref No.    Description 
+11-30-07  KLB          043957     Resequence RECUR_JE_DATA.LINE_NO causes Ora-1 duplicate value in primary index 
+                                  because existing records not yet updated may have the same LINE_NO value 
+                                  of new records being added or updated. 
+                                  Program unit set_primary_key_status addedto enable and disable primary key 
+                                  WHEN-NEW-FORM-INSTANCE trigger changed to DISABLE pk using set_primary_key_status. 
+                                  POST-FORM trigger changed to ENABLE pk using set_primary_key_status. 
+                                  Create Journal WHEN-BUTTON-PRESSED trigger changed to display message when Ora-1 encountered. 
+                                      
+6/26/08  DPH            45596      Change bank_no to varchar2 
+02/07/11 KLB            alio-3421  Most business users do not have permssions to enable/disable 
+                                    primary key statements.   This was causing 
+07/12/11 oel       alio-3461  changed get_account_no function to check if account is active and raised error if not. this function is called by 
+                              a post form trigger for the recur je data block. 
+03/16/12 nja      alio-2974  Change the sort order on the recurring #LOV so that it will sort by 0-9 then a-z 
+  
+  
+07/23/12 nja            alio-307    Checked and if necessary changed the variable sizes/types of batch_no, batch_year, account_id, account_no, po_no, reference_no, vendor_no, check_key, check_no 
+                  -Removed the to_number from all instances of batch_no 
+09/04/12 nja                        -Revisisted for missed changes  
+09/20/12 nja            alio-2974   Added an order_by clause to the RECUR_JE_HEADER block                  
+12/04/12 rdh            alio-7590   modified journal description in header and main to have a maximum length of 40 
+12/14/12 cec   alio-7444  -re-inherited validate_account from idi_lib to recognize trans driver validation correction 
+02/21/14 NJA      alio-10283  -Expanded line no for je_data 
+03/12/14 NJA      Alio-10283  -Expanded the line no for fas.recur_je_data 
+09/08/14  klb     alio-3074   - Validate journals against budget based on JOURNAL_BUDGET_CHECK profile. WNFI retrieve JOURNAL_BUDGET_CHECK profile.     
+                                -  Subclass IDI-Lib Component - BUDGET_OVERRIDE (includes program unit - VALIDATE_BUDGET 
+                                  and alerts including over_budget_no_override. VALIDATE_BUDGET determines when amount should be validated 
+                                  and displays appropriate Insufficent Funds/Override message in the alert displayed. 
+                                - Added: parameter.journal_budget_check and program unit journal_budget_check. 
+                                - journal_budget_check calls new function fjent01a_debit_credit_amt_ (reverse amount when needed) 
+                                        and library program unit validate_budget.  
+                                - Modified je_data triggers: pre insert, pre-update to call.journal_budget_check 
+                                - Added msg_debug and message_display 
+cec  12/03/14  alio-3074  -changed balance check functionality to check the balance in the create journals button instead of pre-insert and pre-update triggers 
+              and to use the array balance checking instead of just the validate budget program unit so that a running total 
+              is kept for the account balance.  The balance check needs to occur when actual journals are created, not the recurring record. 
+              -changed dr and cr amount fields to not allow negative values 
+cec  12/14/14        -reinherit accounting_array 
+              -correct journal_budget_check to match fjent01a.fmx   
+cec  12/18/14        -correct recur_journal_data.when_remove_record trigger to not update accounting array if the record status is QUERY 
+  12/29/14        -changed journal_budget_check to decrease old account amount but flag it as validated 
+  12/31/14        -changed journal_budget_check to validate full amount when account id is changed 
+  01/28/15        -changed journal_budget_check to validate liability accounts for debits instead of credits 
+  02/03/15        -reinherit idi_lib budget_override 
+  02/23/15        -reinherit idi_lib budget_override 
+  02/27/15        -moved call to accounting_array.validate_budget from journal_budget_check to outside the loop that calls journal_budget_check from 
+              create_journal.wbp trigger so that all array elements are updated prior to validating the account balances 
+wjk  03/23/15  alio-12166 15.4  added current account balance 
+NJA   04/13/15    alio-12797  15.4    added the pre_query trigger to recur_je_data 
+wjk  05/15/15  alio-12166 15.4  added pre_payable to account balance calculation 
+NJA   05/25/15    alio-12797  15.4    corrected the default where clause for recur_je_data set in the pre_query 
+DPH   08/03/15    alio-3109   16.1    added code to call approvals
+DPH   12/31/15    13043       16.3    Added call to plsql proc to the get_balance program unit
+mfl   10/12/18    alio-14830  19.2    Added approval chain LOV to form to allow user to specify an approval chain.  
+mfl   12/26/18    alio-14337  19.3    Expanded the width of the screen in order to expand the account no field so 40 characters will display without having to scroll to the right.                                                                                                                  
+mfl   02/11/19    alio-16668  19.4    Added a Ready for Approval checkbox which will be stored in recur_journal_header.release_flag.  When users click the create button,
+                                      the batch will be placed in ready for approval mode and they do not have to go into journal entry to click the Ready for Approval checkbox.
+      ]]>
+    </property>
+  </customProperties>
+</task>

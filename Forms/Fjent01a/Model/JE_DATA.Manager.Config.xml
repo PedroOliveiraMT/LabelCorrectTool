@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="JE_DATA" logicalName="JeData" targetTableName="FAS.JE_DATA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="ACCOUNT_NO" logicalName="AccountNo" type="System.String" virtual="true"/>
+		<item name="DR_AMOUNT" logicalName="DrAmount" type="System.Decimal" virtual="true"/>
+		<item name="CR_AMOUNT" logicalName="CrAmount" type="System.Decimal" virtual="true"/>
+		<item name="REFERENCE_NO" logicalName="ReferenceNo" type="System.String" physicalName="REFERENCE_NO">
+			<copyValueFrom>
+				<item name="REFERENCE_NO" businessObject="JE_HEADER"/>
+			</copyValueFrom>
+		</item>
+		<item name="LINE_NO" logicalName="LineNo" type="System.Decimal" physicalName="LINE_NO"/>
+		<item name="JOURNAL_AMOUNT" logicalName="JournalAmount" type="System.Decimal" physicalName="JOURNAL_AMOUNT"/>
+		<item name="ACCOUNT_ID" logicalName="AccountId" type="System.Decimal" physicalName="ACCOUNT_ID"/>
+		<item name="DEBIT_CREDIT_FLAG" logicalName="DebitCreditFlag" type="System.Decimal" physicalName="DEBIT_CREDIT_FLAG"/>
+		<item name="DR_TOTAL" logicalName="DrTotal" type="System.Decimal" virtual="true">
+      <value>
+        <datasetExpression>SUM(DrAmount)</datasetExpression>
+      </value>
+		</item>
+		<item name="CR_TOTAL" logicalName="CrTotal" type="System.Decimal" virtual="true">
+			<value>
+        <datasetExpression>SUM(CrAmount)</datasetExpression>
+			</value>
+		</item>
+		<item name="ACCOUNT_DESC" logicalName="AccountDesc" type="System.String" virtual="true"/>
+		<item name="HOLD_ACCOUNT_ID" logicalName="HoldAccountId" type="System.Decimal" virtual="true"/>
+		<item name="HOLD_JOURNAL_AMOUNT" logicalName="HoldJournalAmount" type="System.Decimal" virtual="true"/>
+		<item name="HOLD_DR_AMOUNT" logicalName="HoldDrAmount" type="System.Decimal" virtual="true"/>
+		<item name="HOLD_CR_AMOUNT" logicalName="HoldCrAmount" type="System.Decimal" virtual="true"/>
+		<item name="ACCOUNT_BALANCE" logicalName="AccountBalance" type="System.Decimal" virtual="true"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjent01a.Model.JeDataManager</managerClass>
+	<adapterClass>Alio.Forms.Fjent01a.Model.JeDataAdapter</adapterClass>
+	<defaultOrderByClause><![CDATA[line_no]]></defaultOrderByClause>
+	<queryAllRecords>true</queryAllRecords>
+	<pagination enabled="true" maximumRows="20" />
+</manager>

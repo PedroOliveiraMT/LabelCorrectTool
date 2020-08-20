@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="JE_HEADER" logicalName="JeHeader" targetTableName="FAS.JE_HEADER" QueryDataSourceName="FAS.JE_HEADER"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="REFERENCE_NO" logicalName="ReferenceNo" type="System.String" physicalName="REFERENCE_NO"/>
+		<item name="BATCH_YEAR" logicalName="BatchYear" type="System.String" physicalName="BATCH_YEAR"/>
+		<item name="BATCH_NO" logicalName="BatchNo" type="System.String" physicalName="BATCH_NO"/>
+		<item name="BATCH_DATE" logicalName="BatchDate" type="System.DateTime" virtual="true"/>
+		<item name="REQUESTOR" logicalName="Requestor" type="System.String" virtual="true"/>
+		<item name="USER_NAME" logicalName="UserName" type="System.String" virtual="true" queryOnly="true"/>
+		<item name="DISAPPROVAL_MESSAGE" logicalName="DisapprovalMessage" type="System.String" virtual="true"/>
+		<item name="JOURNAL_DESCRIPTION" logicalName="JournalDescription" type="System.String" physicalName="JOURNAL_DESCRIPTION"/>
+		<item name="USER_ID" logicalName="UserId" type="System.String" virtual="true" queryOnly="true"/>
+		<item name="ACCOUNTING_PERIOD" logicalName="AccountingPeriod" type="System.String" virtual="true"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjapp01a.Model.JeHeaderManager</managerClass>
+	<adapterClass>Alio.Forms.Fjapp01a.Model.JeHeaderAdapter</adapterClass>
+	<defaultOrderByClause><![CDATA[batch_year, batch_no,reference_no]]></defaultOrderByClause>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="OK_CANCEL" logicalName="OkCancel"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	<kind>SimpleBusinessObject</kind>
+	<items>
+		<item name="SELECT_ALL" logicalName="SelectAll" type="System.String">
+			<value>
+				<constant>N</constant>
+			</value>
+		</item>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjpst01a.Model.OkCancel</managerClass>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

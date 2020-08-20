@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/ValueSet.Config.xsd">
+  <valueSet name="APPROVAL_CHAINS">
+	<columns>
+		<column name="APPROVAL_CHAIN" type="String" size="15"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT(APPROVAL_CHAIN) FROM SHR.APPROVAL_LINK ORDER BY APPROVAL_CHAIN
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+  </valueSet>
+</valueSets>

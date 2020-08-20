@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <menu name="EDIT">
+    <menuitem name="CUT" label="Cut">
+    </menuitem>
+    <menuitem name="COPY" label="Copy">
+    </menuitem>
+    <menuitem name="PASTE" label="Paste">
+    </menuitem>
+    <menuitem name="CLEAR" label="Clear">
+    </menuitem>
+    <menuitem name="SEP_O1" type="separator" />
+    <menu name="ITEM_PROPERTIES" label="Item Properties" menu="">
+    </menu>
+    <menuitem name="FORM_PROPERTIES" label="Form Properties">
+    </menuitem>
+    <menuitem name="SEP_02" type="separator" />
+    <menuitem name="APPROVE_ITEM" label="Approve Item" type="check">
+    </menuitem>
+  </menu>
+</config>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <data name="securityBlock_securityDate_prompttext">
+    <value>Date</value>
+  </data>
+  <data name="securityBlock_securityKey_prompttext">
+    <value>Security Key</value>
+  </data>
+  <data name="securityBlock_counterKey_prompttext">
+    <value>Counter Key</value>
+  </data>
+  <data name="securityBlock_process_label">
+    <value>Process</value>
+  </data>
+  <data name="securityBlock_waiverKey_prompttext">
+    <value>Waiver Key</value>
+  </data>
+  <data name="ssutl01a_title">
+    <value>Security Program - SSUTL01A</value>
+  </data>
+  <data name="canvas1_text46_text">
+    <value>Note: You will need to contact your support representative for the proper counter key.</value>
+  </data>
+  <data name="noRecord_title">
+    <value>Choose a mode</value>
+  </data>
+  <data name="noRecord_text">
+    <value>There were no records found - Please choose a mode</value>
+  </data>
+  <data name="noRecord_btn1_label">
+    <value>Find</value>
+  </data>
+  <data name="noRecord_btn2_label">
+    <value>New</value>
+  </data>
+  <data name="onMessage_btn1_label">
+    <value>OK</value>
+  </data>
+  <data name="onErrorCaution_btn1_label">
+    <value>OK</value>
+  </data>
+  <data name="onErrorStop_btn1_label">
+    <value>OK</value>
+  </data>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0</value>
+  </resheader></root>

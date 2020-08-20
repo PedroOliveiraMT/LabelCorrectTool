@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal" title="postJeData_title">
+  <include src="Alio/Forms/Fjpst01a/views/PanelPostJeData">
+  </include>
+</window>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="BATCH_NO_BLOCK" logicalName="BatchNoBlock"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	<kind>SimpleBusinessObject</kind>
+	<items>
+		<item name="BATCH_DATE" logicalName="BatchDate" type="System.DateTime"/>
+		<item name="BATCH_YEAR" logicalName="BatchYear" type="System.String"/>
+		<item name="BATCH_NO" logicalName="BatchNo" type="System.String"/>
+		<item name="ACCOUNTING_PERIOD" logicalName="AccountingPeriod" type="System.String"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjent03a.Model.BatchNoBlock</managerClass>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

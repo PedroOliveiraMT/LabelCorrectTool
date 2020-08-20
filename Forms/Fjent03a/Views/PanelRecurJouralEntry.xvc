@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="RECUR_JE_DATA" />
+  <interactionblock name="RECUR_JE_HEADER" />
+  <interactionblock name="BATCH_NO_BLOCK" />
+  <interactionblock name="DESC_BUTTONS" />
+  <panel width="100%" id="pnlRecurJouralEntry" name="RECUR_JOURAL_ENTRY" class="ContentCanvas">
+    <framepanel width="100%">
+      <panel width="100%">
+        <gridlayout cols="3" orientation="horizontal">
+          <gridcell>
+              <textfield label="batchNoBlock_batchYear_prompttext" name="batchYear" style="DISPLAY_TEXT_ITEM" width="30px" member="BATCH_YEAR" block="BATCH_NO_BLOCK" maxlength="2" datatype="String" />
+          </gridcell>
+          <gridcell>
+              <textfield label="batchNoBlock_batchNo_prompttext" name="batchNo" style="DISPLAY_TEXT_ITEM" width="64px" member="BATCH_NO" block="BATCH_NO_BLOCK" maxlength="7" datatype="String" />
+          </gridcell>
+          <gridcell>
+              <checkbox label="recurJeHeader_readyForApproval_label" unmatchedvalue="N" value="Y" falsevalue="N" name="readyForApproval" style="CHECK_BOX" width="116px" member="READY_FOR_APPROVAL" block="RECUR_JE_HEADER" maxlength="1" />
+          </gridcell>
+          <gridcell colspan="2">
+            <component>
+              <button label="recurJeHeader_assignRecurJournalId_label" name="assignRecurJournalId" style="BUTTON" member="ASSIGN_RECUR_JOURNAL_ID" block="RECUR_JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+              <lovdropdown name="recurJournalId" style="TEXT_ITEM" width="101px" member="RECUR_JOURNAL_ID" block="RECUR_JE_HEADER" maxlength="8" datatype="String" />
+              <textbox name="recurJournalDesc" style="TEXT_ITEM" width="260px" label="recurJeHeader_recurJournalDesc_label" member="RECUR_JOURNAL_DESC" block="RECUR_JE_HEADER" maxlength="40" datatype="String" />
+            </component>
+          </gridcell>
+          <gridcell rowspan="2">
+              <radiogroup id="descriptionType" name="descriptionType" style="RADIO_BUTTON" navigable="false" member="DESCRIPTION_TYPE" block="DESC_BUTTONS" maxlength="30" datatype="String" orientation="vertical">
+                <radiobox group="descriptionType" labelposition="left" labelalign="start" label="Use My Own Desc" value="none" name="rb_DescriptionType_None" style="DEFAULT" width="110px" height="16px" />
+                <radiobox group="descriptionType" labelposition="left" labelalign="start" label="Use Batch Desc" value="batch" name="rb_DescriptionType_Batch" style="DEFAULT" width="98px" height="16px" />
+                <radiobox group="descriptionType" labelposition="left" labelalign="start" label="Repeat Desc" value="repeat" name="rb_DescriptionType_Repeat" style="DEFAULT" width="86px" height="15px" />
+              </radiogroup>
+          </gridcell>
+          <gridcell>
+            <component>
+                <button label="recurJeHeader_assignReference_label" name="assignReference" style="BUTTON" member="ASSIGN_REFERENCE" block="RECUR_JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+                <textbox name="referenceNo" style="TEXT_ITEM" width="101px" member="REFERENCE_NO" block="RECUR_JE_HEADER" maxlength="8" datatype="String" />
+                <textbox name="journalDescription" style="TEXT_ITEM" width="260px" label="recurJeHeader_journalDescription_label" member="JOURNAL_DESCRIPTION" block="RECUR_JE_HEADER" maxlength="40" datatype="String" />
+            </component>
+			  <gridcell>
+                <calendar label="recurJeHeader_journalDate_prompttext" name="journalDate" style="DATE" width="120px" tooltip="recurJeHeader_journalDate_tooltip" member="JOURNAL_DATE" block="RECUR_JE_HEADER" maxlength="10" datatype="Date" formatmask="MM/DD/YYYY">
+                  <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+                </calendar>
+			  </gridcell>
+          </gridcell>
+        </gridlayout>
+      </panel>
+      <panel width="100%" style="ui-button-container-right">
+        <button label="recurJeHeader_createJournal_label" name="createJournal" style="BUTTON" member="CREATE_JOURNAL" block="RECUR_JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+        <button label="recurJeHeader_zeroAmounts_label" name="zeroAmounts" style="BUTTON" member="ZERO_AMOUNTS" block="RECUR_JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+      </panel>
+    </framepanel>
+        <!-- <button name="showLov" style="LIST_BUTTON" left="411px" top="2px" width="23px" height="23px" icon="list" member="SHOW_LOV" block="RECUR_JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" /> -->
+    <framepanel width="100%" name="rect14">
+      <panel width="100%">
+        <gridview width="100%" name="grdRecurJeData" block="RECUR_JE_DATA">
+          <viewheader>
+            <viewcolumn width="52px" label="recurJeData_lineNo_label" name="lineNo" style="DEFAULT" labelstyle="DEFAULT" member="LINE_NO" block="RECUR_JE_DATA" validation="server" maxlength="7" datatype="Number" />
+            <viewcolumn width="247px" label="recurJeData_accountNo_label" name="accountNo" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_NO" block="RECUR_JE_DATA" validation="server" maxlength="50" datatype="String">
+              <editor>
+                <lovdropdown action="WHEN-BUTTON-PRESSED" />
+              </editor>
+            </viewcolumn>
+          <!--  <viewcolumn width="19px" label="" name="showLov1" style="DEFAULT" labelstyle="DEFAULT" icon="qtdown" member="SHOW_LOV" block="RECUR_JE_DATA" validation="server" maxlength="30">
+              <editor>
+                <button action="WHEN-BUTTON-PRESSED" />
+              </editor>
+            </viewcolumn> -->
+            <viewcolumn width="93px" label="recurJeData_accountBalance_label" name="accountBalance" member="ACCOUNT_BALANCE" block="RECUR_JE_DATA" validation="server" maxlength="15" datatype="Number" formatmask="999G999G999G999D99MI" />
+            <viewcolumn width="93px" label="recurJeData_drAmount_label" name="drAmount" style="DEFAULT" labelstyle="DEFAULT" textalign="right" member="DR_AMOUNT" block="RECUR_JE_DATA" validation="server" maxlength="15" minvalue="999,999,999.99-" maxvalue="999,999,999.99 " datatype="Number" formatmask="999G999G999D99MI" />
+            <viewcolumn width="93px" label="recurJeData_crAmount_label" name="crAmount" style="DEFAULT" labelstyle="DEFAULT" textalign="right" member="CR_AMOUNT" block="RECUR_JE_DATA" validation="server" maxlength="15" minvalue="999,999,999.99-" maxvalue="999,999,999.99 " datatype="Number" formatmask="999G999G999D99MI" />
+            <viewcolumn width="189px" label="recurJeData_journalDescription_label" name="journalDescription1" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_DESCRIPTION" block="RECUR_JE_DATA" validation="server" maxlength="40" datatype="String" />
+          </viewheader>
+          <totals>
+            <group>
+                <total ref="accountBalance" label="Total" />
+                <total ref="drAmount" name="drTotal" type="member" block="RECUR_JE_DATA" member="DR_TOTAL" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" validation="server" />
+                <total ref="crAmount" name="crTotal" type="member" block="RECUR_JE_DATA" member="CR_TOTAL" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" validation="server" />
+            </group>
+        </totals>
+        </gridview>
+      </panel>
+      <panel width="100%" style="ui-button-container-right">
+        <lovdropdown label="recurJeHeader_approvalChain_label" name="approvalChain" style="DEFAULT" width="122px" menu="EDIT" member="APPROVAL_CHAIN" block="RECUR_JE_HEADER" maxlength="15" datatype="String" />
+        <!-- <button name="approvalChainButton" style="DEFAULT" width="19px" icon="qtdown" menu="" member="APPROVAL_CHAIN_BUTTON" block="RECUR_JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" /> -->
+        <button label="recurJeData_resequence_label" name="resequence" style="DEFAULT" member="RESEQUENCE" block="RECUR_JE_DATA" validation="server" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+      </panel>
+    </framepanel>
+  </panel>
+</config>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="FJAPP01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Fjapp01a.Fjapp01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Fjapp01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Fjapp01a.Services.Fjapp01aServices</services>
+    <!--<packages>
+      <package name="CALENDAR_FORM">Alio.Forms.Fjapp01a.Services.PropClassCalendarForm</package> 
+      <package name="FORM">Alio.Forms.Fjapp01a.Services.PropClassForm</package> 
+    </packages>-->
+    <attachedLibraries>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+      <!--<libraryConfiguration config="CALENDAR.Library.Config.xml"/>-->
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <!--<libraryConfiguration config="WEBUTIL.Library.Config.xml"/>-->
+      <libraryConfiguration config="SCLA01A.Library.Config.xml"/>
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="FJAPP01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Fjapp01a.Controllers.Fjapp01aTaskController</taskController>
+  <blockControllers>
+    <block name="JE_HEADER">Alio.Forms.Fjapp01a.Controllers.JeHeaderController</block>
+    <block name="JE_DATA">Alio.Forms.Fjapp01a.Controllers.JeDataController</block>
+    <block name="JOURNAL_APPROVAL">Alio.Forms.Fjapp01a.Controllers.JournalApprovalController</block>
+    <!--<block name="CONTROLS">Alio.Forms.Fjapp01a.Controllers.ControlsController</block>
+    <block name="DATE_CONTROL_BLOCK">Alio.Forms.Fjapp01a.Controllers.DateControlBlockController</block>
+    <block name="DATE_BUTTON_BLOCK">Alio.Forms.Fjapp01a.Controllers.DateButtonBlockController</block>-->
+  </blockControllers>
+
+  <!-- custom properties -->
+  <customProperties>
+    <property name="version">1</property>
+    <property name="changelog">
+      <![CDATA[
+*************************************************************************************** 
+Change History Log 
+    
+  Date      Author  Reference   Ver      Change 
+  --------  ------  ----------  -------  -------------------------------------------------  
+  
+  07/28/15   DPH     alio-3109       	    Created form
+  09/11/15                               	Expand size of display account 
+  09/15/15                               	Hide user name
+  09/18/15                               	Shorten disapproval message     
+                                          added close_form to both wbp triggers
+  04/03/17   dph    alio-12046  v17.4      WNFI - Added :global.je_reference_no and code to use it
+  07/17/18   mfl    alio-14824  19.1       If the profile_key JOURNAL_APPROVAL is set to Y, then only allow approvals with a release flag (in je_header) of Y.
+  09/27/18   mfl    alio-16295  19.2       Added the user_id from fas.batches to display on the form.
+      ]]>
+    </property>
+  </customProperties>
+</task>

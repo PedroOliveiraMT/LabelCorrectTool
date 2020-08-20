@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="recurJeHeader_assignRecurJournalId_label" xml:space="preserve">
+    <value>Recurring</value>
+  </data>
+  <data name="recurJeHeader_recurJournalId_label" xml:space="preserve">
+    <value>Recurring Journal ID</value>
+  </data>
+  <data name="recurJeHeader_recurJournalId_hint" xml:space="preserve">
+    <value>Enter value for : RECUR_JOURNAL_ID</value>
+  </data>
+  <data name="recurJeHeader_recurJournalDesc_label" xml:space="preserve">
+    <value>Recurring Description</value>
+  </data>
+  <data name="recurJeHeader_recurJournalDesc_hint" xml:space="preserve">
+    <value>Enter value for : RECUR_JOURNAL_DESC</value>
+  </data>
+  <data name="recurJeHeader_assignReference_label" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="recurJeHeader_referenceNo_label" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="recurJeHeader_referenceNo_hint" xml:space="preserve">
+    <value>Enter value for : REFERENCE_NO</value>
+  </data>
+  <data name="recurJeHeader_journalDescription_label" xml:space="preserve">
+    <value>Reference Description</value>
+  </data>
+  <data name="recurJeHeader_journalDescription_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_DESCRIPTION</value>
+  </data>
+  <data name="recurJeHeader_journalDate_prompttext" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="recurJeHeader_journalDate_label" xml:space="preserve">
+    <value>Journal Date</value>
+  </data>
+  <data name="recurJeHeader_journalDate_tooltip" xml:space="preserve">
+    <value>Double-Click for Calendar</value>
+  </data>
+  <data name="recurJeHeader_journalDate_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_DATE</value>
+  </data>
+  <data name="recurJeHeader_zeroAmounts_label" xml:space="preserve">
+    <value>Zero Amounts</value>
+  </data>
+  <data name="recurJeHeader_createJournal_label" xml:space="preserve">
+    <value>Create Journal</value>
+  </data>
+  <data name="recurJeHeader_approvalChain_prompttext" xml:space="preserve">
+    <value>Approval Chain</value>
+  </data>
+  <data name="recurJeHeader_readyForApproval_label" xml:space="preserve">
+    <value>Ready for Approval</value>
+  </data>
+  <data name="recurJeData_lineNo_prompttext" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="recurJeData_lineNo_label" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="recurJeData_lineNo_hint" xml:space="preserve">
+    <value>Enter value for : LINE_NO</value>
+  </data>
+  <data name="recurJeData_accountNo_prompttext" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="recurJeData_accountNo_label" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="recurJeData_accountNo_hint" xml:space="preserve">
+    <value>Enter value for : ACCOUNT_NO</value>
+  </data>
+  <data name="recurJeData_accountBalance_prompttext" xml:space="preserve">
+    <value>Account Balance</value>
+  </data>
+  <data name="recurJeData_accountBalance_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_accountBalance_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="recurJeData_drAmount_prompttext" xml:space="preserve">
+    <value>Debit Amount</value>
+  </data>
+  <data name="recurJeData_drAmount_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_drAmount_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="recurJeData_crAmount_prompttext" xml:space="preserve">
+    <value>Credit Amount</value>
+  </data>
+  <data name="recurJeData_crAmount_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_crAmount_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="recurJeData_recurJournalId_label" xml:space="preserve">
+    <value>Recur Journal ID</value>
+  </data>
+  <data name="recurJeData_recurJournalId_hint" xml:space="preserve">
+    <value>Enter value for : RECUR_JOURNAL_ID</value>
+  </data>
+  <data name="recurJeData_journalAmount_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_journalAmount_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="recurJeData_accountId_label" xml:space="preserve">
+    <value>Account ID</value>
+  </data>
+  <data name="recurJeData_accountId_hint" xml:space="preserve">
+    <value>Enter value for : ACCOUNT_ID</value>
+  </data>
+  <data name="recurJeData_journalDescription_prompttext" xml:space="preserve">
+    <value>Journal Description</value>
+  </data>
+  <data name="recurJeData_journalDescription_label" xml:space="preserve">
+    <value>Journal Description</value>
+  </data>
+  <data name="recurJeData_journalDescription_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_DESCRIPTION</value>
+  </data>
+  <data name="recurJeData_debitCreditFlag_label" xml:space="preserve">
+    <value>Debit Credit Flag</value>
+  </data>
+  <data name="recurJeData_debitCreditFlag_hint" xml:space="preserve">
+    <value>Enter value for : DEBIT_CREDIT_FLAG</value>
+  </data>
+  <data name="recurJeData_drTotal_prompttext" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="recurJeData_resequence_label" xml:space="preserve">
+    <value>Resequence</value>
+  </data>
+  <data name="recurJeData_holdJournalAmount_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_holdJournalAmount_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="recurJeData_holdAccountId_label" xml:space="preserve">
+    <value>Account ID</value>
+  </data>
+  <data name="recurJeData_holdAccountId_hint" xml:space="preserve">
+    <value>Enter value for : ACCOUNT_ID</value>
+  </data>
+  <data name="recurJeData_holdDrAmount_prompttext" xml:space="preserve">
+    <value>Debit Amount</value>
+  </data>
+  <data name="recurJeData_holdDrAmount_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_holdDrAmount_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="recurJeData_holdCrAmount_prompttext" xml:space="preserve">
+    <value>Credit Amount</value>
+  </data>
+  <data name="recurJeData_holdCrAmount_label" xml:space="preserve">
+    <value>Journal Amount</value>
+  </data>
+  <data name="recurJeData_holdCrAmount_hint" xml:space="preserve">
+    <value>Enter value for : JOURNAL_AMOUNT</value>
+  </data>
+  <data name="descButtons_descriptionType_none_label" xml:space="preserve">
+    <value>Use My Own Desc</value>
+  </data>
+  <data name="descButtons_descriptionType_batch_label" xml:space="preserve">
+    <value>Use Batch Desc</value>
+  </data>
+  <data name="descButtons_descriptionType_repeat_label" xml:space="preserve">
+    <value>Repeat Desc</value>
+  </data>
+  <data name="batchNoBlock_batchDate_label" xml:space="preserve">
+    <value>Batch Date</value>
+  </data>
+  <data name="batchNoBlock_batchDate_hint" xml:space="preserve">
+    <value>Enter value for : BATCH_DATE</value>
+  </data>
+  <data name="batchNoBlock_showBal_label" xml:space="preserve">
+    <value>Show Balance</value>
+  </data>
+  <data name="batchNoBlock_batchYear_prompttext" xml:space="preserve">
+    <value>Batch Year</value>
+  </data>
+  <data name="batchNoBlock_batchNo_prompttext" xml:space="preserve">
+    <value>Batch</value>
+  </data>
+  <data name="batchNoBlock_batchNo_label" xml:space="preserve">
+    <value>Batch</value>
+  </data>
+  <data name="batchNoBlock_batchNo_hint" xml:space="preserve">
+    <value>Enter value for : BATCH_NO</value>
+  </data>
+  <data name="batchNoBlock_accountingPeriod_label" xml:space="preserve">
+    <value>Batch</value>
+  </data>
+  <data name="recurJournalEntry_title" xml:space="preserve">
+    <value>Recurring Journal Entries</value>
+  </data>
+  <data name="dateLovWindow_title" xml:space="preserve">
+    <value>Date List of Values</value>
+  </data>
+  <data name="recurJeHeader_title" xml:space="preserve">
+    <value>Recurring Journal Entries</value>
+  </data>
+  <data name="recurJeHeader_recurJournalId_title" xml:space="preserve">
+    <value>Recurring</value>
+  </data>
+  <data name="recurJeHeader_recurJournalDesc_title" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="recurJeHeader_journalDate_title" xml:space="preserve">
+    <value>Journal Date</value>
+  </data>
+  <data name="recurJeHeader_referenceNo_title" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="approvalChains_title" xml:space="preserve">
+    <value>Approval Chains</value>
+  </data>
+  <data name="approvalChains_approvalChain_title" xml:space="preserve">
+    <value>Approval Chain</value>
+  </data>
+  <data name="overBudgetNoOverride_btn1_label" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="overBudgetNoOverride_btn2_label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="accountAlert_btn1_label" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="accountAlert_btn2_label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="noRecord_title" xml:space="preserve">
+    <value>Choose a mode</value>
+  </data>
+  <data name="noRecord_text" xml:space="preserve">
+    <value>There were no records found - Please choose a mode</value>
+  </data>
+  <data name="noRecord_btn1_label" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="noRecord_btn2_label" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="zeroAmounts_text" xml:space="preserve">
+    <value>Are you sure you want to zero out all the journal amounts on the screen?</value>
+  </data>
+  <data name="zeroAmounts_btn1_label" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="zeroAmounts_btn2_label" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="onMessage_btn1_label" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="onErrorCaution_btn1_label" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="onErrorStop_btn1_label" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="overBudgetOverride_btn1_label" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="overBudgetOverride_btn2_label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+</root>

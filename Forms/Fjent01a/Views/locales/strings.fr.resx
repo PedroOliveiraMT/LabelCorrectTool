@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="jeHeader_assignReference_label" xml:space="preserve">
+    <value>Référence</value>
+  </data>
+  <data name="jeHeader_referenceNo_label" xml:space="preserve">
+    <value>Référence</value>
+  </data>
+  <data name="jeHeader_referenceNo_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: REFERENCE_NO</value>
+  </data>
+  <data name="jeHeader_journalDate_prompttext" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="jeHeader_journalDate_label" xml:space="preserve">
+    <value>Date du journal</value>
+  </data>
+  <data name="jeHeader_journalDate_tooltip" xml:space="preserve">
+    <value>Double-cliquez pour le calendrier</value>
+  </data>
+  <data name="jeHeader_journalDate_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_DATE</value>
+  </data>
+  <data name="jeHeader_journalDescription_prompttext" xml:space="preserve">
+    <value>La description</value>
+  </data>
+  <data name="jeHeader_journalDescription_label" xml:space="preserve">
+    <value>Description du journal</value>
+  </data>
+  <data name="jeHeader_journalDescription_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_DESCRIPTION</value>
+  </data>
+  <data name="jeHeader_readyForApproval_label" xml:space="preserve">
+    <value>Prêt pour approbation</value>
+  </data>
+  <data name="jeHeader_spreasdsheet_label" xml:space="preserve">
+    <value>Tableur</value>
+  </data>
+  <data name="jeHeader_approvalStatusDesc_prompttext" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="jeHeader_approvalStatusDesc_label" xml:space="preserve">
+    <value>Description du journal</value>
+  </data>
+  <data name="jeHeader_approvalStatusDesc_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_DESCRIPTION</value>
+  </data>
+  <data name="jeHeader_viewButton_label" xml:space="preserve">
+    <value>Vue</value>
+  </data>
+  <data name="jeHeader_batchYear_prompttext" xml:space="preserve">
+    <value>Année du lot</value>
+  </data>
+  <data name="jeHeader_batchNo_prompttext" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="jeHeader_batchNo_label" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="jeHeader_batchNo_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: BATCH_NO</value>
+  </data>
+  <data name="jeHeader_debitTotal_prompttext" xml:space="preserve">
+    <value>Total débit</value>
+  </data>
+  <data name="jeHeader_creditTotal_prompttext" xml:space="preserve">
+    <value>Total du crédit</value>
+  </data>
+  <data name="jeHeader_whsOrderNo_prompttext" xml:space="preserve">
+    <value>Ordre</value>
+  </data>
+  <data name="jeHeader_approvalChain_prompttext" xml:space="preserve">
+    <value>Chaîne d'approbation</value>
+  </data>
+  <data name="jeData_accountNo_prompttext" xml:space="preserve">
+    <value>Compte</value>
+  </data>
+  <data name="jeData_accountNo_label" xml:space="preserve">
+    <value>Compte</value>
+  </data>
+  <data name="jeData_accountNo_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: ACCOUNT_NO</value>
+  </data>
+  <data name="jeData_drAmount_prompttext" xml:space="preserve">
+    <value>Montant du débit</value>
+  </data>
+  <data name="jeData_drAmount_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_drAmount_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="jeData_crAmount_prompttext" xml:space="preserve">
+    <value>Montant du crédit</value>
+  </data>
+  <data name="jeData_crAmount_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_crAmount_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="jeData_referenceNo_label" xml:space="preserve">
+    <value>Référence</value>
+  </data>
+  <data name="jeData_referenceNo_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: REFERENCE_NO</value>
+  </data>
+  <data name="jeData_lineNo_label" xml:space="preserve">
+    <value>Ligne</value>
+  </data>
+  <data name="jeData_lineNo_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: LINE_NO</value>
+  </data>
+  <data name="jeData_journalAmount_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_journalAmount_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="jeData_accountId_label" xml:space="preserve">
+    <value>identifiant de compte</value>
+  </data>
+  <data name="jeData_accountId_hint" xml:space="preserve">
+    <value>Entrez une valeur pour: ACCOUNT_ID</value>
+  </data>
+  <data name="jeData_debitCreditFlag_label" xml:space="preserve">
+    <value>Débit Credit Flag</value>
+  </data>
+  <data name="jeData_debitCreditFlag_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: DEBIT_CREDIT_FLAG</value>
+  </data>
+  <data name="jeData_drTotal_prompttext" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="jeData_accountDesc_prompttext" xml:space="preserve">
+    <value>Description du compte</value>
+  </data>
+  <data name="jeData_holdAccountId_label" xml:space="preserve">
+    <value>identifiant de compte</value>
+  </data>
+  <data name="jeData_holdAccountId_hint" xml:space="preserve">
+    <value>Entrez une valeur pour: ACCOUNT_ID</value>
+  </data>
+  <data name="jeData_holdJournalAmount_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_holdJournalAmount_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="jeData_holdDrAmount_prompttext" xml:space="preserve">
+    <value>Montant du débit</value>
+  </data>
+  <data name="jeData_holdDrAmount_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_holdDrAmount_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="jeData_holdCrAmount_prompttext" xml:space="preserve">
+    <value>Montant du crédit</value>
+  </data>
+  <data name="jeData_holdCrAmount_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_holdCrAmount_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="jeData_accountBalance_prompttext" xml:space="preserve">
+    <value>Solde du compte</value>
+  </data>
+  <data name="jeData_accountBalance_label" xml:space="preserve">
+    <value>Montant du journal</value>
+  </data>
+  <data name="jeData_accountBalance_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: JOURNAL_AMOUNT</value>
+  </data>
+  <data name="batchNoBlock_batchDate_label" xml:space="preserve">
+    <value>Date du lot</value>
+  </data>
+  <data name="batchNoBlock_batchDate_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: BATCH_DATE</value>
+  </data>
+  <data name="batchNoBlock_batchNo_label" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="batchNoBlock_batchNo_hint" xml:space="preserve">
+    <value>Entrez la valeur pour: BATCH_NO</value>
+  </data>
+  <data name="journalEntry_title" xml:space="preserve">
+    <value>Entrée de journal</value>
+  </data>
+  <data name="dateLovWindow_title" xml:space="preserve">
+    <value>Date Liste des valeurs</value>
+  </data>
+  <data name="approvalChains_title" xml:space="preserve">
+    <value>Chaînes d'approbation</value>
+  </data>
+  <data name="approvalChains_approvalChain_title" xml:space="preserve">
+    <value>Chaîne d'approbation</value>
+  </data>
+  <data name="overBudgetNoOverride_btn1_label" xml:space="preserve">
+    <value>D'accord</value>
+  </data>
+  <data name="overBudgetNoOverride_btn2_label" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="overBudgetOverride_btn1_label" xml:space="preserve">
+    <value>D'accord</value>
+  </data>
+  <data name="overBudgetOverride_btn2_label" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="onErrorStop_btn1_label" xml:space="preserve">
+    <value>D'accord</value>
+  </data>
+  <data name="onErrorCaution_btn1_label" xml:space="preserve">
+    <value>D'accord</value>
+  </data>
+  <data name="onMessage_btn1_label" xml:space="preserve">
+    <value>D'accord</value>
+  </data>
+  <data name="accountAlert_btn1_label" xml:space="preserve">
+    <value>D'accord</value>
+  </data>
+  <data name="accountAlert_btn2_label" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="noRecord_title" xml:space="preserve">
+    <value>Choisissez un mode</value>
+  </data>
+  <data name="noRecord_text" xml:space="preserve">
+    <value>Aucun enregistrement n'a été trouvé - Veuillez choisir un mode</value>
+  </data>
+  <data name="noRecord_btn1_label" xml:space="preserve">
+    <value>Trouver</value>
+  </data>
+  <data name="noRecord_btn2_label" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="debitCredit_title" xml:space="preserve">
+    <value>Hors de l'équilibre</value>
+  </data>
+  <data name="debitCredit_text" xml:space="preserve">
+    <value>Les totaux de débit et de crédit ne correspondent pas!
+(Les écritures hors solde ne seront pas comptabilisées)
+Voulez-vous quand même enregistrer?</value>
+  </data>
+  <data name="debitCredit_btn1_label" xml:space="preserve">
+    <value>Oui, enregistrer tel quel</value>
+  </data>
+  <data name="debitCredit_btn2_label" xml:space="preserve">
+    <value>Non, modifier les entrées</value>
+  </data>
+  <data name="spreadsheetAlert_btn1_label" xml:space="preserve">
+    <value>Sauvegarder et continuer</value>
+  </data>
+  <data name="spreadsheetAlert_btn2_label" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+</root>

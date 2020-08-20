@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="SLACT01A" LovDataPath="Slact01aLovs.xml" AlertDataPath="Slact01aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="ACCOUNT_LOOKUP" Url="Alio/Forms/Slact01a/Views/ViewAccountLookup" Title="accountLookup_title">
+      <ContentCanvas Id="ACCOUNT_LOOKUP">
+      </ContentCanvas>
+      <StackedCanvas Id="CONTROLS">
+      </StackedCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="ACCOUNTS" NavigationStyle="ChangeBlock">
+      <Item Id="ACCOUNT_NO" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" Hint="accounts_accountNo_hint" AllowInsert="false" AllowUpdate="false" MaxLength="50">
+      </Item>
+      <Item Id="ACCOUNT_ID" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" Hint="accounts_accountId_hint" AllowInsert="false" AllowUpdate="false" MaxLength="8">
+      </Item>
+      <Item Id="ACCOUNT_YEAR" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" AllowInsert="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="ACCOUNT_DESC" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" Hint="accounts_accountDesc_hint" AllowInsert="false" AllowUpdate="false" MaxLength="50">
+      </Item>
+    </Block>
+    <Block Id="NICK_ACCOUNTS" MultiRecord="true" NavigationStyle="ChangeRecord">
+      <Item Id="ACCOUNT_NICK_NO" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" Hint="nickAccounts_accountNickNo_hint" MaxLength="50">
+      </Item>
+      <Item Id="USER_ID" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" Hint="nickAccounts_userId_hint" MaxLength="30">
+      </Item>
+      <Item Id="SYS_GEN_FLAG" Type="TextItem" CanvasName="ACCOUNT_LOOKUP" Hint="nickAccounts_sysGenFlag_hint" AllowInsert="false" AllowUpdate="false" MaxLength="1">
+      </Item>
+      <Item Id="ACCOUNT_ID" Type="TextItem" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="8" Enabled="false" Visible="false">
+      </Item>
+    </Block>
+    <Block Id="CONTROLS" AllowDelete="false" AllowSearch="false" NavigationStyle="ChangeBlock">
+      <Item Id="BUTTON_01" Type="Button" CanvasName="CONTROLS" Hint="Help" Navigable="false" MaxLength="30" Tooltip="Help">
+      </Item>
+      <Item Id="BUTTON_02" Type="Button" CanvasName="CONTROLS" Hint="Enter or execute a query" Navigable="false" MaxLength="30" Tooltip="Find">
+      </Item>
+      <Item Id="BUTTON_03" Type="Button" CanvasName="CONTROLS" Hint="Save all changes" Navigable="false" MaxLength="30" Tooltip="Save">
+      </Item>
+      <Item Id="BUTTON_04" Type="Button" CanvasName="CONTROLS" Hint="Add a new record" Navigable="false" MaxLength="30" Tooltip="New">
+      </Item>
+      <Item Id="BUTTON_05" Type="Button" CanvasName="CONTROLS" Hint="Delete a record" Navigable="false" MaxLength="30" Tooltip="Delete">
+      </Item>
+      <Item Id="BUTTON_06" Type="Button" CanvasName="CONTROLS" Hint="Print the Screen" Navigable="false" MaxLength="30" Tooltip="Print">
+      </Item>
+      <Item Id="BUTTON_07" Type="Button" CanvasName="CONTROLS" Hint="move up one record in query" Navigable="false" MaxLength="30" Tooltip="Prev">
+      </Item>
+      <Item Id="BUTTON_08" Type="Button" CanvasName="CONTROLS" Hint="Move down one record in query" Navigable="false" MaxLength="30" Tooltip="Next">
+      </Item>
+      <Item Id="MAIN_MENU" Type="Button" CanvasName="CONTROLS" Hint="Go to the Main Menu" Navigable="false" MaxLength="30" Tooltip="Main Menu">
+      </Item>
+      <Item Id="CLOSE" Type="Button" CanvasName="CONTROLS" Hint="Close Window" Navigable="false" MaxLength="30" Tooltip="Close Window">
+      </Item>
+      <Item Id="PROGRAM_LIST" Type="List" CanvasName="CONTROLS" Navigable="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="GO" Type="Button" CanvasName="CONTROLS" Navigable="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="SCREEN_MODE" Type="DisplayItem" CanvasName="CONTROLS" MaxLength="30">
+      </Item>
+      <Item Id="QTSI_FIND_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_ADD_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_DELETE_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_UPDATE_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

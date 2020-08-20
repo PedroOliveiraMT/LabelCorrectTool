@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="FJENT03A" logicalName="Fjent03a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Fjent03a.Model.Fjent03aModel</modelClass>	
+	
+	<parameters>
+		<parameter name="QTSI_ROLE_ID" type="String">		</parameter>
+		<parameter name="JOURNAL_APPROVAL" type="String">		</parameter>
+		<parameter name="HOLD_ACCT_ID" type="String">		</parameter>
+		<parameter name="JOURNAL_BUDGET_CHECK" type="String">		</parameter>
+		<parameter name="PROPERTIES_MENU" type="String">
+			<value>
+				<constant>N</constant>
+			</value>	
+		</parameter>
+	</parameters>
+	
+	<businessObjects>
+		<businessObject name="RECUR_JE_HEADER" manager="RECUR_JE_HEADER.Manager.Config.xml">
+			<associations>
+				<association child="RECUR_JE_DATA" deleteParentBehavior="Cascading">
+					<mapping parent="RECUR_JOURNAL_ID" child="RECUR_JOURNAL_ID"/>
+				</association>
+			</associations>
+		</businessObject>
+		<businessObject name="RECUR_JE_DATA" manager="RECUR_JE_DATA.Manager.Config.xml" />
+		<businessObject name="DESC_BUTTONS" manager="DESC_BUTTONS.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="BATCH_NO_BLOCK" manager="BATCH_NO_BLOCK.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="HOLD" manager="HOLD.Manager.Config.xml">
+		</businessObject>
+		<!--<businessObject name="CONTROLS" manager="CONTROLS.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="DATE_CONTROL_BLOCK" manager="DATE_CONTROL_BLOCK.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="DATE_BUTTON_BLOCK" manager="DATE_BUTTON_BLOCK.Manager.Config.xml">
+		</businessObject>-->
+	</businessObjects>	
+	
+	<valueSets config="FJENT03A.ValueSet.Config.xml"/>
+</model>

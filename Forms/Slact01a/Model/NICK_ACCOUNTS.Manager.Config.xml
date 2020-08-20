@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="NICK_ACCOUNTS" logicalName="NickAccounts" targetTableName="SHR.NICK_ACCOUNTS" QueryDataSourceName="SHR.NICK_ACCOUNTS"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="ACCOUNT_NICK_NO" logicalName="AccountNickNo" type="System.String" physicalName="ACCOUNT_NICK_NO"/>
+		<item name="USER_ID" logicalName="UserId" type="System.String" physicalName="USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID" />
+			</value>
+		</item>
+		<item name="SYS_GEN_FLAG" logicalName="SysGenFlag" type="System.String" physicalName="SYS_GEN_FLAG">
+			<value>
+				<constant>N</constant>
+			</value>
+		</item>
+		<item name="ACCOUNT_ID" logicalName="AccountId" type="System.Decimal" physicalName="ACCOUNT_ID">
+			<copyValueFrom>
+				<item name="ACCOUNT_ID" businessObject="ACCOUNTS"/>
+			</copyValueFrom>
+		</item>
+	</items>
+	
+	<managerClass>Alio.Forms.Slact01a.Model.NickAccountsManager</managerClass>
+	<adapterClass>Alio.Forms.Slact01a.Model.NickAccountsAdapter</adapterClass>
+	<defaultWhereClause><![CDATA[WHERE (USER_ID = @GLOBAL_QTSI_USER_ID OR USER_ID = '0000')]]></defaultWhereClause>
+	<pagination enabled="true" maximumRows="4" />
+</manager>

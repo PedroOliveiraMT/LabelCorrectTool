@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="FJAPP01A" LovDataPath="Fjapp01aLovs.xml" AlertDataPath="Fjapp01aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="DATE_LOV_WINDOW" Url="Alio/Forms/Fjapp01a/Views/ViewDateLovWindow" Modal="true" Title="dateLovWindow_title">
+      <ContentCanvas Id="DATE_LOV_CANVAS">
+      </ContentCanvas>
+    </Window>
+    <Window Id="AJE_APPROVAL" Url="Alio/Forms/Fjapp01a/Views/ViewAjeApproval" Title="ajeApproval_title">
+      <ContentCanvas Id="AJE_APPROVAL_CV">
+      </ContentCanvas>
+      <TabPageCanvas Id="CANVAS41">
+        <Page Id="AJE_APPROVAL" />
+        <Page Id="APPROVAL_CHAIN" />
+      </TabPageCanvas>
+     <!--  <StackedCanvas Id="CONTROLS">
+      </StackedCanvas> -->
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="JE_HEADER" AllowDelete="false" NavigationStyle="ChangeBlock">
+      <Item Id="REFERENCE_NO" Type="TextItem" CanvasName="AJE_APPROVAL_CV" Hint="jeHeader_referenceNo_hint" Lov="PENDING_APPROVALS_LOV" AllowInsert="false" AllowUpdate="false" MaxLength="10">
+      </Item>
+      <Item Id="SHOW_LOV" Type="Button" CanvasName="AJE_APPROVAL_CV" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="BATCH_YEAR" Type="TextItem" CanvasName="AJE_APPROVAL_CV" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="2">
+      </Item>
+      <Item Id="BATCH_NO" Type="TextItem" CanvasName="AJE_APPROVAL_CV" Hint="jeHeader_batchNo_hint" AllowUpdate="false" Navigable="false" MaxLength="7">
+      </Item>
+      <Item Id="BATCH_DATE" Type="DisplayItem" CanvasName="AJE_APPROVAL_CV" Hint="jeHeader_batchDate_hint" MaxLength="10" Enabled="false" Tooltip="Double-Click for Calendar">
+      </Item>
+      <Item Id="REQUESTOR" Type="DisplayItem" CanvasName="AJE_APPROVAL_CV" MaxLength="30" Enabled="false">
+      </Item>
+      <Item Id="USER_NAME" Type="DisplayItem" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="150">
+      </Item>
+      <Item Id="APPROVE" Type="Button" CanvasName="AJE_APPROVAL_CV" MaxLength="30" Tooltip="Approve this budget request and update approval chain.">
+      </Item>
+      <Item Id="DISAPPROVE" Type="Button" CanvasName="AJE_APPROVAL_CV" MaxLength="30" Tooltip="Disapprove this budget request.">
+      </Item>
+      <Item Id="DISAPPROVAL_MESSAGE" Type="TextItem" CanvasName="AJE_APPROVAL_CV" MaxLength="2000">
+      </Item>
+      <Item Id="DISAPPROVAL_EDIT" Type="Button" CanvasName="AJE_APPROVAL_CV" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="JOURNAL_DESCRIPTION" Type="TextItem" CanvasName="AJE_APPROVAL_CV" Hint="jeHeader_journalDescription_hint" AllowInsert="false" AllowUpdate="false" MaxLength="40">
+      </Item>
+      <Item Id="USER_ID" Type="TextItem" AllowInsert="false" AllowUpdate="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="ACCOUNTING_PERIOD" Type="TextItem" MaxLength="2" Visible="false">
+      </Item>
+    </Block>
+    <Block Id="JE_DATA" MultiRecord="true" AllowInsert="false" AllowDelete="false" AllowUpdate="false" NavigationStyle="ChangeRecord">
+      <Item Id="DISPLAY_ACCOUNT" Type="TextItem" CanvasName="CANVAS41" PageName="AJE_APPROVAL" MaxLength="150">
+      </Item>
+      <Item Id="ACCOUNT_BALANCE" Type="TextItem" CanvasName="CANVAS41" PageName="AJE_APPROVAL" Hint="jeData_accountBalance_hint" MaxLength="15">
+      </Item>
+      <Item Id="DR_AMOUNT" Type="TextItem" CanvasName="CANVAS41" PageName="AJE_APPROVAL" Hint="jeData_drAmount_hint" MaxLength="15" NextItem="CR_AMOUNT">
+      </Item>
+      <Item Id="CR_AMOUNT" Type="TextItem" CanvasName="CANVAS41" PageName="AJE_APPROVAL" Hint="jeData_crAmount_hint" MaxLength="15" PreviousItem="DR_AMOUNT">
+      </Item>
+      <Item Id="DR_TOTAL" Type="TextItem" CanvasName="CANVAS41" PageName="AJE_APPROVAL" AllowInsert="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="CR_TOTAL" Type="TextItem" CanvasName="CANVAS41" PageName="AJE_APPROVAL" AllowInsert="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="REFERENCE_NO" Type="TextItem" Hint="jeData_referenceNo_hint" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="JOURNAL_AMOUNT" Type="TextItem" MaxLength="30">
+      </Item>
+      <Item Id="LINE_NO" Type="TextItem" Hint="jeData_lineNo_hint" MaxLength="7" Visible="false">
+      </Item>
+      <Item Id="ACCOUNT_ID" Type="TextItem" Hint="jeData_accountId_hint" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="DEBIT_CREDIT_FLAG" Type="TextItem" Hint="jeData_debitCreditFlag_hint" MaxLength="3">
+      </Item>
+    </Block>
+    <Block Id="JOURNAL_APPROVAL" MultiRecord="true">
+      <Item Id="APPROVER_SEQUENCE" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" Required="true" MaxLength="5">
+      </Item>
+      <Item Id="APPROVAL_CODE" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" MaxLength="4">
+      </Item>
+      <Item Id="APP_CODE_DESC" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" MaxLength="30">
+      </Item>
+      <Item Id="STATUS_FLAG" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" MaxLength="2">
+      </Item>
+      <Item Id="STATUS_DESCRIPTION" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" MaxLength="20">
+      </Item>
+      <Item Id="STATUS_DATE" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" MaxLength="11">
+      </Item>
+      <Item Id="USER_ID" Type="TextItem" CanvasName="CANVAS41" PageName="APPROVAL_CHAIN" MaxLength="30">
+      </Item>
+      <Item Id="REFERENCE_NO" Type="TextItem" MaxLength="10">
+      </Item>
+    </Block>
+    <!--<Block Id="CONTROLS" AllowDelete="false" AllowSearch="false" NavigationStyle="ChangeBlock">
+      <Item Id="BUTTON_01" Type="Button" Hint="Help" Navigable="false" MaxLength="30" Tooltip="Help">
+      </Item>
+      <Item Id="BUTTON_02" Type="Button" Hint="Enter or execute a query" Navigable="false" MaxLength="30" Tooltip="Find">
+      </Item>
+      <Item Id="BUTTON_03" Type="Button" Hint="Save all changes" Navigable="false" MaxLength="30" Tooltip="Save">
+      </Item>
+      <Item Id="BUTTON_04" Type="Button" Hint="Add a new record" Navigable="false" MaxLength="30" Tooltip="New">
+      </Item>
+      <Item Id="BUTTON_05" Type="Button" Hint="Delete a record" Navigable="false" MaxLength="30" Tooltip="Delete">
+      </Item>
+      <Item Id="BUTTON_06" Type="Button" Hint="Print the Screen" Navigable="false" MaxLength="30" Tooltip="Print">
+      </Item>
+      <Item Id="BUTTON_07" Type="Button" Hint="move up one record in query" Navigable="false" MaxLength="30" Tooltip="Prev">
+      </Item>
+      <Item Id="BUTTON_08" Type="Button" Hint="Move down one record in query" Navigable="false" MaxLength="30" Tooltip="Next">
+      </Item>
+      <Item Id="MAIN_MENU" Type="Button" Hint="Go to the Main Menu" Navigable="false" MaxLength="30" Tooltip="Main Menu">
+      </Item>
+      <Item Id="CLOSE" Type="Button" Hint="Close Window" Navigable="false" MaxLength="30" Tooltip="Close Window">
+      </Item>
+      <Item Id="PROGRAM_LIST" Type="List" Navigable="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="GO" Type="Button" Navigable="false" MaxLength="30" Visible="false">
+      </Item>
+      <Item Id="SCREEN_MODE" Type="DisplayItem" MaxLength="30">
+      </Item>
+      <Item Id="QTSI_FIND_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_ADD_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_DELETE_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+      <Item Id="QTSI_UPDATE_FLAG" Type="TextItem" MaxLength="1">
+      </Item>
+    </Block>
+    <Block Id="DATE_CONTROL_BLOCK">
+      <Item Id="MONTH_PLUS1" Type="Button" CanvasName="DATE_LOV_CANVAS" Hint="Go forward one month." MaxLength="30">
+      </Item>
+      <Item Id="YEAR_PLUS1" Type="Button" CanvasName="DATE_LOV_CANVAS" Hint="Go forward one year." MaxLength="30">
+      </Item>
+      <Item Id="YEAR_MINUS1" Type="Button" CanvasName="DATE_LOV_CANVAS" Hint="Go back one year." MaxLength="30">
+      </Item>
+      <Item Id="MONTH_MINUS1" Type="Button" CanvasName="DATE_LOV_CANVAS" Hint="Go back one month." MaxLength="30">
+      </Item>
+      <Item Id="OK_BUTTON" Type="Button" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="CANCEL_BUTTON" Type="Button" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DISPLAY_MON_YEAR" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" AllowInsert="false" AllowSearch="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL1" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL2" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL3" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL4" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL5" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL6" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DAY_LABEL7" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+    </Block>
+    <Block Id="DATE_BUTTON_BLOCK">
+      <Item Id="DATE_BUTTON1" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON2" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON3" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON4" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON5" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON6" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON7" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON8" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON9" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON10" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON11" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON12" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON13" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON14" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON15" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON16" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON17" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON18" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON19" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON20" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON21" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON22" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON23" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON24" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON25" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON26" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON27" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON28" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON29" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON30" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON31" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON32" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON33" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON34" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON35" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON36" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+      <Item Id="DATE_BUTTON37" Type="DisplayItem" CanvasName="DATE_LOV_CANVAS" MaxLength="30">
+      </Item>
+    </Block>-->
+  </Logic>
+</FormStructure>

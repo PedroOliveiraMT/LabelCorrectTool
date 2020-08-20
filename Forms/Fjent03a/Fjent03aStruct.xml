@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="FJENT03A" LovDataPath="Fjent03aLovs.xml" AlertDataPath="Fjent03aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="RECUR_JOURNAL_ENTRY" Url="Alio/Forms/Fjent03a/Views/ViewRecurJournalEntry" Title="recurJournalEntry_title">
+      <ContentCanvas Id="RECUR_JOURAL_ENTRY">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="RECUR_JE_HEADER">
+      <Item Id="ASSIGN_RECUR_JOURNAL_ID" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" MaxLength="30">
+      </Item>
+      <Item Id="RECUR_JOURNAL_ID" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeHeader_recurJournalId_hint" Lov="RECUR_JE_HEADER" MaxLength="8">
+      </Item>
+      <Item Id="RECUR_JOURNAL_DESC" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeHeader_recurJournalDesc_hint" MaxLength="40">
+      </Item>
+      <Item Id="SHOW_LOV" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="ASSIGN_REFERENCE" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" MaxLength="30">
+      </Item>
+      <Item Id="REFERENCE_NO" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeHeader_referenceNo_hint" MaxLength="8">
+      </Item>
+      <Item Id="JOURNAL_DESCRIPTION" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeHeader_journalDescription_hint" MaxLength="40">
+      </Item>
+      <Item Id="JOURNAL_DATE" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeHeader_journalDate_hint" Tooltip="Double-Click for Calendar">
+      </Item>
+      <Item Id="ZERO_AMOUNTS" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" MaxLength="30">
+      </Item>
+      <Item Id="CREATE_JOURNAL" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="NEXT_LINE_NO" Type="TextItem" MaxLength="30">
+      </Item>
+      <Item Id="APPROVAL_CHAIN" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Lov="APPROVAL_CHAINS" MaxLength="15">
+      </Item>
+      <Item Id="APPROVAL_CHAIN_BUTTON" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="READY_FOR_APPROVAL" Type="Checkbox" CanvasName="RECUR_JOURAL_ENTRY" MaxLength="1">
+      </Item>
+    </Block>
+    <Block Id="RECUR_JE_DATA" MultiRecord="true">
+      <Item Id="LINE_NO" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeData_lineNo_hint" MaxLength="7">
+      </Item>
+      <Item Id="ACCOUNT_NO" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeData_accountNo_hint" MaxLength="50">
+      </Item>
+      <Item Id="SHOW_LOV" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="ACCOUNT_BALANCE" Type="DisplayItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeData_accountBalance_hint" MaxLength="15">
+      </Item>
+      <Item Id="DR_AMOUNT" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeData_drAmount_hint" MinValue="999,999,999.99-" MaxValue="999,999,999.99" MaxLength="15">
+      </Item>
+      <Item Id="CR_AMOUNT" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeData_crAmount_hint" MinValue="999,999,999.99-" MaxValue="999,999,999.99" MaxLength="15">
+      </Item>
+      <Item Id="RECUR_JOURNAL_ID" Type="TextItem" Hint="recurJeData_recurJournalId_hint" MaxLength="8">
+      </Item>
+      <Item Id="JOURNAL_AMOUNT" Type="TextItem" Hint="recurJeData_journalAmount_hint" MaxLength="13">
+      </Item>
+      <Item Id="ACCOUNT_ID" Type="TextItem" Hint="recurJeData_accountId_hint" MaxLength="10">
+      </Item>
+      <Item Id="JOURNAL_DESCRIPTION" Type="TextItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="recurJeData_journalDescription_hint" MaxLength="40">
+      </Item>
+      <Item Id="DEBIT_CREDIT_FLAG" Type="TextItem" Hint="recurJeData_debitCreditFlag_hint" MaxLength="3">
+      </Item>
+      <Item Id="DR_TOTAL" Type="DisplayItem" CanvasName="RECUR_JOURAL_ENTRY" AllowInsert="false" AllowSearch="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="CR_TOTAL" Type="DisplayItem" CanvasName="RECUR_JOURAL_ENTRY" AllowInsert="false" AllowSearch="false" AllowUpdate="false" MaxLength="30">
+      </Item>
+      <Item Id="RESEQUENCE" Type="Button" CanvasName="RECUR_JOURAL_ENTRY" MaxLength="30">
+      </Item>
+      <Item Id="HOLD_JOURNAL_AMOUNT" Type="TextItem" Hint="recurJeData_holdJournalAmount_hint" MaxLength="13" Visible="false">
+      </Item>
+      <Item Id="HOLD_ACCOUNT_ID" Type="TextItem" Hint="recurJeData_holdAccountId_hint" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="HOLD_DR_AMOUNT" Type="TextItem" Hint="recurJeData_holdDrAmount_hint" MaxLength="15" Visible="false" PreviousItem="ACCOUNT_NO" NextItem="CR_AMOUNT">
+      </Item>
+      <Item Id="HOLD_CR_AMOUNT" Type="TextItem" Hint="recurJeData_holdCrAmount_hint" MaxLength="15" Visible="false" PreviousItem="DR_AMOUNT">
+      </Item>
+    </Block>
+    <Block Id="DESC_BUTTONS">
+      <Item Id="DESCRIPTION_TYPE" Type="RadioGroup" CanvasName="RECUR_JOURAL_ENTRY" Navigable="false" MaxLength="30">
+        <Item Id="NONE" Type="RadioButton" />
+        <Item Id="BATCH" Type="RadioButton" />
+        <Item Id="REPEAT" Type="RadioButton" />
+      </Item>
+    </Block>
+    <Block Id="BATCH_NO_BLOCK" NavigationStyle="ChangeBlock">
+      <Item Id="BATCH_DATE" Type="TextItem" Hint="batchNoBlock_batchDate_hint" MinValue="01-01-1900" MaxValue="12-31-2099" MaxLength="10">
+      </Item>
+      <Item Id="SHOW_BAL" Type="Button" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="BATCH_YEAR" Type="DisplayItem" CanvasName="RECUR_JOURAL_ENTRY" AllowInsert="false" AllowUpdate="false" MaxLength="2">
+      </Item>
+      <Item Id="BATCH_NO" Type="DisplayItem" CanvasName="RECUR_JOURAL_ENTRY" Hint="batchNoBlock_batchNo_hint" AllowInsert="false" AllowUpdate="false" MaxLength="7">
+      </Item>
+      <Item Id="ACCOUNTING_PERIOD" Type="TextItem" MaxLength="2" Visible="false">
+      </Item>
+    </Block>
+    <Block Id="HOLD">
+      <Item Id="HOLD_DESC" Type="TextItem" MaxLength="50">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

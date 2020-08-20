@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="RECUR_JE_HEADER" logicalName="RecurJeHeader" targetTableName="FAS.RECUR_JE_HEADER" QueryDataSourceName="FAS.RECUR_JE_HEADER"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="RECUR_JOURNAL_ID" logicalName="RecurJournalId" type="System.String" physicalName="RECUR_JOURNAL_ID"/>
+		<item name="RECUR_JOURNAL_DESC" logicalName="RecurJournalDesc" type="System.String" physicalName="RECUR_JOURNAL_DESC"/>
+		<item name="REFERENCE_NO" logicalName="ReferenceNo" type="System.String" physicalName="REFERENCE_NO"/>
+		<item name="JOURNAL_DESCRIPTION" logicalName="JournalDescription" type="System.String" physicalName="JOURNAL_DESCRIPTION"/>
+		<item name="JOURNAL_DATE" logicalName="JournalDate" type="System.DateTime" physicalName="JOURNAL_DATE"/>
+		<item name="NEXT_LINE_NO" logicalName="NextLineNo" type="System.Decimal" virtual="true"/>
+		<item name="APPROVAL_CHAIN" logicalName="ApprovalChain" type="System.String" physicalName="APPROVAL_CHAIN"/>
+		<item name="READY_FOR_APPROVAL" logicalName="ReadyForApproval" type="System.String" physicalName="release_flag"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjent03a.Model.RecurJeHeaderManager</managerClass>
+	<adapterClass>Alio.Forms.Fjent03a.Model.RecurJeHeaderAdapter</adapterClass>
+	<defaultOrderByClause><![CDATA[sign(ascii(recur_journal_id)-58), length(recur_journal_id), recur_journal_id]]></defaultOrderByClause>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="FJPST01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Fjpst01a.Fjpst01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Fjpst01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Fjpst01a.Services.Fjpst01aServices</services>
+    <!--<packages>
+      <package name="FORM">Alio.Forms.Fjpst01a.Services.PropClassForm</package> 
+    </packages>-->
+    <attachedLibraries>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+      <libraryConfiguration config="SCLA01A.Library.Config.xml"/>
+      <!--<libraryConfiguration config="WEBUTIL.Library.Config.xml"/>-->
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="FJPST01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Fjpst01a.Controllers.Fjpst01aTaskController</taskController>
+  <blockControllers>
+    <block name="BATCHES">Alio.Forms.Fjpst01a.Controllers.BatchesController</block>
+    <block name="OK_CANCEL">Alio.Forms.Fjpst01a.Controllers.OkCancelController</block>
+    <!--<block name="CONTROLS">Alio.Forms.Fjpst01a.Controllers.ControlsController</block>-->
+  </blockControllers>
+
+  <!-- custom properties -->
+  <customProperties>
+    <property name="version">1</property>
+    <property name="changelog">
+      <![CDATA[
+10/22/12 rdh   alio-7410  Recompile
+11/20/15 dph   alio-12543 Added share batches logic to the default where
+04/11/16 dph   alio-13437 Allow query by batch_no and batch_year, change sort order
+09/20/17 mfl	 alio-13676 If Post button is pressed but no batch selected, the 'Process Complete' message will not appear.
+      ]]>
+    </property>
+  </customProperties>
+</task>

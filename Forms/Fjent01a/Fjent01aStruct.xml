@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="FJENT01A" LovDataPath="Fjent01aLovs.xml" AlertDataPath="Fjent01aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="JOURNAL_ENTRY" Url="Alio/Forms/Fjent01a/Views/ViewJournalEntry" Title="journalEntry_title">
+      <ContentCanvas Id="JOURAL_ENTRY">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="JE_HEADER" NavigationStyle="ChangeBlock">
+      <Item Id="ASSIGN_REFERENCE" Type="Button" CanvasName="JOURAL_ENTRY" MaxLength="30" PreviousItem="ASSIGN_REFERENCE" NextItem="REFERENCE_NO">
+      </Item>
+      <Item Id="REFERENCE_NO" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeHeader_referenceNo_hint" AllowUpdate="false" MaxLength="10" PreviousItem="WHS_ORDER_NO" NextItem="JOURNAL_DATE">
+      </Item>
+      <Item Id="JOURNAL_DATE" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeHeader_journalDate_hint" Tooltip="Double-Click for Calendar" PreviousItem="REFERENCE_NO" NextItem="JOURNAL_DESCRIPTION">
+      </Item>
+      <Item Id="JOURNAL_DESCRIPTION" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeHeader_journalDescription_hint" MaxLength="40" PreviousItem="JOURNAL_DATE" NextItem="JE_DATA.ACCOUNT_NO">
+      </Item>
+      <Item Id="READY_FOR_APPROVAL" Type="Checkbox" CanvasName="JOURAL_ENTRY" MaxLength="1">
+      </Item>
+      <Item Id="SPREASDSHEET" Type="Button" CanvasName="JOURAL_ENTRY" MaxLength="30">
+      </Item>
+      <Item Id="APPROVAL_STATUS_DESC" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeHeader_approvalStatusDesc_hint" AllowInsert="false" AllowUpdate="false" MaxLength="4000">
+      </Item>
+      <Item Id="VIEW_BUTTON" Type="Button" CanvasName="JOURAL_ENTRY" MaxLength="30">
+      </Item>
+      <Item Id="BATCH_YEAR" Type="TextItem" CanvasName="JOURAL_ENTRY" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="2">
+      </Item>
+      <Item Id="BATCH_NO" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeHeader_batchNo_hint" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="7">
+      </Item>
+      <Item Id="DEBIT_TOTAL" Type="DisplayItem" CanvasName="JOURAL_ENTRY" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="CREDIT_TOTAL" Type="DisplayItem" CanvasName="JOURAL_ENTRY" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="WHS_ORDER_NO" Type="TextItem" CanvasName="JOURAL_ENTRY" Navigable="false" MaxLength="10">
+      </Item>
+      <Item Id="NEXT_LINE_NO" Type="TextItem" MaxLength="30">
+      </Item>
+      <Item Id="APPROVAL_STATUS" Type="TextItem" MaxLength="30">
+      </Item>
+      <Item Id="SYSTEM_OWNER" Type="TextItem" MaxLength="3">
+      </Item>
+      <Item Id="DISPLAY_REFERENCE_NO" Type="TextItem" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="APPROVAL_CHAIN" Type="TextItem" CanvasName="JOURAL_ENTRY" Lov="APPROVAL_CHAINS" MaxLength="15">
+      </Item>
+      <Item Id="APPROVAL_CHAIN_BUTTON" Type="Button" CanvasName="JOURAL_ENTRY" Navigable="false" MaxLength="30">
+      </Item>
+    </Block>
+    <Block Id="JE_DATA" MultiRecord="true" NavigationStyle="ChangeRecord">
+      <Item Id="ACCOUNT_NO" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeData_accountNo_hint" MaxLength="50" PreviousItem="CR_AMOUNT" NextItem="DR_AMOUNT">
+      </Item>
+      <Item Id="SHOW_LOV" Type="Button" CanvasName="JOURAL_ENTRY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="DR_AMOUNT" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeData_drAmount_hint" MinValue="999,999,999.99-" MaxValue="999,999,999.99" MaxLength="15" PreviousItem="ACCOUNT_NO" NextItem="CR_AMOUNT">
+      </Item>
+      <Item Id="CR_AMOUNT" Type="TextItem" CanvasName="JOURAL_ENTRY" Hint="jeData_crAmount_hint" MinValue="999,999,999.99-" MaxValue="999,999,999.99" MaxLength="15" PreviousItem="DR_AMOUNT">
+      </Item>
+      <Item Id="REFERENCE_NO" Type="TextItem" Hint="jeData_referenceNo_hint" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="LINE_NO" Type="TextItem" Hint="jeData_lineNo_hint" MaxLength="7" Visible="false">
+      </Item>
+      <Item Id="JOURNAL_AMOUNT" Type="TextItem" Hint="jeData_journalAmount_hint" MaxLength="13" Visible="false">
+      </Item>
+      <Item Id="ACCOUNT_ID" Type="TextItem" Hint="jeData_accountId_hint" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="DEBIT_CREDIT_FLAG" Type="TextItem" Hint="jeData_debitCreditFlag_hint" MaxLength="3">
+      </Item>
+      <Item Id="DR_TOTAL" Type="DisplayItem" CanvasName="JOURAL_ENTRY" AllowInsert="false" AllowUpdate="false" MaxLength="30" Exportable="false">
+      </Item>
+      <Item Id="CR_TOTAL" Type="DisplayItem" CanvasName="JOURAL_ENTRY" AllowInsert="false" AllowUpdate="false" MaxLength="30" Exportable="false">
+      </Item>
+      <Item Id="ACCOUNT_DESC" Type="DisplayItem" CanvasName="JOURAL_ENTRY" AllowInsert="false" MaxLength="50">
+      </Item>
+      <Item Id="HOLD_ACCOUNT_ID" Type="TextItem" Hint="jeData_holdAccountId_hint" MaxLength="10" Visible="false">
+      </Item>
+      <Item Id="HOLD_JOURNAL_AMOUNT" Type="TextItem" Hint="jeData_holdJournalAmount_hint" MaxLength="13" Visible="false">
+      </Item>
+      <Item Id="HOLD_DR_AMOUNT" Type="TextItem" Hint="jeData_holdDrAmount_hint" MaxLength="15" Visible="false" PreviousItem="ACCOUNT_NO" NextItem="CR_AMOUNT">
+      </Item>
+      <Item Id="HOLD_CR_AMOUNT" Type="TextItem" Hint="jeData_holdCrAmount_hint" MaxLength="15" Visible="false" PreviousItem="DR_AMOUNT">
+      </Item>
+      <Item Id="ACCOUNT_BALANCE" Type="DisplayItem" CanvasName="JOURAL_ENTRY" Hint="jeData_accountBalance_hint" MaxLength="15">
+      </Item>
+    </Block>
+    <Block Id="BATCH_NO_BLOCK" NavigationStyle="ChangeBlock">
+      <Item Id="NAVIGABLE_ITEM_1" Type="TextItem" CanvasName="JOURAL_ENTRY" MaxLength="30" Exportable="false">
+      </Item>
+      <Item Id="BATCH_DATE" Type="TextItem" Hint="batchNoBlock_batchDate_hint">
+      </Item>
+      <Item Id="BATCH_NO" Type="TextItem" Hint="batchNoBlock_batchNo_hint" MaxLength="7" Visible="false">
+      </Item>
+      <Item Id="BATCH_YEAR" Type="TextItem" MaxLength="2">
+      </Item>
+      <Item Id="ACCOUNTING_PERIOD" Type="TextItem" MaxLength="2" Visible="false">
+      </Item>
+      <Item Id="SAVE_FLAG" Type="TextItem" MaxLength="1" Visible="false">
+      </Item>
+    </Block>  
+  </Logic>
+</FormStructure>

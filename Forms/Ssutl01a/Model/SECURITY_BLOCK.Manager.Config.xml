@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="SECURITY_BLOCK" logicalName="SecurityBlock"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	<kind>SimpleBusinessObject</kind>
+	<items>
+		<item name="SECURITY_DATE" logicalName="SecurityDate" type="System.DateTime">
+			<value>
+				<systemVariable name="DATE"/>
+			</value>
+		</item>
+		<item name="SECURITY_KEY" logicalName="SecurityKey" type="System.String"/>
+		<item name="COUNTER_KEY" logicalName="CounterKey" type="System.String"/>
+		<item name="WAIVER_KEY" logicalName="WaiverKey" type="System.String"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Ssutl01a.Model.SecurityBlock</managerClass>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

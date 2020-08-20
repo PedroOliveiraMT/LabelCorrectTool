@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="FJAPP01A" logicalName="Fjapp01a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Fjapp01a.Model.Fjapp01aModel</modelClass>	
+	
+	<parameters>
+		<parameter name="JOURNAL_APPROVAL" type="String">		</parameter>
+	</parameters>
+	
+	<businessObjects>
+		<businessObject name="JE_HEADER" manager="JE_HEADER.Manager.Config.xml">
+			<associations>
+				<association child="JE_DATA" preventParentlessOperations="true" deleteParentBehavior="Cascading">
+					<mapping parent="REFERENCE_NO" child="REFERENCE_NO"/>
+				</association>
+				<association child="JOURNAL_APPROVAL">
+					<mapping parent="REFERENCE_NO" child="REFERENCE_NO"/>
+				</association>
+			</associations>
+		</businessObject>
+		<businessObject name="JE_DATA" manager="JE_DATA.Manager.Config.xml">
+			<summaries>
+				<item name="DR_TOTAL" summarizedBusinessObject="JE_DATA" summarizedItem="DR_AMOUNT"/>
+				<item name="CR_TOTAL" summarizedBusinessObject="JE_DATA" summarizedItem="CR_AMOUNT"/>
+			</summaries>
+		</businessObject>
+		<businessObject name="JOURNAL_APPROVAL" manager="JOURNAL_APPROVAL.Manager.Config.xml">
+		</businessObject>
+		<!--<businessObject name="CONTROLS" manager="CONTROLS.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="DATE_CONTROL_BLOCK" manager="DATE_CONTROL_BLOCK.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="DATE_BUTTON_BLOCK" manager="DATE_BUTTON_BLOCK.Manager.Config.xml">
+		</businessObject>-->
+	</businessObjects>	
+	
+	<valueSets config="FJAPP01A.ValueSet.Config.xml"/>
+</model>

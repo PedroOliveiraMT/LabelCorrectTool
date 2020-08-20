@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="ACCOUNTS" logicalName="Accounts" targetTableName="SHR.ACCOUNTS" QueryDataSourceName="SHR.ACCOUNTS"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="ACCOUNT_NO" logicalName="AccountNo" type="System.String" physicalName="ACCOUNT_NO" caseInsensitiveQuery="true" queryOnly="true"/>
+		<item name="ACCOUNT_ID" logicalName="AccountId" type="System.Decimal" physicalName="ACCOUNT_ID" key="true"/>
+		<item name="ACCOUNT_YEAR" logicalName="AccountYear" type="System.String" physicalName="ACCOUNT_YEAR" queryOnly="true">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR" />
+			</value>
+		</item>
+		<item name="ACCOUNT_DESC" logicalName="AccountDesc" type="System.String" physicalName="ACCOUNT_DESC" queryOnly="true"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Slact01a.Model.AccountsManager</managerClass>
+	<adapterClass>Alio.Forms.Slact01a.Model.AccountsAdapter</adapterClass>
+	<defaultOrderByClause><![CDATA[order by account_no]]></defaultOrderByClause>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

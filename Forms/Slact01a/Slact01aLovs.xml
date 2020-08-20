@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lovs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Lovs.xsd">
+	<Lov Name="ACCOUNTS_LOV" Title="accountsLov_title" Width="612" Height="293" RecordGroup="ALL_ACCOUNTS_ALL">
+		<Columns>
+			<Column DataMember="ACCOUNT_AND_DESC" Title="accountsLov_accountAndDesc_title" Width="492" />
+			<Column DataMember="ACCOUNT_NICK_NO" ReturnItem="GLOBAL.ACCOUNT_NO" />
+			<Column DataMember="ACCOUNT_ID" ReturnItem="GLOBAL.ACCOUNT_ID" />
+			<Column DataMember="ACCOUNT_YEAR" Title="accountsLov_accountYear_title" Width="73" />
+			<Column DataMember="SEQ_NO" />
+		</Columns>
+	</Lov>
+</Lovs>

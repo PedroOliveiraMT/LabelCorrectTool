@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal" title="journalEntry_title">
+  <include src="Alio/Forms/Fjent01a/Views/MnuFjent01a">
+  </include>
+  <include src="Alio/Forms/Fjent01a/views/PanelJouralEntry">
+  </include>
+</window>

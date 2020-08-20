@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional">
+  <interactionblock name="NICK_ACCOUNTS" />
+  <interactionblock name="ACCOUNTS" />
+  <panel width="0px" height="0px" top="0px" left="0px" id="pnlAccountLookup" name="ACCOUNT_LOOKUP" class="ContentCanvas">
+    <!--<slider name="nickAccountsscrollbar" block="NICK_ACCOUNTS" top="126px" left="575px" width="16px" height="74px" />
+    <framepanel width="646px" height="192px" top="24px" left="5px" name="rect5">-->
+      <textbox label="accounts_accountId_prompttext" name="accountId" style="VISUAL__DISPLAY_TEXT_ITEM" left="0px" top="0px" width="0px" height="0px" member="ACCOUNT_ID" block="ACCOUNTS" maxlength="8" datatype="Number" />
+      <!--<framepanel width="625px" height="153px" top="31px" left="4px" name="rect1">-->
+        <textbox name="accountNo" style="VISUAL__TEXT_ITEM" left="0px" top="0px" width="0px" height="0px" member="ACCOUNT_NO" block="ACCOUNTS" maxlength="50" datatype="String" />
+        <textbox name="accountYear" style="VISUAL__TEXT_ITEM" left="0px" top="0px" width="0px" height="0px" member="ACCOUNT_YEAR" block="ACCOUNTS" maxlength="30" datatype="String" />
+        <textbox name="accountDesc" style="VISUAL__TEXT_ITEM" left="0px" top="0px" width="0px" height="0px" member="ACCOUNT_DESC" block="ACCOUNTS" maxlength="50" datatype="String" />
+        <gridview top="0px" left="0px" width="0px" height="0px" name="grdNickAccounts" block="NICK_ACCOUNTS">
+          <viewheader>
+            <viewcolumn width="0px" label="nickAccounts_accountNickNo_label" name="accountNickNo" style="VISUAL" labelstyle="DEFAULT" member="ACCOUNT_NICK_NO" block="NICK_ACCOUNTS" maxlength="50" datatype="String" />
+            <viewcolumn width="0px" label="nickAccounts_userId_label" name="userId" style="VISUAL" labelstyle="DEFAULT" member="USER_ID" block="NICK_ACCOUNTS" maxlength="30" datatype="String" />
+            <viewcolumn width="0px" label="nickAccounts_sysGenFlag_label" name="sysGenFlag" style="VISUAL" labelstyle="DEFAULT" member="SYS_GEN_FLAG" block="NICK_ACCOUNTS" maxlength="1" datatype="String" />
+          </viewheader>
+        </gridview>
+      <!--</framepanel>
+    </framepanel>-->
+  </panel>
+</config>

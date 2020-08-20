@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lovs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Lovs.xsd">
+	<Lov Name="PENDING_APPROVALS_LOV" Width="585" Height="266" RecordGroup="PENDING_APPROVALS_RG">
+		<Columns>
+			<Column DataMember="REFERENCE_NO" Title="pendingApprovalsLov_referenceNo_title" Width="100" ReturnItem="JE_HEADER.REFERENCE_NO" />
+			<Column DataMember="BATCH_YEAR" Title="pendingApprovalsLov_batchYear_title" Width="44" ReturnItem="JE_HEADER.BATCH_YEAR" />
+			<Column DataMember="BATCH_NO" Title="pendingApprovalsLov_batchNo_title" Width="44" ReturnItem="JE_HEADER.BATCH_NO" />
+			<Column DataMember="BATCH_DATE" Title="pendingApprovalsLov_batchDate_title" Width="60" />
+			<Column DataMember="BATCH_DESCRIPTION" Title="pendingApprovalsLov_batchDescription_title" Width="226" />
+		</Columns>
+	</Lov>
+</Lovs>

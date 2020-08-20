@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="SSUTL01A" logicalName="Ssutl01a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Ssutl01a.Model.Ssutl01aModel</modelClass>	
+	
+	<businessObjects>
+		<businessObject name="SECURITY_BLOCK" manager="SECURITY_BLOCK.Manager.Config.xml">
+		</businessObject>
+	</businessObjects>	
+</model>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+	<interactionblock name="JOURNALS" />
+	<panel width="100%" id="pnlJournalInqury" name="JOURNAL_INQURY" class="ContentCanvas">
+		<framepanel width="100%" name="rect1">
+
+			<panel width="100%">
+				<gridview width="100%" name="grdJournals" block="JOURNALS">
+					<viewheader>
+						<viewcolumn width="80px" label="journals_checkKey_label" name="checkKey" style="DEFAULT" labelstyle="DEFAULT" member="CHECK_KEY" block="JOURNALS" maxlength="10" datatype="String" />
+						<viewcolumn width="80px" label="journals_claimNo_label" name="claimNo" style="DEFAULT" labelstyle="DEFAULT" member="CLAIM_NO" block="JOURNALS" maxlength="8" datatype="String" />
+						<viewcolumn width="85px" label="journals_referenceNo_label" name="referenceNo" style="DEFAULT" labelstyle="DEFAULT" member="REFERENCE_NO" block="JOURNALS" maxlength="10" datatype="String" />
+						<viewcolumn width="60px" label="journals_referenceSeqNo_label" name="referenceSeqNo" style="DEFAULT" labelstyle="DEFAULT" member="REFERENCE_SEQ_NO" block="JOURNALS" maxlength="6" datatype="Number" />
+						<viewcolumn width="60px" label="journals_referenceType_label" name="referenceType" style="DEFAULT" labelstyle="DEFAULT" member="REFERENCE_TYPE" block="JOURNALS" maxlength="1" datatype="String" />
+						<viewcolumn width="60px" label="journals_batchYear_label" name="batchYear" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_YEAR" block="JOURNALS" maxlength="2" datatype="String" />
+						<viewcolumn width="60px" label="journals_batchNo_label" name="batchNo" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_NO" block="JOURNALS" maxlength="7" datatype="String" />
+						<viewcolumn width="60px" label="journals_accountPeriod_label" name="accountPeriod" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_PERIOD" block="JOURNALS" maxlength="2" datatype="String" />
+						<viewcolumn width="90px" label="journals_journalDate_label" name="journalDate" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_DATE" block="JOURNALS" maxlength="10" minvalue="01-01-1900" maxvalue="12-31-2099" datatype="Date" formatmask="MM/DD/YYYY">
+							<editor>
+								<calendar width="70px" label="Date" name="journalDate" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_DATE" datatype="Date" />
+							</editor>
+						</viewcolumn>
+						<viewcolumn width="50px" label="journals_journalType_label" name="journalType" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_TYPE" block="JOURNALS" maxlength="2" datatype="String" />
+						<viewcolumn width="100px" label="journals_journalAmount_label" name="journalAmount" style="DEFAULT" labelstyle="DEFAULT" textalign="right" member="JOURNAL_AMOUNT" block="JOURNALS" maxlength="30" datatype="Number" formatmask="999G999G999D99MI" />
+						<viewcolumn width="50px" label="journals_debitCreditFlag_label" name="debitCreditFlag" style="DEFAULT" labelstyle="DEFAULT" member="DEBIT_CREDIT_FLAG" block="JOURNALS" maxlength="3" datatype="Number" />
+						<viewcolumn width="80px" label="journals_journalId_label" name="journalId" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_ID" block="JOURNALS" maxlength="10" datatype="Number" />
+						<viewcolumn width="60px" label="journals_journalSeqNo_label" name="journalSeqNo" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_SEQ_NO" block="JOURNALS" maxlength="6" datatype="Number" />
+						<viewcolumn width="200px" label="journals_journalDescription_label" name="journalDescription" style="DEFAULT" labelstyle="DEFAULT" member="JOURNAL_DESCRIPTION" block="JOURNALS" maxlength="40" datatype="String" />
+					
+						<viewcolumn width="80px" label="journals_accountId_label" name="accountId" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_ID" block="JOURNALS" maxlength="8" datatype="Number" />
+						<viewcolumn width="60px" label="journals_accountType_label" name="accountType" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_TYPE" block="JOURNALS" maxlength="2" datatype="String" />
+						<viewcolumn width="200px" label="journals_accountNo_label" name="accountNo" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_NO" block="JOURNALS" validation="server" maxlength="50" datatype="String">
+							<editor>
+								<lovdropdown action="WHEN-BUTTON-PRESSED" />
+							</editor>
+						</viewcolumn>
+						<viewcolumn width="60px" label="journals_accountYear_label" name="accountYear" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_YEAR" block="JOURNALS" maxlength="2" datatype="String" />
+						<viewcolumn width="200px" label="journals_accountDesc_label" name="accountDesc" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_DESC" block="JOURNALS" maxlength="40" datatype="String" />
+					</viewheader>
+				</gridview>
+			</panel>
+			<panel width="100%" name="rect16193" style="ui-button-container-right">
+				<flowlayout orientation="horizontal">
+					<button label="journals_dupRec_label" name="dupRec" style="DEFAULT" navigable="false" member="DUP_REC" block="JOURNALS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+				</flowlayout>
+			</panel>
+		</framepanel>
+	</panel>
+</config>
+
+

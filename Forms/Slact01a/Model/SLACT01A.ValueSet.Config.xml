@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/ValueSet.Config.xsd">
+  <valueSet name="ALL_ACTS_ALL_TRANS_OLD">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || account_desc account_and_desc,          nick_accounts.account_nick_no,          nick_accounts.account_id,          accounts.account_year,          1 seq_no     FROM shr.nick_accounts, shr.accounts    WHERE accounts.account_year =             NVL (:global_account_year, accounts.account_year)          AND accounts.inactive_flag = 'N'          AND EXISTS                 (SELECT account_id                    FROM shr.accounts secure_accounts                   WHERE secure_accounts.account_id = accounts.account_id                         AND amsec06b_.find_account (secure_accounts.account_no,                                                     :global_account_year,                                                     :global_qtsi_role_id,                                                     :global_qtsi_user_id) > 0)          AND EXISTS                 (SELECT acct_type_in                    FROM fas.transaction_driver td                   WHERE     td.transaction_desc = :global_transaction_desc                         AND td.acct_type_in = accounts.account_type                         AND NVL (td.display_account, 'Y') = 'Y'                         AND NVL (:global_debit_credit_flag, td.debit_credit_in) =                                td.debit_credit_in)          AND nick_accounts.account_id = accounts.account_id          AND (nick_accounts.user_id = :global_qtsi_user_id               OR nick_accounts.user_id = '0000')          AND (nick_accounts.sys_gen_flag = 'D') ORDER BY account_nick_no   
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACTS_ALL_OLD">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	select rpad(account_nick_no,50) || '  ' || account_desc account_and_desc,         nick_accounts.account_nick_no,         nick_accounts.account_id,        accounts.account_year,        1 seq_no     from shr.nick_accounts,         shr.accounts   where accounts.account_year = nvl(:global_account_year,accounts.account_year)     and accounts.inactive_flag = 'N'     and exists (select account_id                   from shr.accounts secure_accounts                  where secure_accounts.account_id = accounts.account_id                    and amsec06b_.find_account(secure_accounts.account_no,                                              :global_account_year,                                              :global_qtsi_role_id,                                               :global_qtsi_user_id) > 0)                    and nick_accounts.account_id = accounts.account_id                    and (nick_accounts.user_id = :global_qtsi_user_id                        or                        nick_accounts.user_id = '0000' )                    and (nick_accounts.sys_gen_flag = 'D'                 )    order by account_nick_no 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACTS_BY_NO_TRANS_OLD">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || account_desc account_and_desc,          nick_accounts.account_nick_no,          nick_accounts.account_id,          accounts.account_year,          1 seq_no     FROM shr.nick_accounts, shr.accounts    WHERE (nick_accounts.user_id = :global_qtsi_user_id           OR nick_accounts.user_id = '0000')          AND (nick_accounts.sys_gen_flag = 'D')          AND UPPER (nick_accounts.account_nick_no) = UPPER (:global_account_no)          AND nick_accounts.account_id = accounts.account_id          AND accounts.account_year =                 NVL (:global_account_year, accounts.account_year)          AND accounts.inactive_flag = 'N'          AND EXISTS                 (SELECT account_id                    FROM shr.accounts secure_accounts                   WHERE secure_accounts.account_id = accounts.account_id                         AND amsec06b_.find_account (secure_accounts.account_no,                                                     :global_account_year,                                                     :global_qtsi_role_id,                                                     :global_qtsi_user_id) > 0)          AND EXISTS                 (SELECT acct_type_in                    FROM fas.transaction_driver td                   WHERE     td.transaction_desc = :global_transaction_desc                         AND td.acct_type_in = accounts.account_type                         AND NVL (td.display_account, 'Y') = 'Y'                         AND NVL (:global_debit_credit_flag, td.debit_credit_in) = td.debit_credit_in) ORDER BY account_nick_no      
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACTS_BY_NO_OLD">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	select rpad(account_nick_no,50) || '  ' || account_desc account_and_desc, nick_accounts.account_nick_no, nick_accounts.account_id,        accounts.account_year,        1 seq_no   from shr.nick_accounts,  shr.accounts  where (nick_accounts.user_id = :global_qtsi_user_id or nick_accounts.user_id = '0000' )  and (nick_accounts.sys_gen_flag = 'D' )  and upper(nick_accounts.account_nick_no) = upper(:global_account_no)  and nick_accounts.account_id = accounts.account_id  and accounts.account_year = nvl(:global_account_year,accounts.account_year) and accounts.inactive_flag = 'N'  and exists (select account_id  from shr.accounts secure_accounts  where secure_accounts.account_id = accounts.account_id  and amsec06b_.find_account(secure_accounts.account_no,                            :global_account_year,                            :global_qtsi_role_id,                             :global_qtsi_user_id) > 0)  order by account_nick_no 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACTS_LIKE_NO_TRANS_OLD">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || account_desc account_and_desc,          nick_accounts.account_nick_no,          nick_accounts.account_id,          accounts.account_year,          1 seq_no     FROM shr.nick_accounts, shr.accounts    WHERE (nick_accounts.user_id = :global_qtsi_user_id           OR nick_accounts.user_id = '0000')          AND UPPER (nick_accounts.account_nick_no) LIKE                 UPPER (:global_account_no) || '%'          AND nick_accounts.account_id = accounts.account_id          AND accounts.account_year =                 NVL (:global_account_year, accounts.account_year)          AND accounts.inactive_flag = 'N'          AND EXISTS                 (SELECT account_id                    FROM shr.accounts secure_accounts                   WHERE secure_accounts.account_id = accounts.account_id                         AND amsec06b_.find_account (secure_accounts.account_no,                                                     :global_account_year,                                                     :global_qtsi_role_id,                                                     :global_qtsi_user_id) > 0)          AND EXISTS                 (SELECT acct_type_in                    FROM fas.transaction_driver td                   WHERE     td.transaction_desc = :global_transaction_desc                         AND td.acct_type_in = accounts.account_type                         AND NVL (td.display_account, 'Y') = 'Y'                         AND NVL (:global_debit_credit_flag, td.debit_credit_in) =                                td.debit_credit_in) ORDER BY account_nick_no      
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACTS_LIKE_NO_OLD">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	select rpad(account_nick_no,50) || '  ' || account_desc account_and_desc,         nick_accounts.account_nick_no,         nick_accounts.account_id,        accounts.account_year,        1 seq_no     from shr.nick_accounts,         shr.accounts   where (nick_accounts.user_id = :global_qtsi_user_id or nick_accounts.user_id = '0000' )     and upper(nick_accounts.account_nick_no) like upper(:global_account_no) || '%'     and nick_accounts.account_id = accounts.account_id     and accounts.account_year = nvl(:global_account_year,accounts.account_year)    and accounts.inactive_flag = 'N'     and exists (select account_id                   from shr.accounts secure_accounts                  where secure_accounts.account_id = accounts.account_id                    and amsec06b_.find_account(secure_accounts.account_no,                                              :global_account_year,                                              :global_qtsi_role_id,                                               :global_qtsi_user_id) > 0)    order by account_nick_no  
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_ALL_TRANS">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || ac.account_desc             account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          max(td.seq_no) seq_no     FROM shr.accounts ac, shr.nick_accounts na, shr.user_account_security uas,          fas.transaction_driver td    WHERE ac.account_id = na.account_id AND ac.inactive_flag = 'N'          AND (na.sys_gen_flag = 'D'               OR (na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          AND ac.account_year = NVL (:global_account_year, ac.account_year)          AND uas.user_id = :global_qtsi_user_id          AND uas.role_id = :global_qtsi_role_id          AND uas.account_id = ac.account_id          AND uas.account_year = ac.account_year          AND uas.find_flag = 'Y'          AND td.acct_type_in = ac.account_type           AND td.transaction_desc = :global_transaction_desc          AND NVL (td.display_account, 'Y') = 'Y'           AND NVL (:global_debit_credit_flag, td.debit_credit_in) = td.debit_credit_in          group by na.account_nick_no,                 ac.account_desc,                 na.account_id,                 ac.account_year      ORDER BY seq_no, na.account_nick_no  
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_ALL_TRANS_MSTR">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || ac.account_desc             account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          max(td.seq_no) seq_no     FROM shr.accounts ac,           shr.nick_accounts na,          fas.transaction_driver td    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          AND ac.account_year = NVL ( :global_account_year, ac.account_year)          AND td.acct_type_in = ac.account_type           AND td.transaction_desc = :global_transaction_desc          AND NVL (td.display_account, 'Y') = 'Y'           AND NVL (:global_debit_credit_flag, td.debit_credit_in) = td.debit_credit_in          group by na.account_nick_no,                 ac.account_desc,                 na.account_id,                 ac.account_year      ORDER BY  seq_no, na.account_nick_no  
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_ALL">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || ac.account_desc             account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          1 seq_no     FROM shr.accounts ac, shr.nick_accounts na, shr.user_account_security uas    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          AND ac.account_year = NVL ( :global_account_year, ac.account_year)          AND uas.account_id = ac.account_id          AND uas.account_year = ac.account_year          AND uas.find_flag = 'Y'          AND uas.user_id = :global_qtsi_user_id          AND uas.role_id = :global_qtsi_role_id ORDER BY na.account_nick_no  
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_ALL_MSTR">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || ac.account_desc             account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          1 seq_no     FROM shr.accounts ac, shr.nick_accounts na    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          AND ac.account_year = NVL ( :global_account_year, ac.account_year) ORDER BY na.account_nick_no 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_BY_NO_TRANS">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || ac.account_desc             account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          max(td.seq_no) seq_no     FROM shr.accounts ac, shr.nick_accounts na,           shr.user_account_security uas,          fas.transaction_driver td    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_BY_NO_TRANS_MSTR">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || ac.account_desc             account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          max(td.seq_no) seq_no     FROM shr.accounts ac, shr.nick_accounts na,          fas.transaction_driver td    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_BY_NO">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || account_desc account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          1 seq_no     FROM shr.accounts ac, shr.nick_accounts na, shr.user_account_security uas    WHERE     na.account_id = ac.account_id          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          AND ac.inactive_flag = 'N'          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_BY_NO_MSTR">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (na.account_nick_no, 50) || '  ' || account_desc account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          1 seq_no     FROM shr.accounts ac, shr.nick_accounts na    WHERE     na.account_id = ac.account_id          AND (   na.sys_gen_flag = 'D'               OR (    na.sys_gen_flag = 'N'                   AND na.user_id IN ('0000', :global_qtsi_user_id)))          AND ac.inactive_flag = 'N'          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_LIKE_NO_TRANS">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || ac.account_desc account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          max(td.seq_no) seq_no     FROM shr.accounts ac, shr.nick_accounts na,           shr.user_account_security uas,          fas.transaction_driver td    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND ac.account_year = NVL ( :global_account_year, ac.account_year)          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_LIKE_NO_TRANS_MST">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || ac.account_desc account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          max(td.seq_no) seq_no     FROM shr.accounts ac, shr.nick_accounts na,          fas.transaction_driver td    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND ac.account_year = NVL ( :global_account_year, ac.account_year)          AND (na.user_id = :global_qtsi_user_id OR na.user_id = '0000')          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_TRANSACTION_DESC">
+			<value>
+				<globalVariable name="TRANSACTION_DESC"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_DEBIT_CREDIT_FLAG">
+			<value>
+				<globalVariable name="DEBIT_CREDIT_FLAG"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_LIKE_NO">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || ac.account_desc account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          1 seq_no     FROM shr.accounts ac, shr.nick_accounts na, shr.user_account_security uas    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND ac.account_year = NVL ( :global_account_year, ac.account_year)          AND (na.user_id = :global_qtsi_user_id OR na.user_id = '0000')          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_ROLE_ID">
+			<value>
+				<globalVariable name="QTSI_ROLE_ID"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="ALL_ACCOUNTS_LIKE_NO_MSTR">
+	<columns>
+		<column name="ACCOUNT_AND_DESC" type="String" size="92"/>
+		<column name="ACCOUNT_NICK_NO" type="String" size="50"/>
+		<column name="ACCOUNT_ID" type="Number" size="23"/>
+		<column name="ACCOUNT_YEAR" type="String" size="2"/>
+		<column name="SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT RPAD (account_nick_no, 50) || '  ' || ac.account_desc account_and_desc,          na.account_nick_no,          na.account_id,          ac.account_year,          1 seq_no     FROM shr.accounts ac, shr.nick_accounts na    WHERE     ac.account_id = na.account_id          AND ac.inactive_flag = 'N'          AND ac.account_year = NVL ( :global_account_year, ac.account_year)          AND (na.user_id = :global_qtsi_user_id OR na.user_id = '0000')          
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACCOUNT_YEAR">
+			<value>
+				<globalVariable name="ACCOUNT_YEAR"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_QTSI_USER_ID">
+			<value>
+				<globalVariable name="QTSI_USER_ID"/>
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_ACCOUNT_NO">
+			<value>
+				<globalVariable name="ACCOUNT_NO"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+</valueSets>

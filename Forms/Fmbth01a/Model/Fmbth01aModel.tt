@@ -1,0 +1,2 @@
+<#@ include file="$(SolutionDir)TextTemplates\MultiOutput.tt" #>
+<#@ include file="$(SolutionDir)TextTemplates\TaskModel.tt" #>

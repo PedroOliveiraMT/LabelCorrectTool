@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="FJPST01A" logicalName="Fjpst01a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Fjpst01a.Model.Fjpst01aModel</modelClass>	
+	
+	<businessObjects>
+		<businessObject name="BATCHES" manager="BATCHES.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="OK_CANCEL" manager="OK_CANCEL.Manager.Config.xml">
+		</businessObject>
+		<!--<businessObject name="CONTROLS" manager="CONTROLS.Manager.Config.xml">
+		</businessObject>-->
+	</businessObjects>	
+</model>

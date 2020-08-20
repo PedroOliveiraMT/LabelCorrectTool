@@ -1,0 +1,191 @@
+﻿@import "../style.css";
+		.VISUAL
+		{
+			
+      background-color: White;
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.VISUALPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.PROMPT
+		{
+			
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.PROMPTPrompt
+		{
+			
+      font-family: Arial;
+      font-size:8pt;
+      color: black;
+			
+		}
+	
+		.TOOL_TIP
+		{
+			
+      background-color: #ffe07f;
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.TOOL_TIPPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.NEGATIVE_AMOUNT
+		{
+			
+      font-family: Arial;
+      font-size:8pt;
+      color: Red;
+		}
+	
+		.NEGATIVE_AMOUNTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.POSITIVE_AMOUNT
+		{
+			
+      font-family: Arial;
+      font-size:8pt;
+      color: Blue;
+		}
+	
+		.POSITIVE_AMOUNTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.CURSOR_ITEM
+		{
+			
+      background-color: Cyan;
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.CURSOR_ITEMPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.DISPLAY_DEFAULT
+		{
+			
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.DISPLAY_DEFAULTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.DISPLAY_GRAY
+		{
+			
+      background-color: #d6d6d6;
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.DISPLAY_GRAYPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.IDI_DEFAULT
+		{
+			
+      font-family: Arial;
+      font-size:8pt;
+		}
+	
+		.IDI_DEFAULTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.DATE
+		{
+			
+      font-size:8pt;
+      height: 19px;
+		}
+	
+		.DATEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.DISPLAY_TEXT_ITEM
+		{
+			
+      font-size:8pt;
+      height: 19px;
+		}
+	
+		.DISPLAY_TEXT_ITEMPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.TEXT_ITEM
+		{
+			
+      font-size:8pt;
+      height: 19px;
+		}
+	
+		.TEXT_ITEMPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.BUTTON
+		{
+			
+      font-size:8pt;
+      height: 19px;
+		}
+	
+		.BUTTONPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	

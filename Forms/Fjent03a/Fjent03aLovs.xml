@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lovs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Lovs.xsd">
+	<Lov Name="RECUR_JE_HEADER" Title="recurJeHeader_title" Width="466" Height="226" RecordGroup="RECUR_JE_HEADER">
+		<Columns>
+			<Column DataMember="RECUR_JOURNAL_ID" Title="recurJeHeader_recurJournalId_title" Width="85" ReturnItem="RECUR_JE_HEADER.RECUR_JOURNAL_ID" />
+			<Column DataMember="RECUR_JOURNAL_DESC" Title="recurJeHeader_recurJournalDesc_title" Width="186" />
+			<Column DataMember="JOURNAL_DATE" Title="recurJeHeader_journalDate_title" Width="90" />
+			<Column DataMember="REFERENCE_NO" Title="recurJeHeader_referenceNo_title" Width="100" />
+		</Columns>
+	</Lov>
+	<Lov Name="APPROVAL_CHAINS" Title="approvalChains_title" Width="319" Height="226" RecordGroup="APPROVAL_CHAINS">
+		<Columns>
+			<Column DataMember="APPROVAL_CHAIN" Title="approvalChains_approvalChain_title" Width="173" ReturnItem="RECUR_JE_HEADER.APPROVAL_CHAIN" />
+		</Columns>
+	</Lov>
+</Lovs>

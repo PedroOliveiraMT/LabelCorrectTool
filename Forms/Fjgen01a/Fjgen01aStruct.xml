@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="FJGEN01A" AlertDataPath="Fjgen01aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="JOURNAL_INQURY" Url="Alio/Forms/Fjgen01a/Views/ViewJournalInqury" Title="journalInqury_title">
+      <ContentCanvas Id="JOURNAL_INQURY">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="JOURNALS" MultiRecord="true">
+      <Item Id="DUP_REC" Type="Button" CanvasName="JOURNAL_INQURY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="CHECK_KEY" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_checkKey_hint" MaxLength="10">
+      </Item>
+      <Item Id="CLAIM_NO" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_claimNo_hint" MaxLength="8">
+      </Item>
+      <Item Id="REFERENCE_NO" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_referenceNo_hint" MaxLength="10">
+      </Item>
+      <Item Id="REFERENCE_SEQ_NO" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_referenceSeqNo_hint" MaxLength="6">
+      </Item>
+      <Item Id="REFERENCE_TYPE" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_referenceType_hint" MaxLength="1">
+      </Item>
+      <Item Id="BATCH_YEAR" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_batchYear_hint" MaxLength="2">
+      </Item>
+      <Item Id="BATCH_NO" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_batchNo_hint" MaxLength="7">
+      </Item>
+      <Item Id="ACCOUNT_PERIOD" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_accountPeriod_hint" MaxLength="2">
+      </Item>
+      <Item Id="JOURNAL_DATE" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_journalDate_hint">
+      </Item>
+      <Item Id="JOURNAL_TYPE" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_journalType_hint" MaxLength="2">
+      </Item>
+      <Item Id="JOURNAL_AMOUNT" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_journalAmount_hint" MaxLength="30">
+      </Item>
+      <Item Id="DEBIT_CREDIT_FLAG" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_debitCreditFlag_hint" MaxLength="3">
+      </Item>
+      <Item Id="JOURNAL_ID" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_journalId_hint" MaxLength="10">
+      </Item>
+      <Item Id="JOURNAL_SEQ_NO" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_journalSeqNo_hint" MaxLength="6">
+      </Item>
+      <Item Id="JOURNAL_DESCRIPTION" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_journalDescription_hint" MaxLength="40">
+      </Item>
+      <Item Id="ACCOUNT_ID" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_accountId_hint" MaxLength="8">
+      </Item>
+      <Item Id="ACCOUNT_TYPE" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_accountType_hint" MaxLength="2">
+      </Item>
+      <Item Id="ACCOUNT_NO" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_accountNo_hint" MaxLength="50">
+      </Item>
+      <Item Id="SHOW_LOV" Type="Button" CanvasName="JOURNAL_INQURY" Navigable="false" MaxLength="30">
+      </Item>
+      <Item Id="ACCOUNT_YEAR" Type="TextItem" CanvasName="JOURNAL_INQURY" AllowInsert="false" AllowUpdate="false" MaxLength="2">
+      </Item>
+      <Item Id="ACCOUNT_DESC" Type="TextItem" CanvasName="JOURNAL_INQURY" Hint="journals_accountDesc_hint" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="40">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

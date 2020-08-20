@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="SECURITY_BLOCK" />
+  <panel width="100%">
+	<panel width="100%" style="ui-button-container-right">
+        <textbox label="securityBlock_waiverKey_prompttext" name="waiverKey" width="150px" member="WAIVER_KEY" block="SECURITY_BLOCK" maxlength="30" datatype="String" case="upper" />
+	</panel>  
+    <framepanel label="canvas1_text46_text" width="100%" name="rect41" class="ui-framepanel-red-label">
+		<gridlayout cols="1">
+			<gridcell>
+			  <calendar label="securityBlock_securityDate_prompttext" name="securityDate" width="150px" member="SECURITY_DATE" block="SECURITY_BLOCK" maxlength="10" datatype="Date" />
+			</gridcell>
+			<gridcell>
+			  <textbox label="securityBlock_securityKey_prompttext" name="securityKey" width="150px" member="SECURITY_KEY" block="SECURITY_BLOCK" maxlength="10" datatype="String" />
+			</gridcell>
+			<gridcell>
+			  <textbox label="securityBlock_counterKey_prompttext" name="counterKey" width="150px" member="COUNTER_KEY" block="SECURITY_BLOCK" maxlength="8" datatype="String" />
+			</gridcell>
+			<gridcell>
+			  <button label="securityBlock_process_label" name="process" width="81px" member="PROCESS" block="SECURITY_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+			</gridcell>
+		</gridlayout>
+    </framepanel>
+  </panel>
+</config>

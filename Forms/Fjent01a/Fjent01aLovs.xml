@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lovs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Lovs.xsd">
+	<Lov Name="APPROVAL_CHAINS" Title="approvalChains_title" Width="120" Height="226" RecordGroup="APPROVAL_CHAINS">
+		<Columns>
+			<Column DataMember="APPROVAL_CHAIN" Title="approvalChains_approvalChain_title" Width="173" ReturnItem="JE_HEADER.APPROVAL_CHAIN" />
+		</Columns>
+	</Lov>
+</Lovs>

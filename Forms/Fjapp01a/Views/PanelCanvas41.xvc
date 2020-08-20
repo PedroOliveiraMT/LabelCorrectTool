@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <panel width="100%">
+    <tabpanel id="tabCanvas41" name="CANVAS41">
+      <tab label="ajeApproval_label" id="page_ajeApproval" name="AJE_APPROVAL">
+        <include src="Alio/Forms/Fjapp01a/views/TabCanvas41AjeApproval" />
+      </tab>
+      <tab label="approvalChain_label" id="page_approvalChain" name="APPROVAL_CHAIN">
+        <include src="Alio/Forms/Fjapp01a/views/TabCanvas41ApprovalChain" />
+      </tab>
+    </tabpanel>
+  </panel>
+</config>

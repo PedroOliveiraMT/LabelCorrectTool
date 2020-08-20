@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" title="accountLookup_title">
+  <include src="Alio/Forms/Slact01a/views/PanelAccountLookup">
+  </include>
+</window>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="SLACT01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Slact01a.Slact01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Slact01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Slact01a.Services.Slact01aServices</services>
+    <packages />
+    <attachedLibraries>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="SLACT01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Slact01a.Controllers.Slact01aTaskController</taskController>
+  <blockControllers>
+    <block name="ACCOUNTS">Alio.Forms.Slact01a.Controllers.AccountsController</block>
+    <block name="NICK_ACCOUNTS">Alio.Forms.Slact01a.Controllers.NickAccountsController</block>
+  </blockControllers>
+</task>

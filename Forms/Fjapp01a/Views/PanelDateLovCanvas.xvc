@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional">
+  <interactionblock name="DATE_CONTROL_BLOCK" />
+  <interactionblock name="DATE_BUTTON_BLOCK" />
+  <panel width="221px" height="250px" top="0px" left="0px" id="pnlDateLovCanvas" name="DATE_LOV_CANVAS" class="ContentCanvas">
+    <button label="&gt;" name="monthPlus1" style="DEFAULT" left="165px" top="8px" width="24px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" member="MONTH_PLUS1" block="DATE_CONTROL_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="&gt;&gt;" name="yearPlus1" style="DEFAULT" left="189px" top="8px" width="24px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" member="YEAR_PLUS1" block="DATE_CONTROL_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="&lt;&lt;" name="yearMinus1" style="DEFAULT" left="8px" top="8px" width="24px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" member="YEAR_MINUS1" block="DATE_CONTROL_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="&lt;" name="monthMinus1" style="DEFAULT" left="32px" top="8px" width="24px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" member="MONTH_MINUS1" block="DATE_CONTROL_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="OK" name="okButton" style="DEFAULT" left="8px" top="218px" width="90px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" member="OK_BUTTON" block="DATE_CONTROL_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="Cancel" name="cancelButton" style="DEFAULT" left="122px" top="218px" width="90px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" member="CANCEL_BUTTON" block="DATE_CONTROL_BLOCK" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <textfield labelposition="left" labelalign="start" name="displayMonYear" style="DEFAULT" left="56px" top="13px" width="106px" height="24px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DISPLAY_MON_YEAR" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    <framepanel width="31px" height="25px" top="43px" left="8px" name="rect11">
+      <textfield labelposition="left" labelalign="start" name="dayLabel1" style="DEFAULT" left="1px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL1" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="43px" left="37px" name="rect12">
+      <textfield labelposition="left" labelalign="start" name="dayLabel2" style="DEFAULT" left="2px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL2" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="43px" left="66px" name="rect13">
+      <textfield labelposition="left" labelalign="start" name="dayLabel3" style="DEFAULT" left="2px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL3" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="43px" left="96px" name="rect14">
+      <textfield labelposition="left" labelalign="start" name="dayLabel4" style="DEFAULT" left="1px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL4" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="43px" left="125px" name="rect15">
+      <textfield labelposition="left" labelalign="start" name="dayLabel5" style="DEFAULT" left="1px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL5" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="43px" left="154px" name="rect16">
+      <textfield labelposition="left" labelalign="start" name="dayLabel6" style="DEFAULT" left="2px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL6" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="43px" left="184px" name="rect17">
+      <textfield labelposition="left" labelalign="start" name="dayLabel7" style="DEFAULT" left="1px" top="1px" width="25px" height="20px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Microsoft Sans Serif" textalign="center" member="DAY_LABEL7" block="DATE_CONTROL_BLOCK" maxlength="30" datatype="String" />
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="8px" name="rect21">
+      <textfield labelposition="left" labelalign="start" name="dateButton1" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON1" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="37px" name="rect22">
+      <textfield labelposition="left" labelalign="start" name="dateButton2" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON2" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="66px" name="rect23">
+      <textfield labelposition="left" labelalign="start" name="dateButton3" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON3" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="96px" name="rect24">
+      <textfield labelposition="left" labelalign="start" name="dateButton4" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON4" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="125px" name="rect25">
+      <textfield labelposition="left" labelalign="start" name="dateButton5" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON5" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="154px" name="rect26">
+      <textfield labelposition="left" labelalign="start" name="dateButton6" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON6" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="66px" left="184px" name="rect27">
+      <textfield labelposition="left" labelalign="start" name="dateButton7" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON7" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="8px" name="rect31">
+      <textfield labelposition="left" labelalign="start" name="dateButton8" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON8" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="37px" name="rect32">
+      <textfield labelposition="left" labelalign="start" name="dateButton9" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON9" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="66px" name="rect33">
+      <textfield labelposition="left" labelalign="start" name="dateButton10" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON10" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="96px" name="rect34">
+      <textfield labelposition="left" labelalign="start" name="dateButton11" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON11" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="125px" name="rect35">
+      <textfield labelposition="left" labelalign="start" name="dateButton12" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON12" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="154px" name="rect36">
+      <textfield labelposition="left" labelalign="start" name="dateButton13" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON13" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="90px" left="184px" name="rect37">
+      <textfield labelposition="left" labelalign="start" name="dateButton14" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON14" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="8px" name="rect41">
+      <textfield labelposition="left" labelalign="start" name="dateButton15" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON15" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="37px" name="rect42">
+      <textfield labelposition="left" labelalign="start" name="dateButton16" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON16" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="66px" name="rect43">
+      <textfield labelposition="left" labelalign="start" name="dateButton17" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON17" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="96px" name="rect44">
+      <textfield labelposition="left" labelalign="start" name="dateButton18" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON18" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="125px" name="rect45">
+      <textfield labelposition="left" labelalign="start" name="dateButton19" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON19" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="154px" name="rect46">
+      <textfield labelposition="left" labelalign="start" name="dateButton20" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON20" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="114px" left="184px" name="rect47">
+      <textfield labelposition="left" labelalign="start" name="dateButton21" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON21" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="8px" name="rect51">
+      <textfield labelposition="left" labelalign="start" name="dateButton22" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON22" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="37px" name="rect52">
+      <textfield labelposition="left" labelalign="start" name="dateButton23" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON23" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="66px" name="rect53">
+      <textfield labelposition="left" labelalign="start" name="dateButton24" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON24" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="96px" name="rect54">
+      <textfield labelposition="left" labelalign="start" name="dateButton25" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON25" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="125px" name="rect55">
+      <textfield labelposition="left" labelalign="start" name="dateButton26" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON26" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="154px" name="rect56">
+      <textfield labelposition="left" labelalign="start" name="dateButton27" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON27" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="138px" left="184px" name="rect57">
+      <textfield labelposition="left" labelalign="start" name="dateButton28" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON28" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="8px" name="rect61">
+      <textfield labelposition="left" labelalign="start" name="dateButton29" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON29" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="37px" name="rect62">
+      <textfield labelposition="left" labelalign="start" name="dateButton30" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON30" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="66px" name="rect63">
+      <textfield labelposition="left" labelalign="start" name="dateButton31" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON31" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="96px" name="rect64">
+      <textfield labelposition="left" labelalign="start" name="dateButton32" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON32" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="125px" name="rect65">
+      <textfield labelposition="left" labelalign="start" name="dateButton33" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON33" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="154px" name="rect66">
+      <textfield labelposition="left" labelalign="start" name="dateButton34" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON34" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="162px" left="184px" name="rect67">
+      <textfield labelposition="left" labelalign="start" name="dateButton35" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON35" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="186px" left="8px" name="rect71">
+      <textfield labelposition="left" labelalign="start" name="dateButton36" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON36" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="186px" left="37px" name="rect72">
+      <textfield labelposition="left" labelalign="start" name="dateButton37" style="DATE_NORMAL_VA" left="0px" top="0px" width="29px" height="24px" backgroundcolor="Control" textalign="center" member="DATE_BUTTON37" block="DATE_BUTTON_BLOCK" maxlength="30" datatype="String">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </textfield>
+    </framepanel>
+    <framepanel width="31px" height="25px" top="186px" left="66px" name="rect73" />
+    <framepanel width="31px" height="25px" top="186px" left="96px" name="rect74" />
+    <framepanel width="31px" height="25px" top="186px" left="125px" name="rect75" />
+    <framepanel width="31px" height="25px" top="186px" left="154px" name="rect76" />
+    <framepanel width="31px" height="25px" top="186px" left="184px" name="rect77" />
+  </panel>
+</config>

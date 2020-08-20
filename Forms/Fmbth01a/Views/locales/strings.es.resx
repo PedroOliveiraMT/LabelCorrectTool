@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="batches_assignBatch_label" xml:space="preserve">
+    <value>Lote</value>
+  </data>
+  <data name="batches_batchYear_label" xml:space="preserve">
+    <value>Año de cuenta</value>
+  </data>
+  <data name="batches_batchYear_hint" xml:space="preserve">
+    <value>Ingrese el valor para: ACCOUNT_YEAR</value>
+  </data>
+  <data name="batches_batchNo_label" xml:space="preserve">
+    <value>Lote N º</value>
+  </data>
+  <data name="batches_batchNo_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_NO</value>
+  </data>
+  <data name="batches_batchLovBtn_label" xml:space="preserve">
+    <value>Use este lote</value>
+  </data>
+  <data name="batches_status_prompttext" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="batches_status_tooltip" xml:space="preserve">
+    <value>ENTRADA - La edición no se ha ejecutado ERROR - La edición se ejecutó y los errores se encontraron LISTO - La edición se ejecutó y el lote está listo para publicar</value>
+  </data>
+  <data name="batches_warrantLovBtn_label" xml:space="preserve">
+    <value>Use este lote</value>
+  </data>
+  <data name="batches_dateCreated_label" xml:space="preserve">
+    <value>fecha de creacion</value>
+  </data>
+  <data name="batches_dateCreated_tooltip" xml:space="preserve">
+    <value>Haga doble clic para calendario</value>
+  </data>
+  <data name="batches_dateCreated_hint" xml:space="preserve">
+    <value>Ingrese el valor para: DATE_CREATED</value>
+  </data>
+  <data name="batches_batchDate_prompttext" xml:space="preserve">
+    <value>Transacción
+Fecha</value>
+  </data>
+  <data name="batches_batchDate_label" xml:space="preserve">
+    <value>Fecha de lote</value>
+  </data>
+  <data name="batches_batchDate_tooltip" xml:space="preserve">
+    <value>Haga doble clic para calendario</value>
+  </data>
+  <data name="batches_batchDate_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_DATE</value>
+  </data>
+  <data name="batches_batchDescription_prompttext" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="batches_batchDescription_label" xml:space="preserve">
+    <value>Descripción del lote</value>
+  </data>
+  <data name="batches_batchDescription_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_DESCRIPTION</value>
+  </data>
+  <data name="batches_accountPeriod_prompttext" xml:space="preserve">
+    <value>Contabilidad
+Período</value>
+  </data>
+  <data name="batches_accountPeriod_label" xml:space="preserve">
+    <value>Periodo de cuenta</value>
+  </data>
+  <data name="batches_accountPeriod_hint" xml:space="preserve">
+    <value>Ingrese el valor para: ACCOUNT_PERIOD</value>
+  </data>
+  <data name="batches_useThisBatch_label" xml:space="preserve">
+    <value />
+  </data>
+  <data name="batches_details_label" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="batches_postedFlag_hint" xml:space="preserve">
+    <value>Ingrese el valor para: POSTED_FLAG</value>
+  </data>
+  <data name="batches_userId_prompttext" xml:space="preserve">
+    <value>ID de usuario</value>
+  </data>
+  <data name="batches_userId_label" xml:space="preserve">
+    <value>ID de usuario</value>
+  </data>
+  <data name="batches_userId_hint" xml:space="preserve">
+    <value>Ingrese el valor para: USER_ID</value>
+  </data>
+  <data name="batches_assignWarrant_label" xml:space="preserve">
+    <value>Warrant</value>
+  </data>
+  <data name="batches_warrantFromDate_prompttext" xml:space="preserve">
+    <value>De
+Fecha</value>
+  </data>
+  <data name="batches_warrantFromDate_label" xml:space="preserve">
+    <value>Lote N º</value>
+  </data>
+  <data name="batches_warrantFromDate_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_NO</value>
+  </data>
+  <data name="batches_warrantToDate_prompttext" xml:space="preserve">
+    <value>A
+Fecha</value>
+  </data>
+  <data name="batches_warrantToDate_label" xml:space="preserve">
+    <value>Lote N º</value>
+  </data>
+  <data name="batches_warrantToDate_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_NO</value>
+  </data>
+  <data name="batches_batchType_label" xml:space="preserve">
+    <value>Tipo de lote</value>
+  </data>
+  <data name="batches_batchType_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_TYPE</value>
+  </data>
+  <data name="batches_batchOrigin_label" xml:space="preserve">
+    <value>Origen de lote</value>
+  </data>
+  <data name="batches_batchOrigin_hint" xml:space="preserve">
+    <value>Ingrese el valor para: BATCH_ORIGIN</value>
+  </data>
+  <data name="batches_accessFlag_label" xml:space="preserve">
+    <value>Indicador de acceso</value>
+  </data>
+  <data name="batches_accessFlag_hint" xml:space="preserve">
+    <value>Ingrese el valor para: ACCESS_FLAG</value>
+  </data>
+  <data name="batches_resetActiveBatch_label" xml:space="preserve">
+    <value>Restablecer lote activo</value>
+  </data>
+  <data name="batches_batchMasterListing_label" xml:space="preserve">
+    <value>Listado maestro de lotes</value>
+  </data>
+  <data name="hold_accountPeriod_label" xml:space="preserve">
+    <value>Periodo de cuenta</value>
+  </data>
+  <data name="hold_accountPeriod_hint" xml:space="preserve">
+    <value>Ingrese el valor para: ACCOUNT_PERIOD</value>
+  </data>
+  <data name="batches_title" xml:space="preserve">
+    <value>Maestro de lotes</value>
+  </data>
+  <data name="dateLovWindow_title" xml:space="preserve">
+    <value>Lista de valores de fecha</value>
+  </data>
+  <data name="warrantNoLov_title" xml:space="preserve">
+    <value>Warrants</value>
+  </data>
+  <data name="warrantNoLov_warrantNo_title" xml:space="preserve">
+    <value>Orden</value>
+  </data>
+  <data name="warrantNoLov_batchDescription_title" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="warrantNoLov_fromDate_title" xml:space="preserve">
+    <value>Partir de la fecha</value>
+  </data>
+  <data name="warrantNoLov_toDate_title" xml:space="preserve">
+    <value>Hasta la fecha</value>
+  </data>
+  <data name="batchNoLov_title" xml:space="preserve">
+    <value>LOTE N º</value>
+  </data>
+  <data name="batchNoLov_keyValue_title" xml:space="preserve">
+    <value>Clave de lote</value>
+  </data>
+  <data name="onMessage_btn1_label" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="onErrorCaution_btn1_label" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="onErrorStop_btn1_label" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="noRecord_title" xml:space="preserve">
+    <value>Elige un modo</value>
+  </data>
+  <data name="noRecord_text" xml:space="preserve">
+    <value>No se encontraron registros. Elija un modo</value>
+  </data>
+  <data name="noRecord_btn1_label" xml:space="preserve">
+    <value>Encontrar</value>
+  </data>
+  <data name="noRecord_btn2_label" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="saveChanges_text" xml:space="preserve">
+    <value>¿Desea guardar los cambios que ha realizado?</value>
+  </data>
+  <data name="saveChanges_btn1_label" xml:space="preserve">
+    <value>si</value>
+  </data>
+  <data name="saveChanges_btn2_label" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="saveChanges_btn3_label" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="accountPeriodWarning_text" xml:space="preserve">
+    <value>Esta fecha no está en el rango válido para
+este período de cuenta, haga clic en Aceptar para continuar</value>
+  </data>
+  <data name="accountPeriodWarning_btn1_label" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="accountPeriodWarning_btn2_label" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="accountPeriodChange_text" xml:space="preserve">
+    <value>El período de la cuenta no es el predeterminado. ¿Desea volver al período contable predeterminado?</value>
+  </data>
+  <data name="accountPeriodChange_btn1_label" xml:space="preserve">
+    <value>si</value>
+  </data>
+  <data name="accountPeriodChange_btn2_label" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="batchPrefix_btn1_label" xml:space="preserve">
+    <value>si</value>
+  </data>
+  <data name="batchPrefix_btn2_label" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="batchPrefix_btn3_label" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="debugMessage_title" xml:space="preserve">
+    <value>Mensaje de depuración</value>
+  </data>
+  <data name="debugMessage_btn1_label" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="debugMessage_btn2_label" xml:space="preserve">
+    <value>Detener depuración</value>
+  </data>
+</root>

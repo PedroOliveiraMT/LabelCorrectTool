@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="HOLD" logicalName="Hold"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	<kind>SimpleBusinessObject</kind>
+	<items>
+		<item name="HOLD_DESC" logicalName="HoldDesc" type="System.String"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjent03a.Model.Hold</managerClass>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

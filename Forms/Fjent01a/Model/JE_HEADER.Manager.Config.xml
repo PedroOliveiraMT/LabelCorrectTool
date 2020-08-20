@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="JE_HEADER" logicalName="JeHeader" targetTableName="FAS.JE_HEADER" QueryDataSourceName="FAS.JE_HEADER"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="REFERENCE_NO" logicalName="ReferenceNo" type="System.String" physicalName="REFERENCE_NO"/>
+		<item name="JOURNAL_DATE" logicalName="JournalDate" type="System.DateTime" physicalName="JOURNAL_DATE">
+			<value>
+				<item name="BATCH_DATE" businessObject="BATCH_NO_BLOCK"/>
+			</value>
+		</item>
+		<item name="JOURNAL_DESCRIPTION" logicalName="JournalDescription" type="System.String" physicalName="JOURNAL_DESCRIPTION"/>
+		<item name="READY_FOR_APPROVAL" logicalName="ReadyForApproval" type="System.String" physicalName="release_flag"/>
+		<item name="APPROVAL_STATUS_DESC" logicalName="ApprovalStatusDesc" type="System.String" virtual="true"/>
+		<item name="BATCH_YEAR" logicalName="BatchYear" type="System.String" physicalName="BATCH_YEAR">
+			<value>
+				<item name="BATCH_YEAR" businessObject="BATCH_NO_BLOCK"/>
+			</value>
+		</item>
+		<item name="BATCH_NO" logicalName="BatchNo" type="System.String" physicalName="BATCH_NO">
+			<value>
+				<item name="BATCH_NO" businessObject="BATCH_NO_BLOCK"/>
+			</value>
+		</item>
+		<item name="DEBIT_TOTAL" logicalName="DebitTotal" type="System.Decimal" virtual="true"/>
+		<item name="CREDIT_TOTAL" logicalName="CreditTotal" type="System.Decimal" virtual="true"/>
+		<item name="WHS_ORDER_NO" logicalName="WhsOrderNo" type="System.String" physicalName="WHS_ORDER_NO"/>
+		<item name="NEXT_LINE_NO" logicalName="NextLineNo" type="System.Decimal" virtual="true"/>
+		<item name="APPROVAL_STATUS" logicalName="ApprovalStatus" type="System.String" physicalName="APPROVAL_STATUS"/>
+		<item name="SYSTEM_OWNER" logicalName="SystemOwner" type="System.String" physicalName="SYSTEM_OWNER"/>
+		<item name="DISPLAY_REFERENCE_NO" logicalName="DisplayReferenceNo" type="System.String" virtual="true"/>
+		<item name="APPROVAL_CHAIN" logicalName="ApprovalChain" type="System.String" physicalName="APPROVAL_CHAIN"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjent01a.Model.JeHeaderManager</managerClass>
+	<adapterClass>Alio.Forms.Fjent01a.Model.JeHeaderAdapter</adapterClass>
+	<defaultWhereClause><![CDATA[WHERE je_header.batch_year = @BATCH_NO_BLOCK_BATCH_YEAR AND je_header.batch_no = @BATCH_NO_BLOCK_BATCH_NO]]></defaultWhereClause>
+	<defaultOrderByClause><![CDATA[reference_no]]></defaultOrderByClause>
+	<pagination enabled="true" maximumRows="100" />
+</manager>

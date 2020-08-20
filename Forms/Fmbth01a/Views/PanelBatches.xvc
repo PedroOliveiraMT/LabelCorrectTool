@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+	<interactionblock name="BATCHES" />
+	<panel width="100%" id="pnlBatches" name="BATCHES" class="ContentCanvas">
+		<button name="assignBatch" action="WHEN-BUTTON-PRESSED" style="DEFAULT" member="ASSIGN_BATCH" block="BATCHES" validation="server" maxlength="30" label="batches_assignBatch_label" />
+		<button action="WHEN-BUTTON-PRESSED" label="batches_assignWarrant_label" name="assignWarrant" style="DEFAULT" member="ASSIGN_WARRANT" block="BATCHES" validation="server" maxlength="30" />
+		<framepanel width="100%">
+			<panel width="100%">
+				<gridview width="100%" name="grdBatches" block="BATCHES">
+					<viewheader>
+						<viewcolumn width="85px" label="batches_batchYear_label" name="batchYear" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_YEAR" validation="server" maxlength="2" datatype="String" />
+						<viewcolumn width="100px" headerwidget="assignBatch" name="batchNo" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_NO" validation="server" maxlength="6" datatype="String" />
+						<viewcolumn width="140px" headerwidget="assignWarrant" name="warrantNo" style="DEFAULT" labelstyle="DEFAULT" member="WARRANT_NO" validation="server" maxlength="8" datatype="String">
+							<editor>
+								<lovdropdown />
+							</editor>
+						</viewcolumn>
+						<viewcolumn width="106px" label="batches_batchDate_label" name="batchDate" style="DEFAULT" labelstyle="DEFAULT" tooltip="batches_batchDate_tooltip" member="BATCH_DATE" validation="server" datatype="Date" formatmask="MM/DD/YYYY">
+							<editor>
+								<calendar>
+									<xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn width="266px" label="batches_batchDescription_label" name="batchDescription" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_DESCRIPTION" validation="server" maxlength="40" datatype="String" />
+						<viewcolumn width="150px" label="batches_accountPeriod_label" name="accountPeriod" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_PERIOD" validation="server" maxlength="2" datatype="String" />
+						<viewcolumn width="120px" name="useThisBatch" style="DEFAULT" labelstyle="DEFAULT" member="USE_THIS_BATCH" validation="server" maxlength="30">
+							<editor>
+								<button label="batches_batchLovBtn_label" action="WHEN-BUTTON-PRESSED" />
+							</editor>
+						</viewcolumn>
+						<viewcolumn width="124px" label="batches_userId_label" name="userId" style="DEFAULT" labelstyle="DEFAULT" member="USER_ID" validation="server" maxlength="30" datatype="String" />
+						<viewcolumn width="87px" label="batches_status_prompttext" name="status" style="DEFAULT" labelstyle="DEFAULT" tooltip="batches_status_tooltip" member="STATUS" validation="server" maxlength="30" datatype="String" />
+            <viewcolumn width="80px" label="batches_warrantFromDate_label" name="warrantFromDate" style="DEFAULT" labelstyle="DEFAULT" member="WARRANT_FROM_DATE" validation="server" datatype="Date" formatmask="MM/DD/YYYY">
+							<editor>
+								<calendar>
+									<xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn width="80px" label="batches_warrantToDate_label" name="warrantToDate" style="DEFAULT" labelstyle="DEFAULT" member="WARRANT_TO_DATE" validation="server" datatype="Date" formatmask="MM/DD/YYYY">
+							<editor>
+								<calendar>
+									<xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+								</calendar>
+							</editor>
+						</viewcolumn>
+
+					</viewheader>
+				</gridview>
+			</panel>
+			<panel width="100%" name="rect16193" class="ui-button-container-right">
+				<button label="batches_resetActiveBatch_label" name="resetActiveBatch" style="DEFAULT" member="RESET_ACTIVE_BATCH" block="BATCHES" validation="server" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+				<button label="batches_batchMasterListing_label" name="batchMasterListing" style="DEFAULT" member="BATCH_MASTER_LISTING" block="BATCHES" validation="server" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+			</panel>
+		</framepanel>
+	</panel>
+</config>

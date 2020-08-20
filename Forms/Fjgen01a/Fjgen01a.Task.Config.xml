@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="FJGEN01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Fjgen01a.Fjgen01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Fjgen01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Fjgen01a.Services.Fjgen01aServices</services>
+    <packages>
+      <package name="VALIDATE_ACCOUNT">Alio.Common.Parts.PkgValidateAccount</package>
+      <!--<package name="FORM">Alio.Forms.Fjgen01a.Services.PropClassForm</package>--> 
+    </packages>
+    <attachedLibraries>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+      <libraryConfiguration config="SCLA01A.Library.Config.xml"/>
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="FJGEN01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Fjgen01a.Controllers.Fjgen01aTaskController</taskController>
+  <blockControllers>
+    <block name="JOURNALS">Alio.Forms.Fjgen01a.Controllers.JournalsController</block>
+    <!--<block name="CONTROLS">Alio.Forms.Fjgen01a.Controllers.ControlsController</block>-->
+  </blockControllers>
+
+  <!-- custom properties -->
+  <customProperties>
+    <property name="version">1</property>
+    <property name="changelog">
+      <![CDATA[
+--oel 9/01/09 alio 847 added year restriction to 'pre-query'
+--oel 9/30/09 alio 847 added yr restriction to 'when validate item' in account no field
+                         -- also made accout year (was display only) to query by
+--oel 07/12/10 added counter key security screen when accessing this program (when new form instance)
+   
+-- 06/27/12	        NJA		Alio-307	Checked and if necessary changed the variable sizes/types of batch_no, batch_year, account_id, account_no, po_no, reference_no, vendor_no, check_key, check_no
+      ]]>
+    </property>
+  </customProperties>
+</task>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/ValueSet.Config.xsd">
+  <valueSet name="PENDING_APPROVALS_RG">
+	<columns>
+		<column name="REFERENCE_NO" type="String" size="10"/>
+		<column name="BATCH_YEAR" type="String" size="2"/>
+		<column name="BATCH_NO" type="String" size="6"/>
+		<column name="BATCH_DATE" type="String" size="10"/>
+		<column name="BATCH_DESCRIPTION" type="String" size="40"/>
+	</columns>
+	<query><![CDATA[
+	select jh.reference_no,         jh.batch_year,         jh.batch_no,        to_char(b.batch_date,'mm-dd-yyyy') batch_date,        b.batch_description  from fas.je_header jh,       fas.batches    b where jh.approval_status ='EN'   and jh.batch_no   = b.batch_no   and jh.batch_year = jh.batch_year    and jh.reference_no in            ( select ja.reference_no              from shr.user_approver_master uam,                   fas.journal_approval ja              where uam.user_id = user                and uam.active_flag = 'Y'               and ja.status_flag  = 'W'               and ja.approval_code = upper(uam.approval_code))     order by reference_no   
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+  </valueSet>
+</valueSets>

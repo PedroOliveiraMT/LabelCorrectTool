@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lovs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Lovs.xsd">
+	<Lov Name="WARRANT_NO_LOV" Title="warrantNoLov_title" Width="485" Height="266" RecordGroup="WARRANT_NO">
+		<Columns>
+			<Column DataMember="WARRANT_NO" Title="warrantNoLov_warrantNo_title" Width="75" ReturnItem="BATCHES.WARRANT_NO" />
+			<Column DataMember="BATCH_DESCRIPTION" Title="warrantNoLov_batchDescription_title" Width="233" ReturnItem="BATCHES.BATCH_DESCRIPTION" />
+			<Column DataMember="FROM_DATE" Title="warrantNoLov_fromDate_title" Width="90" />
+			<Column DataMember="TO_DATE" Title="warrantNoLov_toDate_title" Width="90" />
+			<Column DataMember="WARRANT_FROM_DATE" ReturnItem="BATCHES.WARRANT_FROM_DATE" />
+			<Column DataMember="WARRANT_TO_DATE" ReturnItem="BATCHES.WARRANT_TO_DATE" />
+		</Columns>
+	</Lov>
+	<Lov Name="BATCH_NO_LOV" Title="batchNoLov_title" Width="399" Height="210" RecordGroup="BATCH_NO">
+		<Columns>
+			<Column DataMember="KEY_VALUE" Title="batchNoLov_keyValue_title" Width="310" ReturnItem="BATCHES.NEXT_KEYS_BATCH" />
+		</Columns>
+	</Lov>
+</Lovs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="CONTROLS" logicalName="Controls"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	<kind>SimpleBusinessObject</kind>
+	<items>
+		<item name="PROGRAM_LIST" logicalName="ProgramList" type="System.String"/>
+		<item name="SCREEN_MODE" logicalName="ScreenMode" type="System.String"/>
+		<item name="QTSI_FIND_FLAG" logicalName="QtsiFindFlag" type="System.String"/>
+		<item name="QTSI_ADD_FLAG" logicalName="QtsiAddFlag" type="System.String"/>
+		<item name="QTSI_DELETE_FLAG" logicalName="QtsiDeleteFlag" type="System.String"/>
+		<item name="QTSI_UPDATE_FLAG" logicalName="QtsiUpdateFlag" type="System.String"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Slact01a.Model.Controls</managerClass>
+	<pagination enabled="true" maximumRows="1" />
+</manager>

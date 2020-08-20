@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="JE_DATA" />
+  <panel width="100%">
+      <!-- <slider name="jeDatascrollbar" block="JE_DATA" top="29px" left="757px" width="16px" height="233px" /> -->
+    <framepanel width="100%">    
+      <gridview width="100%" name="grdJeData" block="JE_DATA">
+        <viewheader>
+          <viewcolumn width="466px" label="jeData_displayAccount_prompttext" name="displayAccount" member="DISPLAY_ACCOUNT" block="JE_DATA" datatype="String" />
+          <viewcolumn width="93px" label="jeData_accountBalance_label" name="accountBalance" member="ACCOUNT_BALANCE" block="JE_DATA" datatype="Number" formatmask="999G999G999G999D99MI" />
+          <viewcolumn width="100px" label="jeData_drAmount_label" name="drAmount" member="DR_AMOUNT" block="JE_DATA" datatype="Number" formatmask="999G999G999D99MI" />
+          <viewcolumn width="100px" label="jeData_crAmount_label" name="crAmount" member="CR_AMOUNT" block="JE_DATA" datatype="Number" formatmask="999G999G999D99MI" />
+        </viewheader>
+        <totals>
+            <group>
+                <total ref="accountBalance" label="Total" />
+                <total ref="drAmount" name="drTotal" type="member" block="JE_DATA" member="DR_TOTAL" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" />
+                <total ref="crAmount" name="crTotal" type="member" block="JE_DATA" member="CR_TOTAL" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" />
+            </group>
+        </totals>
+      </gridview>
+    </framepanel>
+  </panel>
+</config>

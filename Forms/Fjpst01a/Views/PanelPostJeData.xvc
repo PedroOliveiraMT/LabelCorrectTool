@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="BATCHES" />
+  <interactionblock name="OK_CANCEL" />
+  <panel width="100%" id="pnlPostJeData" name="POST_JE_DATA" class="ContentCanvas">
+    <!-- <slider name="batchesscrollbar" block="BATCHES" top="70px" left="741px" width="16px" height="298px" /> -->
+    <framepanel width="100%" name="rect23">
+      <panel width="100%">
+        <gridview width="100%" name="grdBatches" block="BATCHES">
+          <viewheader>
+            <viewcolumn width="80px" label="batches_batchYear_label" name="batchYear" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_YEAR" block="BATCHES" maxlength="2" datatype="String" />
+            <viewcolumn width="100px" label="batches_batchNo_label" name="batchNo" style="DISPLAY_GRAY" labelstyle="DEFAULT" member="BATCH_NO" block="BATCHES" maxlength="7" datatype="String" />
+            <viewcolumn width="110px" label="batches_batchDate_label" name="batchDate" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_DATE" block="BATCHES" maxlength="10" datatype="Date" formatmask="MM/DD/YYYY">
+              <editor>
+                <calendar />
+              </editor>
+            </viewcolumn>
+            <viewcolumn width="239px" label="batches_batchDescription_label" name="batchDescription" style="DEFAULT" labelstyle="DEFAULT" member="BATCH_DESCRIPTION" block="BATCHES" maxlength="40" datatype="String" />
+            <viewcolumn width="85px" label="batches_accountPeriod_label" name="accountPeriod" style="DEFAULT" labelstyle="DEFAULT" member="ACCOUNT_PERIOD" block="BATCHES" maxlength="2" datatype="String" />
+            <viewcolumn width="110px" headerwidget="selectAll" label="batches_postBatch_prompttext" name="postBatch" style="DEFAULT" labelstyle="DEFAULT" member="POST_BATCH" block="BATCHES" maxlength="30">
+              <editor>
+                <checkbox unmatchedvalue="N" value="Y" falsevalue="N" />
+              </editor>
+            </viewcolumn>
+            <viewcolumn width="125px" label="batches_debitTotal_prompttext" name="debitTotal" member="DEBIT_TOTAL" block="BATCHES" maxlength="30" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" />
+            <viewcolumn width="125px" label="batches_creditTotal_prompttext" name="creditTotal" member="CREDIT_TOTAL" block="BATCHES" maxlength="30" datatype="Number" formatmask="999G999G999G999G999G999G999D99MI" />
+          </viewheader>
+        </gridview>
+      </panel>
+      <panel width="100%" style="ui-button-container-right">
+        <checkbox value="Y" falsevalue="N" name="selectAll" style="CHECK_BOX" width="13px" height="19px" member="SELECT_ALL" block="OK_CANCEL" maxlength="30" action="WHEN-CHECKBOX-CHANGED" />
+        <button label="okCancel_post_label" name="post" style="BUTTON" height="19px" accesskey="O" member="POST" block="OK_CANCEL" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+        <button label="okCancel_cancel_label" name="cancel" style="BUTTON" height="19px" accesskey="C" member="CANCEL" block="OK_CANCEL" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+      </panel>
+    </framepanel>
+  </panel>
+</config>

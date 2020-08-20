@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<task name="FMBTH01A" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Task.Config.xsd">
+  <taskClass>Alio.Forms.Fmbth01a.Fmbth01aTask</taskClass>
+  
+  <!-- struct -->
+  <taskResources>Fmbth01aStruct.xml</taskResources>  
+  
+  <!-- parts -->
+  <taskParts>
+  </taskParts>
+  
+  <!-- support code -->
+  <supportCodeConfiguration>
+    <services>Alio.Forms.Fmbth01a.Services.Fmbth01aServices</services>
+    <attachedLibraries>
+      <libraryConfiguration config="SUTL01A.Library.Config.xml"/>
+      <libraryConfiguration config="AFILERPT.Library.Config.xml"/>
+      <libraryConfiguration config="SCLA01A.Library.Config.xml"/>
+	</attachedLibraries>
+  </supportCodeConfiguration>
+
+  <!-- model -->
+  <modelConfiguration config="FMBTH01A.Model.Config.xml"/>
+
+  <!-- controllers -->
+  <taskController>Alio.Forms.Fmbth01a.Controllers.Fmbth01aTaskController</taskController>
+  <blockControllers>
+    <block name="BATCHES">Alio.Forms.Fmbth01a.Controllers.BatchesController</block>
+    <block name="HOLD">Alio.Forms.Fmbth01a.Controllers.HoldController</block>
+    <block name="CONTROLS_FIX">Alio.Forms.Fmbth01a.Controllers.ControlsFixController</block>
+  </blockControllers>
+
+
+  <!-- custom properties -->
+  <customProperties>
+    <property name="version">1</property>
+    <property name="changelog">
+      <![CDATA[
+09/06/12	cec		alio-307		-corrected new logic for setting account period to match the old existing logic of checking to see if it null before updating it.
+08/11/14  dph   alio-11190  15.1		Added warrant logic for new items warrant button, warrant_no, warrant_from_date and warrant_to_date
+	                                  Added from_date desc to :batches block sort order
+	                                  Added :parameter.show_warrants populated in wnfi if set then screen presentation includes warrant button and from to dates
+	                                  Added validate_warrant_dates program unit.  
+09/03/14  dph   alio-11190  15.1		Added group by to warrant lov
+01/29/15	wjk		alio-11713	15.3		Split the new profile key up between Post or P and Display or D and added the appropriate batch types to go along with them
+10/05/16	cec		alio-14432	17.2		added synchronize to use_this_batch.wbp trigger to prevent frm-93652 process termination in 12c
+01/04/17	psr		alio-12975	17.3		Moved code up in WNFI to determine what columns will be displayed on the form before form is displayed and added a synchronize command.
+03/20/19  mfl   alio-11626  19.4    If the calling form is FCVOI01A, do not display existing batches.  Only allow the creation of a new batch.
+01/31/20	psr		alio-16722	20.4		Added FMBTH01A report object, RESET_ACTIVE_BATCH and BATCH_MASTER_LISTING buttons to form.
+      ]]>
+    </property>
+  </customProperties>
+</task>

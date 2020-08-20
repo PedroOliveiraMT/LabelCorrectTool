@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="JOURNAL_APPROVAL" logicalName="JournalApproval" targetTableName="FAS.JOURNAL_APPROVAL" QueryDataSourceName="FAS.JOURNAL_APPROVAL"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="APPROVER_SEQUENCE" logicalName="ApproverSequence" type="System.Decimal" physicalName="APPROVER_SEQUENCE"/>
+		<item name="APPROVAL_CODE" logicalName="ApprovalCode" type="System.String" physicalName="APPROVAL_CODE"/>
+		<item name="APP_CODE_DESC" logicalName="AppCodeDesc" type="System.String" virtual="true"/>
+		<item name="STATUS_FLAG" logicalName="StatusFlag" type="System.String" physicalName="STATUS_FLAG"/>
+		<item name="STATUS_DESCRIPTION" logicalName="StatusDescription" type="System.String" virtual="true"/>
+		<item name="STATUS_DATE" logicalName="StatusDate" type="System.DateTime" physicalName="STATUS_DATE"/>
+		<item name="USER_ID" logicalName="UserId" type="System.String" physicalName="USER_ID"/>
+		<item name="REFERENCE_NO" logicalName="ReferenceNo" type="System.String" physicalName="REFERENCE_NO">
+			<copyValueFrom>
+				<item name="REFERENCE_NO" businessObject="JE_HEADER"/>
+			</copyValueFrom>
+		</item>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjapp01a.Model.JournalApprovalManager</managerClass>
+	<adapterClass>Alio.Forms.Fjapp01a.Model.JournalApprovalAdapter</adapterClass>
+	<pagination enabled="true" maximumRows="20" />
+</manager>

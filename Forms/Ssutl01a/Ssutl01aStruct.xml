@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="SSUTL01A" AlertDataPath="Ssutl01aAlerts.xml" DeferredValidationMode="None" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Struct.xsd">
+  <Visual>
+    <Window Id="SSUTL01A" Url="Alio/Forms/Ssutl01a/Views/ViewSsutl01a">
+      <ContentCanvas Id="CANVAS_1">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="SECURITY_BLOCK">
+      <Item Id="SECURITY_DATE" Type="TextItem" CanvasName="CANVAS_1" Navigable="false" MaxLength="10">
+      </Item>
+      <Item Id="SECURITY_KEY" Type="TextItem" CanvasName="CANVAS_1" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="10">
+      </Item>
+      <Item Id="COUNTER_KEY" Type="TextItem" CanvasName="CANVAS_1" MaxLength="8">
+      </Item>
+      <Item Id="PROCESS" Type="Button" CanvasName="CANVAS_1" MaxLength="30">
+      </Item>
+      <Item Id="WAIVER_KEY" Type="TextItem" CanvasName="CANVAS_1" MaxLength="30">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

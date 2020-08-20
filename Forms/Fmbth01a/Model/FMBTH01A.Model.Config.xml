@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="FMBTH01A" logicalName="Fmbth01a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Fmbth01a.Model.Fmbth01aModel</modelClass>	
+	
+	<parameters>
+		<parameter name="ALLOW_PREFIX_BATCHES" type="String">
+			<value>
+				<constant>NO</constant>
+			</value>	
+		</parameter>
+		<parameter name="SHOW_WARRANTS" type="String">		</parameter>
+	</parameters>
+	
+	<businessObjects>
+		<businessObject name="BATCHES" manager="BATCHES.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="HOLD" manager="HOLD.Manager.Config.xml">
+		</businessObject>
+		<!--<businessObject name="CONTROLS" manager="CONTROLS.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="DATE_CONTROL_BLOCK" manager="DATE_CONTROL_BLOCK.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="DATE_BUTTON_BLOCK" manager="DATE_BUTTON_BLOCK.Manager.Config.xml">
+		</businessObject>-->
+	</businessObjects>	
+	
+	<valueSets config="FMBTH01A.ValueSet.Config.xml"/>
+</model>

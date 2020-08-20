@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional">
+  <interactionblock name="CONTROLS" />
+  <panel width="846px" height="29px" top="0px" left="0px" id="pnlControls" name="CONTROLS" class="HrToolBarCanvas">
+    <button name="button01" style="DEFAULT" left="96px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_help" tooltip="Help" member="BUTTON_01" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button02" style="DEFAULT" left="142px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_entqry" tooltip="Find" member="BUTTON_02" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button03" style="DEFAULT" left="189px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_save" tooltip="Save" member="BUTTON_03" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button04" style="DEFAULT" left="235px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_insrec" tooltip="New" member="BUTTON_04" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button05" style="DEFAULT" left="282px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_delrec" tooltip="Delete" member="BUTTON_05" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button06" style="DEFAULT" left="329px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_print" tooltip="Print" member="BUTTON_06" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button07" style="DEFAULT" left="374px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_prvrec" tooltip="Prev" member="BUTTON_07" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button name="button08" style="DEFAULT" left="420px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_nxtrec" tooltip="Next" member="BUTTON_08" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="Main Menu" name="mainMenu" style="DEFAULT" left="466px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_uplevel" tooltip="Main Menu" member="MAIN_MENU" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <button label="Close" name="close" style="DEFAULT" left="512px" top="1px" width="47px" height="27px" fontsize="7pt" navigable="false" icon="alio_home" tooltip="Close Window" member="CLOSE" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <combobox labelposition="left" labeloffset="4" labelalign="start" labelalignoffset="3px" name="programList" style="VISUAL" left="605px" top="5px" width="153px" height="19px" visible="false" navigable="false" member="PROGRAM_LIST" block="CONTROLS" maxlength="30" action="WHEN-LIST-CHANGED">
+      <model />
+    </combobox>
+    <button label="&amp;GO" name="go" style="DEFAULT" left="761px" top="5px" width="27px" height="19px" fontsize="7pt" visible="false" navigable="false" menu="" member="GO" block="CONTROLS" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    <textfield labelposition="left" labelalign="start" name="screenMode" style="DEFAULT" left="32px" top="5px" width="57px" height="19px" backgroundcolor="Control" foregroundcolor="Black" fontsize="8pt" fontfamily="Arial" member="SCREEN_MODE" block="CONTROLS" maxlength="30" datatype="String" />
+    <text fontfamily="Arial" fontsize="8pt" fontcolor="Black" name="text1" left="3px" top="9px">Mode:</text>
+  </panel>
+</config>

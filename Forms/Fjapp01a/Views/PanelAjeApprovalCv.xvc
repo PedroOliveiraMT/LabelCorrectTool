@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+  <interactionblock name="JE_HEADER" />
+  <panel width="100%" id="pnlAjeApprovalCv" name="AJE_APPROVAL_CV" class="ContentCanvas">
+  
+      <framepanel width="100%">
+        <panel width="100%">
+         <responsivelayout>
+              <row>
+                <cell cols="4">
+                  <lovdropdown label="jeHeader_referenceNo_label" name="referenceNo" style="TEXT_ITEM" width="113px" member="REFERENCE_NO" block="JE_HEADER" maxlength="10" datatype="String" />
+                  <!-- <button name="showLov" style="DEFAULT" foregroundcolor="Black" icon="qtdown" member="SHOW_LOV" block="JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" /> -->
+                </cell>
+                <cell cols="4">
+                  <textbox label="jeHeader_batchYear_prompttext" name="batchYear" style="DEFAULT small" width="30px" member="BATCH_YEAR" block="JE_HEADER" maxlength="2" datatype="String" />
+                </cell>
+                <cell cols="4">
+                  <textbox label="jeHeader_batchNo_prompttext" name="batchNo" style="DEFAULT" width="64px" member="BATCH_NO" block="JE_HEADER" maxlength="7" datatype="String" />
+                </cell>
+              </row>
+              <row>
+               <cell cols="4">
+                  <textfield label="jeHeader_batchDate_prompttext" name="batchDate" style="DEFAULT" width="80px" enabled="false" tooltip="jeHeader_batchDate_tooltip" member="BATCH_DATE" block="JE_HEADER" maxlength="10" datatype="Date" formatmask="MM/DD/YYYY" />
+                </cell>
+               <cell cols="4">
+                  <textfield label="jeHeader_requestor_prompttext" name="requestor" style="DEFAULT large" enabled="false" width="240px" member="REQUESTOR" block="JE_HEADER" maxlength="30" datatype="String" />
+                </cell>
+                <cell cols="4">
+                  <textbox label="jeHeader_journalDescription_prompttext" name="journalDescription" style="TEXT_ITEM large" width="305px" member="JOURNAL_DESCRIPTION" block="JE_HEADER" maxlength="40" datatype="String" />
+                </cell>
+              </row>
+              <row>
+                <cell cols="8">
+                  <editbox label="jeHeader_disapprovalMessage_prompttext" name="disapprovalMessage" style="DISPLAY_DEFAULT large" labelposition="left" width="476px" multiline="true" member="DISAPPROVAL_MESSAGE" block="JE_HEADER" maxlength="2000" datatype="String" />
+                  <!-- <button label="Edit" name="disapprovalEdit" style="DISPLAY_GRAY" height="19px" member="DISAPPROVAL_EDIT" block="JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" /> -->
+                </cell>
+              </row>
+            </responsivelayout>
+         <!--  <responsivelayout>
+              <row>
+                <cell cols="2">
+                  <lovdropdown label="Reference No" name="referenceNo" style="TEXT_ITEM" width="77px" height="19px" member="REFERENCE_NO" block="JE_HEADER" maxlength="10" datatype="String" />
+                </cell>
+                <cell cols="2">
+                  <textbox label="Batch Year" name="batchYear" style="DEFAULT small" width="20px" height="19px" member="BATCH_YEAR" block="JE_HEADER" maxlength="2" datatype="String"/>
+                </cell>
+                <cell cols="2">
+                  <textbox label="Batch No" name="batchNo" style="DEFAULT" width="64px" height="19px" member="BATCH_NO" block="JE_HEADER" maxlength="7" datatype="String" />
+                </cell>
+                <cell cols="2">
+                  <textfield label="Date" name="batchDate" style="DEFAULT" width="80px" height="19px" enabled="false" tooltip="Double-Click for Calendar" member="BATCH_DATE" block="JE_HEADER" maxlength="10" datatype="Date" formatmask="MM/DD/YYYY" />
+                </cell>
+                <cell cols="3">
+                  <textfield label="Requestor" name="requestor" style="DEFAULT large" width="180px" height="19px" member="REQUESTOR" block="JE_HEADER" maxlength="30" datatype="String"/>
+                </cell>
+              </row>
+              <row>
+                <cell cols="4">
+                  <textbox label="Description" name="journalDescription" style="TEXT_ITEM large" width="294px" height="19px" member="JOURNAL_DESCRIPTION" block="JE_HEADER" maxlength="40" datatype="String"/>
+                </cell>
+                <cell cols="8">
+                  <editbox label="Disapproval Reason" name="disapprovalMessage" style="DISPLAY_DEFAULT large" labelposition="left" width="476px" height="19px" multiline="true" member="DISAPPROVAL_MESSAGE" block="JE_HEADER" maxlength="2000" datatype="String"/>
+                </cell>
+              </row>
+            </responsivelayout> -->
+          </panel>
+          <panel width="100%" class="ui-button-container-right">
+            <button label="jeHeader_approve_label" name="approve" style="DISPLAY_GRAY" tooltip="jeHeader_approve_tooltip" member="APPROVE" block="JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+            <button label="jeHeader_disapprove_label" name="disapprove" style="DISPLAY_GRAY" tooltip="jeHeader_disapprove_tooltip" member="DISAPPROVE" block="JE_HEADER" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+          </panel>
+        </framepanel>
+  </panel>
+</config>

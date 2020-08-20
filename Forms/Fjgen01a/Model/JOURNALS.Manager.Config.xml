@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="JOURNALS" logicalName="Journals" targetTableName="FAS.JOURNALS" QueryDataSourceName="FAS.JOURNALS"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	
+	<items>
+		<item name="CHECK_KEY" logicalName="CheckKey" type="System.String" physicalName="CHECK_KEY"/>
+		<item name="CLAIM_NO" logicalName="ClaimNo" type="System.String" physicalName="CLAIM_NO"/>
+		<item name="REFERENCE_NO" logicalName="ReferenceNo" type="System.String" physicalName="REFERENCE_NO"/>
+		<item name="REFERENCE_SEQ_NO" logicalName="ReferenceSeqNo" type="System.Decimal" physicalName="REFERENCE_SEQ_NO"/>
+		<item name="REFERENCE_TYPE" logicalName="ReferenceType" type="System.String" physicalName="REFERENCE_TYPE"/>
+		<item name="BATCH_YEAR" logicalName="BatchYear" type="System.String" physicalName="BATCH_YEAR"/>
+		<item name="BATCH_NO" logicalName="BatchNo" type="System.String" physicalName="BATCH_NO"/>
+		<item name="ACCOUNT_PERIOD" logicalName="AccountPeriod" type="System.String" physicalName="ACCOUNT_PERIOD"/>
+		<item name="JOURNAL_DATE" logicalName="JournalDate" type="System.DateTime" physicalName="JOURNAL_DATE"/>
+		<item name="JOURNAL_TYPE" logicalName="JournalType" type="System.String" physicalName="JOURNAL_TYPE"/>
+		<item name="JOURNAL_AMOUNT" logicalName="JournalAmount" type="System.Decimal" physicalName="JOURNAL_AMOUNT"/>
+		<item name="DEBIT_CREDIT_FLAG" logicalName="DebitCreditFlag" type="System.Decimal" physicalName="DEBIT_CREDIT_FLAG"/>
+		<item name="JOURNAL_ID" logicalName="JournalId" type="System.Decimal" physicalName="JOURNAL_ID"/>
+		<item name="JOURNAL_SEQ_NO" logicalName="JournalSeqNo" type="System.Decimal" physicalName="JOURNAL_SEQ_NO"/>
+		<item name="JOURNAL_DESCRIPTION" logicalName="JournalDescription" type="System.String" physicalName="JOURNAL_DESCRIPTION"/>
+		<item name="ACCOUNT_ID" logicalName="AccountId" type="System.Decimal" physicalName="ACCOUNT_ID"/>
+		<item name="ACCOUNT_TYPE" logicalName="AccountType" type="System.String" virtual="true"/>
+		<item name="ACCOUNT_NO" logicalName="AccountNo" type="System.String" virtual="true"/>
+		<item name="ACCOUNT_YEAR" logicalName="AccountYear" type="System.String" virtual="true"/>
+		<item name="ACCOUNT_DESC" logicalName="AccountDesc" type="System.String" virtual="true"/>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjgen01a.Model.JournalsManager</managerClass>
+	<adapterClass>Alio.Forms.Fjgen01a.Model.JournalsAdapter</adapterClass>
+	<defaultOrderByClause><![CDATA[journal_id, journal_seq_no]]></defaultOrderByClause>
+	<pagination enabled="true" maximumRows="20" />
+</manager>

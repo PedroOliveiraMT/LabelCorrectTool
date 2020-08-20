@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="SLACT01A" logicalName="Slact01a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Model.Config.xsd">
+	<modelClass>Alio.Forms.Slact01a.Model.Slact01aModel</modelClass>	
+	
+	<businessObjects>
+		<businessObject name="ACCOUNTS" manager="ACCOUNTS.Manager.Config.xml">
+			<associations>
+				<association child="NICK_ACCOUNTS">
+					<mapping parent="ACCOUNT_ID" child="ACCOUNT_ID"/>
+				</association>
+			</associations>
+		</businessObject>
+		<businessObject name="NICK_ACCOUNTS" manager="NICK_ACCOUNTS.Manager.Config.xml">
+		</businessObject>
+		<businessObject name="CONTROLS" manager="CONTROLS.Manager.Config.xml">
+		</businessObject>
+	</businessObjects>	
+	
+	<valueSets config="SLACT01A.ValueSet.Config.xml"/>
+</model>

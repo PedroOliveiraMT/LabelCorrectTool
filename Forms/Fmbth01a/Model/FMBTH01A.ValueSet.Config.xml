@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/ValueSet.Config.xsd">
+  <valueSet name="BATCH_NO">
+	<columns>
+		<column name="KEY_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	select key_description        key_value   from adm.next_keys  where key_description like 'BATCH_PREFIX_'||:BATCHES_BATCH_YEAR||'%'  order by key_description 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="BATCHES_BATCH_YEAR">
+			<value>
+				<item businessObject="BATCHES" name="BATCH_YEAR"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+  <valueSet name="WARRANT_NO">
+	<columns>
+		<column name="WARRANT_NO" type="String" size="8"/>
+		<column name="BATCH_DESCRIPTION" type="String" size="40"/>
+		<column name="FROM_DATE" type="String" size="10"/>
+		<column name="TO_DATE" type="String" size="10"/>
+		<column name="WARRANT_FROM_DATE" type="Date" size="7"/>
+		<column name="WARRANT_TO_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	select warrant_no, batch_description,  to_char(warrant_from_date,'MM-DD-YYYY') from_date, to_char(warrant_to_date,'MM-DD-YYYY')   to_date, warrant_from_date,  warrant_to_date    from fas.batches   where batch_year = :batches_batch_year    and warrant_no is not null group by warrant_no,          batch_description,          warrant_from_date,         warrant_to_date  order by warrant_no
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="BATCHES_BATCH_YEAR">
+			<value>
+				<item businessObject="BATCHES" name="BATCH_YEAR"/>
+			</value>
+        </parameter>
+	</parameters>
+  </valueSet>
+</valueSets>

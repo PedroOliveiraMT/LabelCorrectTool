@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/ValueSet.Config.xsd">
+  <valueSet name="RECUR_JE_HEADER">
+	<columns>
+		<column name="RECUR_JOURNAL_ID" type="String" size="8"/>
+		<column name="RECUR_JOURNAL_DESC" type="String" size="40"/>
+		<column name="REFERENCE_NO" type="String" size="8"/>
+		<column name="JOURNAL_DESCRIPTION" type="String" size="40"/>
+		<column name="JOURNAL_DATE" type="String" size="10"/>
+		<column name="SORT_ORDER" type="Number" size="23"/>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="ICRGGQ_1" type="Number" size="23"/>
+		<column name="ICRGGQ_2" type="Number" size="23"/>
+		<column name="ICRGGQ_3" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+			SELECT
+			recur_journal_id,
+			recur_journal_desc,
+			reference_no,
+			journal_description,
+			TO_CHAR(journal_date, 'MM-DD-YYYY') journal_date,
+			1 sort_order,
+			DECODE( LENGTH(recur_journal_id), 1, 1 , 2, 2 , 3, 3 , 4, 4 , 5, 5 , 6, 6 , 7, 7 , 8, 8 , 9) ICRGGQ_0,
+			ASCII(SUBSTR(UPPER(recur_journal_id), 1, 1)) ICRGGQ_1,
+			NVL(ASCII(SUBSTR(recur_journal_id, 2, 1)),-1) ICRGGQ_2,
+			NVL(ASCII(SUBSTR(recur_journal_id, 3, 1)),-1) ICRGGQ_3
+		FROM
+			fas.recur_je_header
+		WHERE
+			ASCII(SUBSTR(UPPER(recur_journal_id), 1, 1)) < 65
+		UNION SELECT
+			recur_journal_id,
+			recur_journal_desc,
+			reference_no,
+			journal_description,
+			TO_CHAR(journal_date, 'MM-DD-YYYY') journal_date,
+			2 sort_order,
+			ASCII(SUBSTR(UPPER(recur_journal_id), 1, 1)) ICRGGQ_0,
+			NVL(ASCII(SUBSTR(recur_journal_id, 2, 1)),-1) ICRGGQ_1,
+			NVL(ASCII(SUBSTR(recur_journal_id, 3, 1)),-1) ICRGGQ_2,
+			DECODE( LENGTH(recur_journal_id), 1, 1 , 2, 2 , 3, 3 , 4, 4 , 5, 5 , 6, 6 , 7, 7 , 8, 8 , 9) ICRGGQ_3
+		FROM
+			fas.recur_je_header
+		WHERE
+			ASCII(SUBSTR(UPPER(recur_journal_id), 1, 1)) >= 65
+		ORDER BY
+			6,
+			7,
+			8,
+			9,
+			10
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+  </valueSet>
+  <valueSet name="APPROVAL_CHAINS">
+	<columns>
+		<column name="APPROVAL_CHAIN" type="String" size="15"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT(APPROVAL_CHAIN) FROM SHR.APPROVAL_LINK ORDER BY APPROVAL_CHAIN
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+  </valueSet>
+</valueSets>

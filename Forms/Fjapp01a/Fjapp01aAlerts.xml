@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Alerts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Alerts.xsd">
+	<Alert Name="ON_ERROR_STOP">
+ 		<Buttons>
+  			<Button Id="BTN1" Label="onErrorStop_btn1_label" />
+		</Buttons>
+	</Alert>
+	<Alert Name="ON_ERROR_CAUTION" Type="WARNING">
+ 		<Buttons>
+  			<Button Id="BTN1" Label="onErrorCaution_btn1_label" />
+		</Buttons>
+	</Alert>
+	<Alert Name="ON_MESSAGE" Type="INFORMATION">
+ 		<Buttons>
+  			<Button Id="BTN1" Label="onMessage_btn1_label" />
+		</Buttons>
+	</Alert>
+	<Alert Name="NO_RECORD" Title="noRecord_title" Type="INFORMATION">
+		<Text>noRecord_text</Text>
+ 		<Buttons>
+  			<Button Id="BTN1" Label="noRecord_btn1_label" />
+  			<Button Id="BTN2" Label="noRecord_btn2_label" />
+		</Buttons>
+	</Alert>
+	<Alert Name="DEBIT_CREDIT" Title="debitCredit_title" Type="WARNING">
+		<Text>debitCredit_text</Text>
+ 		<Buttons>
+  			<Button Id="BTN1" Label="debitCredit_btn1_label" />
+  			<Button Id="BTN2" Label="debitCredit_btn2_label" />
+		</Buttons>
+	</Alert>
+</Alerts>
+

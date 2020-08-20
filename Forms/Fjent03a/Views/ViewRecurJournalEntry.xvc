@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal" title="recurJournalEntry_title">
+  <include src="Alio/Forms/Fjent03a/views/MnuFjent03a">
+  </include>
+  <include src="Alio/Forms/Fjent03a/views/PanelRecurJouralEntry">
+  </include>
+</window>

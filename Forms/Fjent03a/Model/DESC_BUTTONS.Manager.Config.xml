@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manager name="DESC_BUTTONS" logicalName="DescButtons"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://docs.cdn.morphis-tech.com/foundations/schemas/dotNet/latest/Manager.Config.xsd">
+	<kind>SimpleBusinessObject</kind>
+	<items>
+		<item name="DESCRIPTION_TYPE" logicalName="DescriptionType" type="System.String">
+			<value>
+				<constant>none</constant>
+			</value>
+		</item>
+	</items>
+	
+	<managerClass>Alio.Forms.Fjent03a.Model.DescButtons</managerClass>
+	<pagination enabled="true" maximumRows="1" />
+</manager>
